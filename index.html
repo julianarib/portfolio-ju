@@ -1109,8 +1109,7 @@ function CategoryPage(key){
    <svg class="deco-star" viewBox="0 0 200 200" aria-hidden="true"><polygon points="${star(100,100,96,40,key==='digital'?6:key==='comunicacao'?10:14)}" fill="${key==='comunidade'?'#7138D5':'#C4F05A'}" stroke="#25212B" stroke-width="5"/></svg>
    <div class="wrap">
    <h1 id="h-cat">${esc(C.name)}</h1><p class="lead">${esc(C.lead)}</p>${Tags(C.areas)}</div></section>
-   <section class="band b-graf" aria-label="Projetos"><div class="wrap">${key==='comunidade'?FilterBar(list)+`<div class="rlist">${list.map(Row).join('')}</div><p class="empty rempty" hidden>Nenhum evento com esses filtros.</p>`:`<div class="clist">${list.map(HCard).join('')}</div>`}
-   <p class="note">${key==='comunidade'?'Fotos, datas e descrições provisórias':'Títulos, textos e imagens provisórios'}: substitua em PROJECTS.</p></div></section>
+   <section class="band b-graf" aria-label="Projetos"><div class="wrap">${key==='comunidade'?FilterBar(list)+`<div class="rlist">${list.map(Row).join('')}</div><p class="empty rempty" hidden>Nenhum evento com esses filtros.</p>`:`<div class="clist">${list.map(HCard).join('')}</div>`}</div></section>
    ${Contact()}`;
 }
 
