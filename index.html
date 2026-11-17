@@ -76,10 +76,16 @@ p{margin:0}
 .nav a.nav-in{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--bg);font:700 15px/1 var(--t);margin-left:6px;flex:none}
 .nav a.nav-in:hover{background:var(--roxo);color:#fff}
 .nav-in .in-tx{display:none}
-.menu-btn{display:none;align-items:center;gap:8px;min-height:38px;padding:0 16px;border-radius:999px;border:2px solid var(--edge);background:var(--lima);color:var(--graf);font:700 15px var(--t);cursor:pointer}
+.lang{display:inline-flex;align-items:center;gap:2px;margin-left:6px;padding:3px;border-radius:999px;border:2px solid var(--edge);background:transparent;cursor:pointer;font:600 12px/1 var(--m);color:var(--ink);flex:none;order:3}
+.lang span{padding:6px 8px;border-radius:999px;letter-spacing:.04em}
+.lang span.on{background:var(--ink);color:var(--bg)}
+.lang:hover span:not(.on){background:color-mix(in srgb,var(--ink) 10%,transparent)}
+.nav{order:2}.logo{order:1}
+.menu-btn{display:none;order:4;align-items:center;gap:8px;min-height:38px;padding:0 16px;border-radius:999px;border:2px solid var(--edge);background:var(--lima);color:var(--graf);font:700 15px var(--t);cursor:pointer}
 .menu-btn i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 5px 0 currentColor,0 -5px 0 currentColor;transition:.2s}
 .menu-btn[aria-expanded=true] i{box-shadow:none;transform:rotate(45deg)}
 @media(max-width:1060px){
+ .lang{margin-left:auto}
  .menu-btn{display:inline-flex}
  .nav{display:none;position:fixed;inset:54px 0 0 0;background:var(--roxo);flex-direction:column;align-items:stretch;padding:28px max(5vw,16px);gap:4px;overflow:auto}
  .nav.open{display:flex}
@@ -533,6 +539,13 @@ a.clink:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--graf)}
 .traj .tl-i h3{font:600 18px/1.3 var(--t);letter-spacing:0;margin-bottom:10px}
 .traj .todo{border:1px dashed rgba(245,238,220,.28);border-radius:12px;padding:12px 14px;font-size:15px}
 .traj .todo b{color:var(--lima)}
+.tl-gn{font:500 12px/1 var(--m);color:rgba(245,238,220,.6);text-transform:uppercase;letter-spacing:.06em;margin:-4px 0 18px}
+.tl-sub{display:grid;gap:22px;border-left:1.5px dashed rgba(196,240,90,.45);margin-left:2px;padding-left:22px}
+.tl-s{position:relative}
+.tl-s::before{content:"";position:absolute;left:-27px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--graf);border:1.5px solid var(--lima)}
+.tl-s h4{font:600 16px/1.3 var(--t);margin:0 0 8px;color:var(--creme)}
+.tl-s .tl-p{color:rgba(196,240,90,.85)}
+.tl-up{font:500 11px/1 var(--m);color:var(--lima);border:1px solid rgba(196,240,90,.5);border-radius:99px;padding:3px 7px;margin-left:6px;vertical-align:middle;white-space:nowrap}
 .tl-d{font-size:15px;line-height:1.6;color:var(--muted);max-width:62ch;margin-bottom:12px}
 .tl-t .tag{font-size:13px;padding:6px 9px;text-transform:uppercase;border-color:rgba(245,238,220,.35);color:var(--creme)}
 @media(max-width:800px){.traj{grid-template-columns:minmax(0,1fr)}}
@@ -824,18 +837,19 @@ const TRAJETORIA=[
   {periodo:'2025 — Presente',cargo:'Organizadora de Comunidade',empresa:'Google Developer Group (GDG BH)',
    descricao:'Planejamento e execução de meetups, workshops e conferências de tecnologia, articulando parceiros, palestrantes e patrocinadores. Responsável pela identidade visual, peças de comunicação e fortalecimento do ecossistema dev em Belo Horizonte.',
    tags:['Community Building','Eventos de tech','Direção de arte','Relacionamento']},
-  {periodo:'2025 — 2026',cargo:'Product Designer',empresa:'Greenole',
-   descricao:'Atuação estratégica na arquitetura de módulos complexos de SaaS, governança de Design System e estruturação do workflow de documentação no Figma e Confluence. Aplicação de IA para acelerar pesquisas e prototipagem do time.',
-   tags:['Product Design','Design System','IA','Documentação','Arquitetura de informação']},
   {periodo:'2023 — Presente',cargo:'Community Manager',empresa:'Comunidade UXis',
    descricao:'Atuação estratégica no suporte, retenção e crescimento da comunidade, impulsionando o lançamento de novas iniciativas. Responsável pelo networking com parceiros e por atuar como host nas talks e transmissões ao vivo no YouTube.',
    tags:['Community Management','Host','Networking','Engagement']},
+  {empresa:'Greenole',periodo:'2023 — 2026',grupo:[
+   {periodo:'2025 — 2026',cargo:'Product Designer',
+     descricao:'Atuação estratégica na arquitetura de módulos complexos de SaaS, governança de Design System e estruturação do workflow de documentação no Figma e Confluence. Aplicação de IA para acelerar pesquisas e prototipagem do time.',
+     tags:['Product Design','Design System','IA','Documentação','Arquitetura de informação']},
+   {periodo:'2023 — 2025',cargo:'UX/UI Designer',
+     descricao:'Introdução do Figma para padronizar a colaboração com engenharia e condução de pesquisas e testes de usabilidade orientados a dados. Design end-to-end de fluxos e interfaces, transformando requisitos complexos de SaaS em jornadas intuitivas.',
+     tags:['UX Research','UI Design','Usabilidade','SaaS','Figma']}]},
   {periodo:'2023',cargo:'Mentora de UX',empresa:'Comunidade UXis',
    descricao:'Liderança de grupos de voluntários e mentoria prática para designers iniciantes. Orientação no desenvolvimento e na entrega de projetos reais sob metodologias ágeis em 3 frentes distintas da comunidade.',
    tags:['Mentoria','Liderança','Metodologias ágeis','Voluntariado']},
-  {periodo:'2023 — 2025',cargo:'UX/UI Designer',empresa:'Greenole',
-   descricao:'Introdução do Figma para padronizar a colaboração com engenharia e condução de pesquisas e testes de usabilidade orientados a dados. Design end-to-end de fluxos e interfaces, transformando requisitos complexos de SaaS em jornadas intuitivas.',
-   tags:['UX Research','UI Design','Usabilidade','SaaS','Figma']},
   {periodo:'2022 — Presente',cargo:'Designer Freelancer',empresa:'Autônoma',
    descricao:'Atuação versátil em projetos de Design Gráfico, UX/UI, Social Media e branding. Desenvolvimento de sites e experiências digitais interativas utilizando plataformas no-code e infraestrutura em nuvem para diversos clientes e nichos.',
    tags:['UX/UI Design','No-code','Branding','Social Media','Freelance']},
@@ -868,6 +882,271 @@ const CASE_SECTIONS={
     ['resultados','O que ficou','Público, conexões, desdobramentos. Só números reais.']
   ]
 };
+
+
+/* ===================== ENGLISH VERSION =====================
+   Traduções sobrepostas aos dados em português. Arrays são substituídos por inteiro. */
+const EN={
+ cats:{
+  digital:{name:"Digital Experiences",short:"Digital",
+    lead:"Products, interfaces, websites and landing pages. From the journey to the final pixel, including what can go live with Framer and Wix Studio.",
+    areas:["UX Design","Product Design","UI Design","Design System","AI applied to Design","Websites and landing pages","No-code"]},
+  comunicacao:{name:"Visual Design",short:"Visual Design",
+    lead:"Brands, campaigns, content and art direction. Ideas that need to be seen, understood and remembered.",
+    areas:["Communication strategy","Content creation","Branding","Visual identity","Graphic design","Social media communication"]},
+  comunidade:{name:"Community Manager",short:"Community Manager",
+    lead:"Events, meetups and initiatives that bring people together around technology and design. Here, design also means organizing, welcoming and making things happen.",
+    areas:["Community building","Event organization","Host","Sponsor relations","GDG BH","UXis Community"]}
+ },
+ projects:{
+  "mentoria-ux-uxis":{imageAlt:"Mockup showing the UXis Marketplace, UXis Academy and Portfolio Reviewer screens",
+   title:"UX/UI Leadership: Squad Acceleration and Product Governance",
+   summary:"Led the hands-on mentorship of the UXis Community talent acceleration program for new UX/UI designers: 6 designers, 3 squads and 3 products delivered on time.",
+   tags:["UX Design","Mentorship","Squad management"],role:"UX Mentor · Squad leadership",
+   case:{
+    gallery:[{src:"img/uxis-marketplace.jpg",alt:"UXis Marketplace: candidate list with seniority, area and work model filters",caption:"UXis Marketplace · talent search with filters and profiles"},
+             {src:"img/uxis-academy.jpg",alt:"UXis Academy landing page with a call to start learning",caption:"UXis Academy · educational hub landing page"},
+             {src:"img/uxis-avaliador.jpg",alt:"Portfolio Reviewer: results chart and course recommendations",caption:"Portfolio Reviewer · report with results and recommendations"}],
+    stats:[["6","designers mentored"],["3","squads under my leadership"],["3","products delivered"],["100%","delivered on time"]],
+    sections:[
+     {id:"visao",title:"Overview & Leadership Challenge",blocks:[
+      {p:"At the UXis Community, I led the **hands-on mentorship of the acceleration program for new UX/UI talent**. The program was designed to develop **6 designers**, originally split into **3 autonomous squads** working on strategic community projects."},
+      {label:"The challenge",callout:"Initially responsible for the technical leadership of 1 squad, I had to **urgently take over the management and guidance of the other 2 squads** during the program. The core goal was to **unify visual governance, speed up product delivery and give the teams technical autonomy** without compromising deadlines or consistency."}]},
+     {id:"escopo",title:"Products Under My Management",blocks:[
+      {cards:[["UXis Marketplace","A connections platform designed to **centralize members' portfolios** and connect them directly with **recruiters and opportunities** in the tech market."],
+              ["UXis Academy","An educational hub built to **map and guide the UX/UI learning journey**, bringing together the community's courses, articles and learning paths."],
+              ["Portfolio Reviewer","An interactive diagnostic tool that assesses the **maturity level of junior designers' portfolios**, generating **strategic reports** with improvement recommendations."]]}]},
+     {id:"atuacao",title:"Strategic Role & Squad Management",blocks:[
+      {steps:[["Scaling Leadership & Fast Replanning","When I took **full command of the 3 squads**, I ran an immediate diagnosis of workflow bottlenecks. I **redefined critical scopes (MVP)**, reorganized delivery schedules and set up lightweight agile rituals (weekly syncs and design critiques) to keep pace and clear priorities."],
+              ["Governance & Standardization (Design System & QA)","To avoid discrepancies between each pair's deliverables, I set **clear Quality Assurance (QA) criteria and interface consistency guidelines**, making sure the three products spoke the same visual language as the UXis ecosystem."],
+              ["Mentorship Based on Guided Autonomy","I acted as a **strategic bridge between community stakeholders and the teams**. I guided the teams through decisions on information architecture, user research and navigation, **encouraging them to solve complex problems on their own** instead of handing out ready-made answers."]]}]},
+     {id:"resultados",title:"Program Results & Impact",blocks:[
+      {kpis:[["100%","of products delivered on time","All 3 projects (Marketplace, Academy and Portfolio Reviewer) were completed within the set deadline, keeping the UX standard and staying true to the strategic requirements."],
+             ["3 squads","Seamless continuity","The move to unified leadership of 3 squads happened **with no delays in the production pipeline** and no loss of motivation in the volunteer team."],
+             ["6 designers","Talent development","The 6 mentored designers grew in **technical maturity** (systems thinking, rationale behind decisions and high-fidelity prototyping) and in **readiness for the job market**."]]}]},
+     {id:"aprendizados",title:"Leadership Learnings",blocks:[
+      {list:[["Operational Pivoting","Quickly resizing processes when team capacity changes is essential to **protect the MVP delivery**."],
+             ["Leading Through Influence and Empathy","In volunteer environments, **ongoing motivation and a clear sense of purpose** are the main drivers of engagement and high performance."],
+             ["Balancing Direction and Autonomy","Delegating safely requires **clear guardrails** (design system, review rituals) to allow creative freedom without losing the coherence of the final product."]]}]}
+    ]}},
+  "linkedin-qr-code":{imageAlt:"Mockup of two phones showing the redesigned LinkedIn profile and QR Code",
+   title:"LinkedIn QR Code: from hidden in search to 2 taps from your profile",
+   summary:"A test with 53 users showed that 73.5% didn't know the feature existed and 38% couldn't reach it. I proposed a new flow that moves the QR Code to the profile and cuts access from 4 taps to 2.",
+   tags:["Product Design","UX Research","Information architecture","Mobile"],role:"Product Designer (End-to-End)",
+   case:{
+    gallery:[{video:"img/linkedin-fluxo.mp4",poster:"img/linkedin-fluxo-poster.jpg",alt:"Prototype video: from the feed to the profile drawer and the QR Code screen",caption:"Prototype · from the feed to the QR Code in 2 taps"}],
+    stats:[["53","test participants"],["73.5%","didn't know the feature"],["38%","failed or gave up"],["4 → 2","taps to the QR Code"]],
+    sections:[
+     {id:"visao",title:"Project Overview",blocks:[
+      {p:"QR Code sharing in the LinkedIn mobile app was designed to speed up in-person networking. However, the current information architecture **requires multiple steps and hides the tool in the search bar**, creating navigation friction and **low discovery rates**."},
+      {p:"This Product Design case study evaluates the current journey through **quantitative and qualitative testing**, proposing a new access flow from the user's profile to **reduce time on task and remove drop-off points**."}]},
+     {id:"atuacao",title:"Scope of Work",blocks:[
+      {cards:[["Role","Product Designer (End-to-End)."],
+              ["Scope","UX Research, Navigation Data Analysis, Information Architecture, Prototyping and Interaction Design."],
+              ["Context","Product optimization study presented as the final project of the UX Design postgraduate program at PUCRS."]]}]},
+     {id:"pesquisa",title:"Usability Research and Data Analysis",blocks:[
+      {p:"To validate the hypothesis of a **mismatch with users' mental model**, I ran an **unmoderated usability test on Maze** with a sample of **53 participants**."},
+      {label:"Test scenario",callout:"Find and display your own profile QR Code in the mobile app."},
+      {h:"Quantitative Metrics"},
+      {kpis:[["73.5%","Feature unawareness","39 of the 53 participants said they didn't know the feature existed in the app."],
+             ["38%","Failure/abandonment rate","More than a third of users didn't complete the task or ended up on the wrong screen."],
+             ["+60s","Average time on task","Too long for a feature whose main value is instant speed in the physical world."]]}]},
+     {id:"friction",title:"Friction Point Mapping (Qualitative)",blocks:[
+      {steps:[["Broken Mental Model","Users expect to find their own identification data (like the QR Code) **inside the Profile hub**, not visually tied to the Global Search component."],
+              ["Too Many Secondary Taps","The original flow requires the route `Feed → Search Bar → Secondary QR Code Icon → My Code tab`, adding **unnecessary friction**."]]}]},
+     {id:"solucao",title:"Proposed Solution: Restructuring the Profile Flow",blocks:[
+      {p:"The proposed solution redesigned the access model to match the app to users' **expectations of immediate navigation**:"},
+      {steps:[["Quick Actions Drawer on the Profile","Tapping the profile photo/avatar in the feed opens a **contextual menu with a direct shortcut to \"My QR Code\"**."],
+              ["Fewer Steps (Clicks to Task)","The new flow shortens the journey **from 4 taps to 2**, removing the dependency on the search component."],
+              ["Context Preservation","Navigation happens through surface components (drawers/modals), **keeping users anchored in their original browsing session**."]]}]},
+     {id:"resultados",title:"Impact Hypotheses and Validation Metrics",blocks:[
+      {p:"Since this is a **redesign proposal** for the feature, the new navigation structure was designed to reach the following **success indicators (Benchmarking)** in a next round of testing:"},
+      {kpis:[["< 5s","TTF (Time to Find) reduction goal","Projected drop in the time to find the feature from +60s to under 5s, enabled by direct access through the contextual menu."],
+             ["4 → 2","Less friction (Task Efficiency)","Journey shortened from 4 taps to 2 starting from the home feed."],
+             ["> 90%","Projected completion rate","Goal of raising direct task success to >90% (addressing the 38% failure/abandonment found in the legacy flow)."]]}]}
+    ]}},
+  "design-system-greenole":{imageAlt:"Design System screens in perspective: color palette, typography, buttons and shadows",
+   title:"Building and Governing the Design System",
+   summary:"A Design System built from scratch in Figma: tokens, a component library and governance that standardized the new visual identity and brought Design and Development closer together.",
+   tags:["Design System","Figma","UI Design","Governance"],role:"Product Designer · Design System",
+   case:{
+    gallery:[{src:"img/ds-cores.svg",alt:"Design System primary palette: purple-400 to purple-900 tokens with hex and rgb",caption:"Foundations · primary palette ($purple-400 to $purple-900)"},
+             {src:"img/ds-tipografia.svg",alt:"H1 to H4 heading scale with weight, size and line height",caption:"Foundations · heading type scale"},
+             {src:"img/ds-botoes.svg",alt:"Primary, secondary and tertiary buttons in default and hover states",caption:"Components · buttons, variants and states"},
+             {src:"img/ds-sombras.svg",alt:"Shadow tokens shadow-sm, shadow-md and shadow-lg with their values",caption:"Foundations · elevation and shadows"}],
+    stats:[["0 → 1","Design System built from scratch"],["Tokens","primitive and semantic"],["WCAG","contrast checked"],["1:1","components in Figma and code"]],
+    sections:[
+     {id:"visao",title:"Overview & Challenge",blocks:[
+      {p:"As the product evolved, we saw the need to **refresh the interface and standardize visual elements**. The platform had **duplicated components, unnecessary screen variations and misaligned patterns** between Design and Development."},
+      {label:"The challenge",callout:"Build a structured Design System in Figma from scratch (tokens, component library and guidelines), delivering the brand's new visual identity, speeding up the team's prototyping and reducing rework at handoff."}]},
+     {id:"atuacao",title:"My Role & Responsibilities",blocks:[
+      {cards:[["Role","Product Designer responsible for the architecture and maintenance of the Design System."],
+              ["Scope","Audit of the current interface, token hierarchy structure, Figma library creation (with Auto Layout, Variables and Component Properties) and technical handoff documentation."]]}]},
+     {id:"processo",title:"Building Process",blocks:[
+      {h:"Current UI Audit"},
+      {ul:["**Global screen mapping** to identify visual inconsistencies (misaligned buttons, typography variations, unstandardized modals and palettes).",
+           "Mapping of the main **friction points reported by developers** when implementing new features."]},
+      {h:"Tokens and Foundations"},
+      {steps:[["Color and Typography","Structuring **primitive and semantic tokens** to ensure consistency and make branding easier to apply."],
+              ["Spacing and Grid","Standardizing **spacing and elevation scales** to make layouts more predictable and responsive."],
+              ["Accessibility","Checking **contrast (WCAG)** on the main color combinations to ensure good readability and visual accessibility."]]},
+      {h:"Figma Library"},
+      {ul:["Creating **atomic components** (buttons, inputs, badges, icons) up to more complex structures (cards, modals and tables).",
+           "Using advanced Figma features (**Auto Layout, Variables, Variants and Components**) to keep the library lightweight and easy to use."]},
+      {h:"Heuristics and Cognitive Biases"},
+      {p:"I applied **Nielsen's heuristics** and knowledge of **cognitive biases** to make components more predictable, consistent and easy to use. Principles such as **consistency and standards, visibility of system status and error prevention** guided the interaction of buttons, fields, modals and messages. I also considered **mental models and recognizable patterns** to reduce cognitive load and guide visual and behavioral decisions."},
+      {h:"Documentation and Governance"},
+      {ul:["Creating the **usage guide in Figma** (behavior specs, component states and variations).",
+           "Frequent alignment with the development team to ensure **parity between Figma components and code**.",
+           "Defining an **internal flow for requesting, approving and creating new components** as needs arise."]}]},
+     {id:"resultados",title:"Results and Impact",blocks:[
+      {cards2:[["Faster Prototyping","A significant reduction in the time the team takes to deliver new flows and high-fidelity screens."],
+               ["Visual Consistency","Full standardization of the product with the company's new visual identity."],
+               ["Alignment with Developers","Fewer questions and adjustments during development sprints thanks to clear component and token standards."],
+               ["Continuous Evolution","A clear maintenance process so the Design System keeps growing in an organized way."]]}]},
+     {id:"aprendizados",title:"Learnings",blocks:[
+      {list:[["A Design System is a Product","It requires **ongoing maintenance, active listening to teams and clear governance** to keep being used day to day."],
+             ["Communication Between Design and Dev","Clear documentation and **consistent naming** close the gap between what is designed and what is coded."],
+             ["Simple Processes Speed Up Delivery","Flexible, well-organized components in Figma **free designers to focus on solving user problems**, not on assembling screens."]]}]}
+    ]}},
+  "arquitetura-informacao-saas":{imageAlt:"Miro boards with the navigation test and card sorting for the new information architecture",
+   title:"Information Architecture Restructuring: Reducing Cognitive Load and Validating Navigation in a SaaS Platform",
+   summary:"A new global navigation driven by user intent, validated with 8 participants through task-based navigation testing and closed card sorting.",
+   tags:["Information Architecture","UX Research","Card Sorting","SaaS"],role:"Product Designer · Information Architecture",
+   case:{
+    gallery:[{src:"img/ia-sessao.jpg",alt:"Remote card sorting session on Miro, with the faces on the video call blurred",caption:"Sample · card sorting session"}],
+    stats:[["8","participants in individual sessions"],["2","UX Research methods"],["6","intent-driven domains"],["~80–90%","convergence in 3 domains"]],
+    sections:[
+     {id:"visao",title:"Overview & Business Challenge",blocks:[
+      {p:"As the platform grew incrementally, the original information architecture piled up structural debt: **fragmented modules**, operational, analytical and administrative functions **mixed at the same level** and **high cognitive load in the main menu**."},
+      {label:"The challenge",callout:"Reorganize the system's global navigation into functional domains driven by user intent, reducing search complexity, improving findability and creating a scalable foundation for product growth."}]},
+     {id:"arquitetura",title:"New Architecture (Intent-Driven)",blocks:[
+      {p:"The ecosystem was split into domains based on users' **mental states and tasks**:"},
+      {cards:[["Dashboard Builder","Create: editing and building tools."],
+              ["My Dashboards","Consume: library and viewing of saved dashboards."],
+              ["Analysis Center","Analyze: analytics, reports and trends."],
+              ["Data Management","Configure data: infrastructure, integrations, data sources and devices."],
+              ["Administration","Administer: access control, users, permissions, logs and global settings."],
+              ["Help & Support","Get support and technical assistance."]]}]},
+     {id:"metodologia",title:"User Validation Methodology",blocks:[
+      {p:"To avoid reorganizing based on assumptions, I ran **individual sessions with 8 participants**, combining two complementary UX Research methods:"},
+      {steps:[["Phase 1 · Task-Based Navigation Test","Validate **label clarity and first-click intuition**. Participants pointed to where they would click to complete real tasks (create a dashboard, set up an integration, add a user, check an alert) with no prior context."],
+              ["Phase 2 · Closed Card Sorting","Validate the **structural soundness of the groupings**. Participants sorted real platform items (Analytics, Reports, Alerts, Users, Logs, Insights) into the predefined categories."]]}]},
+     {id:"resultados",title:"Research Results & UX Metrics",blocks:[
+      {p:"The study produced **convergence indicators per domain** and revealed patterns in users' mental models."},
+      {h:"Structural Validation Matrix"},
+      {matrix:[["Dashboard Builder","~80–90%","alta","Clear separation between the building and consuming mindsets."],
+               ["My Dashboards","~80–90%","alta","Consumption library well understood by users."],
+               ["Administration","~80–90%","alta","Unified mental model for governance, users, logs and permissions."],
+               ["Data Management","~60–70%","media","Recognition that infrastructure and data sources are a technical layer of their own."],
+               ["Analysis Center","~60–70%","media","The analytics concept is understood, but the hub's scope needs semantic improvements."],
+               ["Alerts & Insights","~40–50%","baixa","Semantic ambiguity: the feature was associated with both operational alerts and dashboard insights."]]}]},
+     {id:"insights",title:"Key Behavioral Insights",blocks:[
+      {list:[["Task-oriented mental model","Users don't think in technical modules but in immediate actions: **Create, View, Analyze and Configure**. Separating Dashboard Builder (creation) from My Dashboards (consumption) **removed the previous cognitive friction**."],
+             ["Centralized governance","Control, logs, security and access management are naturally seen as **a single administrative ecosystem**."],
+             ["Ambiguity in Alerts and Insights","Alerts were associated both with operational notifications on the home screen and with metrics inside dashboards. Insights, in turn, are understood as **the outcome of an analysis**, not as a standalone tool."]]}]},
+     {id:"decisoes",title:"Design Decisions & Refinement",blocks:[
+      {p:"Based on the data, the proposal was adjusted before aligning with **Product and Engineering**:"},
+      {ul:["**Cross-cutting alerts:** instead of isolating Alerts in one category, alerts became a cross-cutting element, with system notifications in the global bar and contextual indicators inside each dashboard.",
+           "**Contextual insights:** integrated into the Analysis Center and report consumption, reinforcing their role as an analytical outcome.",
+           "**Lower handoff risk:** the data-validated reorganization gave the team the confidence to implement the navigation **without the risk of rework or post-launch rejection**."]}]},
+     {id:"impacto",title:"Project Impact",blocks:[
+      {cards2:[["Data-validated structure","Navigation decisions backed by user testing."],
+               ["Scalable architecture","A solid foundation for adding new features without cluttering the main menu."],
+               ["Lower cognitive load","An organization aligned with the mental models mapped in the navigation tests."]]}]}
+    ]}},
+  "devfest-bh":{imageAlt:"DevFest BH 2026 organizers on stage with the audience in the background",
+   subtitle:"The Biggest Google Community Tech Event in BH",
+   summary:"As a GDG BH organizer, I took part in managing and running DevFest BH, the first edition to bring together more than 1,000 people at Minascentro. Beyond organizing the AI- and product-focused event, I led the full art direction and visual communication, from the website to the physical pieces at the venue.",
+   tags:["Event","GDG BH"],date:"October 2026",role:"Organizer · Identity and communication",
+   buttons:[{label:"Event website",href:"https://gdgbh.com.br/devfest-2026"}]},
+  "uxis-talk-youtube":{imageAlt:"Marianne Fernandes presenting at UXis Talks #005",
+   subtitle:"International Careers & Hiring Processes Abroad",
+   summary:"A conversation with guest Marianne Fernandes focused on demystifying the international market for designers, from preparing your résumé/LinkedIn and the English level required to the stages of hiring processes at startups and Big Techs.",
+   topics:["International career","English for UX","LinkedIn","Hiring processes"],
+   tags:["Talk","UXis Community"],date:"October 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/live/-ojy6o4Dxlk"}]},
+  "uxis-talks-004":{imageAlt:"Ju Ribeiro, Thamiris Garcia and Davi Aires at UXis Talks #004",
+   subtitle:"Recruiting & Hiring Designers in Today's Market",
+   summary:"An in-depth discussion with guest Thamiris Garcia, Design recruiter at Itaú, about how recruiters evaluate designers, the impact of artificial intelligence on hiring, how to structure a strong portfolio and storytelling, and what really makes a candidate stand out at large companies.",
+   tags:["Talk","UXis Community"],date:"September 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/live/BLOaaXAPIJI"}]},
+  "uxis-talks-003":{imageAlt:"Ju Ribeiro, Vitor David and Davi Aires at UXis Talks #003",
+   subtitle:"Digital Accessibility Beyond the Checklist",
+   summary:"A deep dive with guest Vitor David (Bradesco Seguros / ABNT) into the culture and practice of accessibility in design, discussing how to integrate it into the business and into ABNT/WCAG guidelines without treating it as just a list of tedious requirements.",
+   tags:["Talk","UXis Community"],date:"August 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/live/OfVHJd5OgvY"}]},
+  "uxis-talks-002":{imageAlt:"Ju Ribeiro, Davi Aires and Luan Mateus at UXis Talks #002",
+   subtitle:"The Art of Selling Yourself and Service Design in Practice",
+   summary:"A conversation with guest Luan Mateus (Papo de UX / Specialist Designer) about the strategic value of professional visibility, office politics and applying service design and problem solving beyond the digital world.",
+   tags:["Talk","UXis Community"],date:"July 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/live/je5oQWthn20"}]},
+  "uxis-talks-001":{imageAlt:"Promotional card for UXis Talks #001 with Filipe Nzongo",
+   subtitle:"Sustainable Design, Academic Research and a Global Career",
+   summary:"An in-depth debate with guest Filipe Nzongo (Designer, Researcher and PhD Candidate) on applying persuasive and sustainable design to complex systems, moving into careers and research abroad, and the value of theoretical rigor amid advances in AI.",
+   tags:["Talk","UXis Community"],date:"July 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/live/1riG0qVnrVM"}]},
+  "google-io-extended-bh-2026":{imageAlt:"Google I/O Extended BH 2026 audience with the GDG BH flag",
+   subtitle:"Streaming & Unpacking the Google I/O Announcements",
+   summary:"As a GDG BH organizer, I helped manage and run Google I/O Extended BH, streaming the main AI and Web launches with a World Cup vibe. I was responsible for the overall organization of the event and designed the visual identity, inspired by Brazil to connect global news with local pride and energy.",
+   tags:["Event","GDG BH"],date:"June 2026",role:"Organizer · Visual identity",
+   buttons:[{label:"Event website",href:"https://gdgbh.com.br/google-io-extended-2026"}]},
+  "iwd-bh-2026":{imageAlt:"IWD BH 2026 participants in the auditorium with the Women Techmakers flag",
+   subtitle:"Celebrating & Empowering Women in Tech",
+   summary:"As a WTM/GDG BH organizer and volunteer, I helped manage and run the local edition of International Women's Day (IWD). Beyond organizing the event, focused on equity, women's leadership and tech innovation, I led the art direction and visual identity for the edition's digital and physical pieces.",
+   tags:["Event","Women Techmakers","GDG BH"],date:"March 2026",role:"Organizer · Art direction",
+   buttons:[{label:"Event website",href:"https://gdgbh.com.br/iwd-2026"}]},
+  "gdg-bh-meet-2":{imageAlt:"GDG BH Meet #2 participants gathered on the bleachers",
+   subtitle:"Dev Community Meetup, Networking & Knowledge Sharing",
+   summary:"As a GDG BH organizer, I helped manage and run the community's in-person meetup, focused on technical talks, connecting professionals and sharing experiences in product and development. I supported the event's organization and created the visual communication and promotional pieces.",
+   tags:["Meetup","GDG BH"],date:"January 2026",role:"Organization · Visual communication",
+   buttons:[{label:"Event website",href:"https://gdgbh.com.br/gdg-bh-meet-2"}]}
+ },
+ traj:[
+  {periodo:"2025 — Present",cargo:"Community Organizer",empresa:"Google Developer Group (GDG BH)",
+   descricao:"Planning and running tech meetups, workshops and conferences, coordinating partners, speakers and sponsors. Responsible for visual identity, communication pieces and strengthening the dev ecosystem in Belo Horizonte.",
+   tags:["Community Building","Tech events","Art direction","Partnerships"]},
+  {periodo:"2023 — Present",cargo:"Community Manager",empresa:"UXis Community",
+   descricao:"Strategic work on community support, retention and growth, driving the launch of new initiatives. Responsible for networking with partners and hosting talks and live streams on YouTube.",
+   tags:["Community Management","Host","Networking","Engagement"]},
+  {empresa:"Greenole",periodo:"2023 — 2026",grupo:[
+   {periodo:"2025 — 2026",cargo:"Product Designer",
+     descricao:"Strategic work on the architecture of complex SaaS modules, Design System governance and structuring the documentation workflow in Figma and Confluence. Applied AI to speed up the team's research and prototyping.",
+     tags:["Product Design","Design System","AI","Documentation","Information architecture"]},
+   {periodo:"2023 — 2025",cargo:"UX/UI Designer",
+     descricao:"Introduced Figma to standardize collaboration with engineering and ran data-driven research and usability tests. End-to-end design of flows and interfaces, turning complex SaaS requirements into intuitive journeys.",
+     tags:["UX Research","UI Design","Usability","SaaS","Figma"]}]},
+  {periodo:"2023",cargo:"UX Mentor",empresa:"UXis Community",
+   descricao:"Led volunteer groups and provided hands-on mentorship to junior designers. Guided the development and delivery of real projects using agile methods across 3 different community initiatives.",
+   tags:["Mentorship","Leadership","Agile methods","Volunteering"]},
+  {periodo:"2022 — Present",cargo:"Freelance Designer",empresa:"Self-employed",
+   descricao:"Versatile work on Graphic Design, UX/UI, Social Media and branding projects. Built websites and interactive digital experiences using no-code platforms and cloud infrastructure for a wide range of clients and niches.",
+   tags:["UX/UI Design","No-code","Branding","Social Media","Freelance"]},
+  {periodo:"2017 — 2022",cargo:"Healthcare",empresa:"",
+   descricao:"A period working professionally in healthcare, before returning to design.",
+   tags:[]},
+  {periodo:"2015 — 2017",cargo:"Designer",empresa:"IDÊ Ateliê",
+   descricao:"Created and developed custom prints and graphic art for a variety of products and textiles. Worked directly with clients to align exclusive briefs and managed the brand's visual content on social media.",
+   tags:["Product design","Graphic design","Print design","Social media"]}
+ ]
+};
+
+/* ---------- idioma ---------- */
+let LANG=(()=>{try{const s=localStorage.getItem('lang');if(s==='pt'||s==='en')return s}catch(e){}return /^pt/i.test(navigator.language||'pt')?'pt':'en'})();
+const t=(pt,en)=>LANG==='en'?en:pt;
+const clone=o=>JSON.parse(JSON.stringify(o));
+const merge=(a,b)=>{if(!b)return clone(a);const o=clone(a);for(const k in b){o[k]=(b[k]&&typeof b[k]==='object'&&!Array.isArray(b[k])&&o[k]&&typeof o[k]==='object'&&!Array.isArray(o[k]))?merge(o[k],b[k]):clone(b[k])}return o};
+const PT_DATA={cats:clone(CATS),projects:clone(PROJECTS),traj:clone(TRAJETORIA)};
+function applyLang(){
+  const en=LANG==='en';
+  for(const k in PT_DATA.cats)Object.assign(CATS[k],merge(PT_DATA.cats[k],en?EN.cats[k]:null));
+  PROJECTS.splice(0,PROJECTS.length,...PT_DATA.projects.map(p=>merge(p,en?EN.projects[p.slug]:null)));
+  TRAJETORIA.splice(0,TRAJETORIA.length,...(en?clone(EN.traj):clone(PT_DATA.traj)));
+  document.documentElement.lang=en?'en':'pt-BR';
+  const sk=document.getElementById('skip');if(sk)sk.textContent=en?'Skip to content':'Pular para o conteúdo';
+}
+function setLang(l){LANG=l;try{localStorage.setItem('lang',l)}catch(e){}applyLang();document.getElementById("ftr").innerHTML=Footer();const y=scrollY;route();window.scrollTo(0,y)}
+applyLang();
 
 /* ===================================================================== */
 const main=document.getElementById('main');
@@ -978,28 +1257,29 @@ const ProjectCard=p=>{
   const ev=p.cat==='comunidade',b=ev&&(p.buttons||[])[0];
   const href=ev?(b&&b.href):caseHref(p),ext=href&&/^https?:/.test(href);
   const inner=`<div class="pcover">${cover(p)}</div>
-  <div class="pbody"><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${Tags(p.tags)}${href?`<span class="more">${esc(ev?b.label:'Ver case')} ${ext?'↗':ARROW}</span>`:''}</div>`;
+  <div class="pbody"><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${Tags(p.tags)}${href?`<span class="more">${esc(ev?b.label:t('Ver case','View case'))} ${ext?'↗':ARROW}</span>`:''}</div>`;
   return `<article class="pcard reveal" data-tags="${esc((p.tags||[]).join('|'))}">${href?`<a href="${esc(href)}"${ext?' target="_blank" rel="noopener"':''}>${inner}</a>`:`<div>${inner}</div>`}</article>`;
 };
 
 const HCard=p=>`<article class="ccard reveal">
-  <div class="cphoto">${cover(p,p.cat==='comunidade'?'foto provisória':'imagem provisória')}</div>
-  <div class="cinfo"><div class="tags">${p.cat==='digital'?'':Tag(p.date,'t-date')}${orgTags(p)}</div><h3>${esc(p.title)}</h3>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p>${esc(p.summary)}</p>${p.cat==='comunidade'?(p.topics?`<div class="tags ctopics">${p.topics.map(t=>Tag(t)).join('')}</div>`:''):Tags(p.tags)}<div class="btns">${(p.buttons||[{label:p.cat==='comunidade'?'Explorar projeto':'Ver case',href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
+  <div class="cphoto">${cover(p,p.cat==='comunidade'?t('foto provisória','placeholder photo'):t('imagem provisória','placeholder image'))}</div>
+  <div class="cinfo"><div class="tags">${p.cat==='digital'?'':Tag(p.date,'t-date')}${orgTags(p)}</div><h3>${esc(p.title)}</h3>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p>${esc(p.summary)}</p>${p.cat==='comunidade'?(p.topics?`<div class="tags ctopics">${p.topics.map(t=>Tag(t)).join('')}</div>`:''):Tags(p.tags)}<div class="btns">${(p.buttons||[{label:p.cat==='comunidade'?t('Explorar projeto','Explore project'):t('Ver case','View case'),href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
 const yearOf=p=>((p.date||'').match(/\d{4}/)||[''])[0];
 const Row=p=>`<article class="row reveal" data-year="${yearOf(p)}" data-org="${[].concat(p.org||[]).join(' ')}"><div class="rimg">${cover(p,'provisória')}</div>
   <div class="rbody"><div class="rhead"><h3>${esc(p.title)}</h3><div class="rmeta"><span class="rdate">${esc(p.date)}</span>${orgTags(p)}</div></div>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p class="rdesc">${esc(p.summary)}</p>
-  <div class="btns">${(p.buttons||[{label:'Explorar projeto',href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
-const orgTags=p=>[].concat(p.org||[]).map(o=>ORG_TAG[o]||'').join('');
-const ORG_TAG={wtm:'<span class="tag t-wtm">Women Techmakers BH</span>',gdg:'<span class="tag t-gdg"><i></i><i></i><i></i><i></i>GDG BH</span>',uxis:'<span class="tag t-uxis">✦ Comunidade UXis</span>'};
+  <div class="btns">${(p.buttons||[{label:t('Explorar projeto','Explore project'),href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
+const orgTags=p=>[].concat(p.org||[]).map(o=>(ORG_TAG[o]||'').replace('UXIS_LBL',t('Comunidade UXis','UXis Community'))).join('');
+const ORG_TAG={wtm:'<span class="tag t-wtm">Women Techmakers BH</span>',gdg:'<span class="tag t-gdg"><i></i><i></i><i></i><i></i>GDG BH</span>',uxis:'<span class="tag t-uxis">✦ UXIS_LBL</span>'};
 const LinkBtn=(b,cls)=>{const ext=/^https?:/.test(b.href||'');return b.href?`<a class="btn ${cls}" href="${esc(b.href)}"${ext?' target="_blank" rel="noopener"':''}>${esc(b.label)}${ARROW}</a>`:`<a class="btn ${cls}" href="#${location.hash.slice(1)||'inicio'}" data-pending>${esc(b.label)}${ARROW}</a>`};
-const CvButton=()=>CONFIG.cv?`<a class="btn" href="${esc(CONFIG.cv)}" target="_blank" rel="noopener">Ver currículo${ARROW}</a>`:`<a class="btn" href="#sobre" data-cv-missing>Ver currículo${ARROW}</a>`;
+const CvButton=()=>CONFIG.cv?`<a class="btn" href="${esc(CONFIG.cv)}" target="_blank" rel="noopener">${t('Ver currículo','View résumé')}${ARROW}</a>`:`<a class="btn" href="#sobre" data-cv-missing>${t('Ver currículo','View résumé')}${ARROW}</a>`;
 
 const SectionHead=(title,lead,extra)=>`<div class="shead reveal"><div><h2>${title}</h2>${lead?`<p class="lead">${esc(lead)}</p>`:''}</div>${extra||''}</div>`;
 
 const byCat=c=>PROJECTS.filter(p=>p.cat===c);
 const featured=(c,n)=>{const f=byCat(c).filter(p=>p.featured);return (f.length?f:byCat(c)).slice(0,n)};
 
-const AREA_BLURB={digital:'Produtos, interfaces, sites e landing pages.',comunicacao:'Marcas, campanhas, conteúdo e direção de arte.',comunidade:'Eventos e comunidades de tecnologia e design.'};
+const AREA_BLURB_I={digital:['Produtos, interfaces, sites e landing pages.','Products, interfaces, websites and landing pages.'],comunicacao:['Marcas, campanhas, conteúdo e direção de arte.','Brands, campaigns, content and art direction.'],comunidade:['Eventos e comunidades de tecnologia e design.','Tech and design events and communities.']};
+const AREA_BLURB=new Proxy({},{get:(o,k)=>AREA_BLURB_I[k]&&t(...AREA_BLURB_I[k])});
 const AREA_STYLE={digital:['#7138D5','#fff'],comunicacao:['#FF704E','#25212B'],comunidade:['#C4F05A','#25212B']};
 function WorksSection(){
   const all=['digital','comunidade','comunicacao'].filter(k=>CATS[k]);const keys=all.filter(k=>!isSoon(k));
@@ -1007,11 +1287,11 @@ function WorksSection(){
    :`<button class="area" type="button" role="tab" id="tab-${k}" aria-controls="panel-${k}" aria-selected="${k===keys[0]}" tabindex="${k===keys[0]?0:-1}" data-area="${k}" style="--c:${AREA_STYLE[k][0]};--fg:${AREA_STYLE[k][1]}">
      <span class="an">${esc(CATS[k].name)}${ARROW}</span><p>${esc(AREA_BLURB[k])}</p></button>`).join('');
   const panels=keys.map((k,i)=>`<div class="panel" role="tabpanel" id="panel-${k}" aria-labelledby="tab-${k}"${i?' hidden':''} style="--c:${AREA_STYLE[k][0]};--fg:${AREA_STYLE[k][1]}">
-     <div class="panel-h"><h3>${k==='comunidade'?'Últimos eventos':'Em destaque'}</h3>${Button(k==='comunidade'?'Ver todos os eventos':'Ver todos os projetos','#'+CATS[k].route,'btn-lima')}</div>
+     <div class="panel-h"><h3>${k==='comunidade'?t('Últimos eventos','Latest events'):t('Em destaque','Featured')}</h3>${Button(k==='comunidade'?t('Ver todos os eventos','See all events'):t('Ver todos os projetos','See all projects'),'#'+CATS[k].route,'btn-lima')}</div>
      <div class="pgrid">${featured(k,2).map(ProjectCard).join('')}</div></div>`).join('');
   return `<section class="band" id="sec-trabalhos" aria-labelledby="h-trab"><div class="wrap">
-    <div class="shead reveal"><div><h2 id="h-trab">Projetos</h2><p class="lead">Produto, marca e gente: escolha por onde começar.</p><p class="hint">* Passe o mouse ou toque em uma área para ver os destaques.</p></div></div>
-    <div class="works"><div class="areas" role="tablist" aria-label="Áreas de trabalho">${tabs}</div><div>${panels}</div></div>
+    <div class="shead reveal"><div><h2 id="h-trab">${t('Projetos','Projects')}</h2><p class="lead">${t('Produto, marca e gente: escolha por onde começar.','Product, brand and people: pick where to start.')}</p><p class="hint">${t('* Passe o mouse ou toque em uma área para ver os destaques.','* Hover over or tap an area to see the highlights.')}</p></div></div>
+    <div class="works"><div class="areas" role="tablist" aria-label="${t('Áreas de trabalho','Work areas')}">${tabs}</div><div>${panels}</div></div>
   </div></section>`;
 }
 function selectArea(k,focus){
@@ -1022,27 +1302,32 @@ function selectArea(k,focus){
 }
 
 const Contact=()=>`<section class="band b-roxo contact" id="sec-contato" aria-labelledby="h-contato"><div class="wrap">
-  <h2 id="h-contato" class="reveal">Bora criar algo junto?</h2>
-  <p class="lead reveal">Tem um produto, uma marca, um evento ou aquela ideia meio maluca que ainda não tem nome? Me conta. Eu adoro começar pela conversa.</p>
+  <h2 id="h-contato" class="reveal">${t('Bora criar algo junto?',"Let's create something together?")}</h2>
+  <p class="lead reveal">${t('Tem um produto, uma marca, um evento ou aquela ideia meio maluca que ainda não tem nome? Me conta. Eu adoro começar pela conversa.',"Got a product, a brand, an event or that slightly wild idea that doesn't have a name yet? Tell me about it. I love starting with a conversation.")}</p>
   <div class="clinks reveal">
-   <div class="clink"><small>E-mail</small><strong>${esc(CONFIG.email)}</strong><button class="copy" type="button" data-copy="${esc(CONFIG.email)}">Copiar e-mail</button></div>
+   <div class="clink"><small>${t('E-mail','Email')}</small><strong>${esc(CONFIG.email)}</strong><button class="copy" type="button" data-copy="${esc(CONFIG.email)}">${t('Copiar e-mail','Copy email')}</button></div>
    <a class="clink" href="${esc(CONFIG.linkedin)}" target="_blank" rel="noopener"><small>LinkedIn</small><strong>${esc(CONFIG.linkedinLabel)} ↗</strong></a>
-   ${CONFIG.whatsapp?`<a class="clink" href="https://wa.me/${esc(CONFIG.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(CONFIG.whatsappLabel)} (abre em nova aba)"><small>WhatsApp</small><strong>${esc(CONFIG.whatsappLabel)} ↗</strong></a>`:''}
+   ${CONFIG.whatsapp?`<a class="clink" href="https://wa.me/${esc(CONFIG.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(CONFIG.whatsappLabel)} ${t('(abre em nova aba)','(opens in a new tab)')}"><small>WhatsApp</small><strong>${esc(CONFIG.whatsappLabel)} ↗</strong></a>`:''}
   </div>
  </div></section>`;
 
 const SOON=['comunicacao'];const isSoon=k=>SOON.includes(k);
-const SOON_TAG='<span class="soon">Em breve</span>';
-const NAV=[['inicio','Início'],['sobre','Sobre mim'],['experiencias-digitais','Experiências Digitais'],['comunidades','Community Manager'],['visual-design','Visual Design',1],['contato','Contato']];
+const SOON_I=['<span class="soon">Em breve</span>','<span class="soon">Soon</span>'];
+let SOON_TAG=SOON_I[0];
+const NAV_I=[['inicio','Início','Home'],['sobre','Sobre mim','About me'],['experiencias-digitais','Experiências Digitais','Digital Experiences'],['comunidades','Community Manager','Community Manager'],['visual-design','Visual Design','Visual Design',1],['contato','Contato','Contact']];
+let NAV=[];
+function syncUI(){NAV=NAV_I.map(([r,pt,en,soon])=>[r,t(pt,en),soon]);SOON_TAG=SOON_I[LANG==='en'?1:0]}
+syncUI();
 function Header(active){
-  return `<div class="hdr-in"><a class="logo" href="#inicio" aria-label="Ju Ribeiro, página inicial">JU RIBEIRO<sup>®</sup></a>
+  return `<div class="hdr-in"><a class="logo" href="#inicio" aria-label="${t('Ju Ribeiro, página inicial','Ju Ribeiro, home page')}">JU RIBEIRO<sup>®</sup></a>
+  <button class="lang" type="button" data-lang="${LANG==='en'?'pt':'en'}" aria-label="${t('Mudar idioma para inglês','Switch language to Portuguese')}"><span${LANG==='pt'?' class="on"':''}>PT</span><span${LANG==='en'?' class="on"':''}>EN</span></button>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><i></i><span>Menu</span></button>
-  <nav class="nav" id="nav" aria-label="Principal">${NAV.map(([r,l,soon])=>soon?`<span class="nav-soon" aria-disabled="true"><span class="ns-t">${l}${SOON_TAG}</span></span>`:`<a href="#${r}" class="${r==='contato'?'nav-cta':''}"${r===active?' aria-current="page"':''}>${l}</a>`).join('')}<a class="nav-in" href="${esc(CONFIG.linkedin)}" target="_blank" rel="noopener" aria-label="LinkedIn de Ju Ribeiro (abre em nova aba)"><span class="in-ic" aria-hidden="true">in</span><span class="in-tx">LinkedIn ↗</span></a></nav></div>`;
+  <nav class="nav" id="nav" aria-label="${t('Principal','Main')}">${NAV.map(([r,l,soon])=>soon?`<span class="nav-soon" aria-disabled="true"><span class="ns-t">${l}${SOON_TAG}</span></span>`:`<a href="#${r}" class="${r==='contato'?'nav-cta':''}"${r===active?' aria-current="page"':''}>${l}</a>`).join('')}<a class="nav-in" href="${esc(CONFIG.linkedin)}" target="_blank" rel="noopener" aria-label="${t('LinkedIn de Ju Ribeiro (abre em nova aba)',"Ju Ribeiro's LinkedIn (opens in a new tab)")}"><span class="in-ic" aria-hidden="true">in</span><span class="in-tx">LinkedIn ↗</span></a></nav></div>`;
 }
 function Footer(){
   return `<div class="wrap"><div class="ftr-g"><a class="logo" href="#inicio">JU RIBEIRO<sup>®</sup></a>
-  <nav aria-label="Rodapé">${NAV.slice(1).map(([r,l,soon])=>soon?`<span class="ftr-soon" aria-disabled="true">${l}${SOON_TAG}</span>`:`<a href="#${r}">${l}</a>`).join('')}</nav></div>
-  <div class="ftr-b"><span>© ${new Date().getFullYear()} Ju Ribeiro · Designer de Produto & Comunicação</span><span>Entre pixels, pessoas e possibilidades.</span></div></div>`;
+  <nav aria-label="${t('Rodapé','Footer')}">${NAV.slice(1).map(([r,l,soon])=>soon?`<span class="ftr-soon" aria-disabled="true">${l}${SOON_TAG}</span>`:`<a href="#${r}">${l}</a>`).join('')}</nav></div>
+  <div class="ftr-b"><span>© ${new Date().getFullYear()} Ju Ribeiro · ${t('Designer de Produto & Comunicação','Product & Communication Designer')}</span><span>${t('Entre pixels, pessoas e possibilidades.','Between pixels, people and possibilities.')}</span></div></div>`;
 }
 
 /* ---------- páginas ---------- */
@@ -1050,47 +1335,47 @@ function Home(){
   const D=PROJECTS.find(p=>p.cat==='digital')||{slug:'d',cat:'digital'};
   const M=PROJECTS.find(p=>p.cat==='comunicacao')||{slug:'c',cat:'comunicacao',title:'C'};
   const P=PROJECTS.find(p=>p.cat==='comunidade')||{slug:'p',cat:'comunidade'};
-  const words=['UX Design','Product Design','UI Design','Design System','IA aplicada ao Design','B2B e SaaS','Produtos escaláveis','Sites e landing pages','No-code','Identidade visual','Conteúdo','Comunidades','Eventos'];
+  const words=t(['UX Design','Product Design','UI Design','Design System','IA aplicada ao Design','B2B e SaaS','Produtos escaláveis','Sites e landing pages','No-code','Identidade visual','Conteúdo','Comunidades','Eventos'],['UX Design','Product Design','UI Design','Design System','AI applied to Design','B2B & SaaS','Scalable products','Websites & landing pages','No-code','Visual identity','Content','Communities','Events']);
   const strip=`<span>${words.map(w=>esc(w)+STAR_ICON).join('')}</span>`;
   return `
   <section class="band b-roxo hero" aria-labelledby="h-hero">
    <svg class="blob" viewBox="0 0 400 400" style="left:-230px;bottom:-200px;width:420px" aria-hidden="true"><path d="M200 20c90 0 180 60 180 170s-80 190-190 190S20 300 20 200 110 20 200 20z" fill="#FF704E" opacity=".9"/></svg>
    <div class="wrap hero-g">
     <div class="hero-t">
-     <span class="sticker">Designer de Produto & Comunicação</span>
-     <h1 id="h-hero">Entre pixels, pessoas e possibilidades.</h1>
+     <span class="sticker">${t('Designer de Produto & Comunicação','Product & Communication Designer')}</span>
+     <h1 id="h-hero">${t('Entre pixels, pessoas e possibilidades.','Between pixels, people and possibilities.')}</h1>
     </div>
     <div class="hero-c"><div class="collage">
-     <a class="tile t1" href="#experiencias-digitais">${art(D,3)}<span class="lbl">Experiências Digitais</span></a>
+     <a class="tile t1" href="#experiencias-digitais">${art(D,3)}<span class="lbl">${t('Experiências Digitais','Digital Experiences')}</span></a>
      <div class="tile t2 tile-soon" aria-disabled="true">${art(M,5)}<span class="lbl lbl-soon">Visual Design${SOON_TAG}</span></div>
-     <a class="tile t3" href="#comunidades">${art(P,2)}<span class="lbl">Comunidades</span></a>
-     <div class="badge">${CONFIG.photo?`<img src="${esc(CONFIG.photo)}" alt="Foto de Ju Ribeiro" style="object-position:50% 30%">`:`<svg viewBox="0 0 100 100" role="img" aria-label="Espaço para a foto da Ju"><rect width="100" height="100" fill="#C4F05A"/><circle cx="50" cy="40" r="17" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/><path d="M18 104c2-26 16-42 32-42s30 16 32 42z" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/></svg><span class="bph">sua foto</span>`}</div>
+     <a class="tile t3" href="#comunidades">${art(P,2)}<span class="lbl">${t('Comunidades','Communities')}</span></a>
+     <div class="badge">${CONFIG.photo?`<img src="${esc(CONFIG.photo)}" alt="${t('Foto de Ju Ribeiro','Photo of Ju Ribeiro')}" style="object-position:50% 30%">`:`<svg viewBox="0 0 100 100" role="img" aria-label="Espaço para a foto da Ju"><rect width="100" height="100" fill="#C4F05A"/><circle cx="50" cy="40" r="17" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/><path d="M18 104c2-26 16-42 32-42s30 16 32 42z" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/></svg><span class="bph">sua foto</span>`}</div>
     </div></div>
     <div class="hero-b">
-     <p>Sou Ju Ribeiro e, há +${CONFIG.years} anos, trabalho na interseção entre design, comunicação e pessoas, unindo estratégia e criatividade para criar experiências com propósito.</p>
-     <div class="btns"><button class="btn btn-lima" type="button" data-scroll="sec-trabalhos">Explorar projetos${ARROW}</button>
-      <a class="btn" href="#sobre">Quem é a Ju</a>
+     <p>${t(`Sou Ju Ribeiro e, há +${CONFIG.years} anos, trabalho na interseção entre design, comunicação e pessoas, unindo estratégia e criatividade para criar experiências com propósito.`,`I'm Ju Ribeiro and, for +${CONFIG.years} years, I've been working at the intersection of design, communication and people, combining strategy and creativity to build meaningful experiences.`)}</p>
+     <div class="btns"><button class="btn btn-lima" type="button" data-scroll="sec-trabalhos">${t('Explorar projetos','Explore projects')}${ARROW}</button>
+      <a class="btn" href="#sobre">${t('Quem é a Ju','Meet Ju')}</a>
       <svg class="scribble" viewBox="0 0 84 46" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M80 40C60 44 30 40 18 22 12 13 22 4 30 10c8 6-2 20-24 22M6 32l4-9M6 32l9 2"/></svg></div>
     </div>
    </div>
   </section>
-  <div class="mq" role="region" aria-label="Áreas de atuação: ${esc(words.join(', '))}"><div class="mq-t" aria-hidden="true">${strip}${strip}</div></div>
+  <div class="mq" role="region" aria-label="${t('Áreas de atuação','Areas of expertise')}: ${esc(words.join(', '))}"><div class="mq-t" aria-hidden="true">${strip}${strip}</div></div>
   ${WorksSection()}
   <section class="band b-lima" aria-labelledby="h-sobre"><div class="wrap about-g">
    <div class="portrait reveal">${portrait()}</div>
-   <div class="reveal"><h2 id="h-sobre" style="margin-bottom:22px">Prazer, Ju.</h2>
-    <p class="big">Designer há +${CONFIG.years} anos, sem caixinha. Minha prática junta UX, interfaces, identidade visual, estratégia, conteúdo e a organização de comunidades e eventos.</p>
-    <p class="lead" style="margin-top:18px">Não escolhi uma especialidade: escolhi as conexões entre elas.</p>
-    <div class="btns">${Button('Conhecer minha trajetória','#sobre','btn-roxo')}${CvButton()}</div></div>
+   <div class="reveal"><h2 id="h-sobre" style="margin-bottom:22px">${t('Prazer, Ju.',"Hi, I'm Ju.")}</h2>
+    <p class="big">${t(`Designer há +${CONFIG.years} anos, sem caixinha. Minha prática junta UX, interfaces, identidade visual, estratégia, conteúdo e a organização de comunidades e eventos.`,`A designer for +${CONFIG.years} years, no boxes. My practice brings together UX, interfaces, visual identity, strategy, content and organizing communities and events.`)}</p>
+    <p class="lead" style="margin-top:18px">${t('Não escolhi uma especialidade: escolhi as conexões entre elas.',"I didn't pick one specialty: I picked the connections between them.")}</p>
+    <div class="btns">${Button(t('Conhecer minha trajetória','See my journey'),'#sobre','btn-roxo')}${CvButton()}</div></div>
   </div></section>
   ${Contact()}`;
 }
 
-const ORG_NAME={gdg:'GDG BH',uxis:'Comunidade UXis',wtm:'Women Techmakers'};
+const ORG_NAME=new Proxy({},{get:(o,k)=>({gdg:'GDG BH',uxis:t('Comunidade UXis','UXis Community'),wtm:'Women Techmakers'})[k]});
 function FilterBar(list){
   const orgs=[...new Set(list.flatMap(p=>[].concat(p.org||[])))].filter(o=>o!=='wtm'); // filtros só para GDG BH e UXis
-  return `<div class="fbar" role="group" aria-label="Filtrar eventos">
-   <div class="fgrp"><span>Comunidade</span><button type="button" class="ft" data-fo="" aria-pressed="true">Todas</button>${orgs.map(o=>`<button type="button" class="ft" data-fo="${o}" aria-pressed="false">${esc(ORG_NAME[o]||o)}</button>`).join('')}</div>
+  return `<div class="fbar" role="group" aria-label="${t('Filtrar eventos','Filter events')}">
+   <div class="fgrp"><span>${t('Comunidade','Community')}</span><button type="button" class="ft" data-fo="" aria-pressed="true">${t('Todas','All')}</button>${orgs.map(o=>`<button type="button" class="ft" data-fo="${o}" aria-pressed="false">${esc(ORG_NAME[o]||o)}</button>`).join('')}</div>
    <span class="fcount" aria-live="polite"></span></div>`;
 }
 function applyFilter(){
@@ -1100,7 +1385,7 @@ function applyFilter(){
   let n=0;
   main.querySelectorAll('.rlist .row').forEach(r=>{const ok=(!y||r.dataset.year===y)&&(!o||r.dataset.org.split(' ').includes(o));r.hidden=!ok;if(ok){n++;r.classList.add('in')}});
   const em=main.querySelector('.rempty');if(em)em.hidden=n>0;
-  const c=bar.querySelector('.fcount');if(c)c.textContent=n+(n===1?' evento':' eventos');
+  const c=bar.querySelector('.fcount');if(c)c.textContent=n+(n===1?t(' evento',' event'):t(' eventos',' events'));
 }
 function CategoryPage(key){
   const C=CATS[key],list=byCat(key);
@@ -1109,7 +1394,7 @@ function CategoryPage(key){
    <svg class="deco-star" viewBox="0 0 200 200" aria-hidden="true"><polygon points="${star(100,100,96,40,key==='digital'?6:key==='comunicacao'?10:14)}" fill="${key==='comunidade'?'#7138D5':'#C4F05A'}" stroke="#25212B" stroke-width="5"/></svg>
    <div class="wrap">
    <h1 id="h-cat">${esc(C.name)}</h1><p class="lead">${esc(C.lead)}</p>${Tags(C.areas)}</div></section>
-   <section class="band b-graf" aria-label="Projetos"><div class="wrap">${key==='comunidade'?FilterBar(list)+`<div class="rlist">${list.map(Row).join('')}</div><p class="empty rempty" hidden>Nenhum evento com esses filtros.</p>`:`<div class="clist">${list.map(HCard).join('')}</div>`}</div></section>
+   <section class="band b-graf" aria-label="${t('Projetos','Projects')}"><div class="wrap">${key==='comunidade'?FilterBar(list)+`<div class="rlist">${list.map(Row).join('')}</div><p class="empty rempty" hidden>${t('Nenhum evento com esses filtros.','No events match these filters.')}</p>`:`<div class="clist">${list.map(HCard).join('')}</div>`}</div></section>
    ${Contact()}`;
 }
 
@@ -1123,19 +1408,19 @@ function Block(b){
   if(b.kpis)return `<div class="kpis">${b.kpis.map(([k,t,x])=>`<div class="kpi"><strong>${esc(k)}</strong><h3>${esc(t)}</h3><p>${md(x)}</p></div>`).join('')}</div>`;
   if(b.ul)return `<ul class="dots">${b.ul.map(x=>`<li>${md(x)}</li>`).join('')}</ul>`;
   if(b.cards2)return `<div class="pcards pc2">${b.cards2.map(([t,x])=>`<div class="pc"><h3>${esc(t)}</h3><p>${md(x)}</p></div>`).join('')}</div>`;
-  if(b.matrix)return `<div class="mx" role="table" aria-label="Taxa de convergência por domínio"><div class="mx-r mx-h" role="row"><span role="columnheader">Domínio</span><span role="columnheader">Convergência</span><span role="columnheader">Diagnóstico</span></div>${b.matrix.map(([d,r,l,x])=>`<div class="mx-r" role="row"><span role="cell" class="mx-d">${esc(d)}</span><span role="cell"><span class="mx-b mx-${l}">${esc(r)} · ${l==='alta'?'Alta':l==='media'?'Média':'Baixa'}</span></span><span role="cell" class="mx-x">${md(x)}</span></div>`).join('')}</div>`;
+  if(b.matrix)return `<div class="mx" role="table" aria-label="${t('Taxa de convergência por domínio','Convergence rate by domain')}"><div class="mx-r mx-h" role="row"><span role="columnheader">${t('Domínio','Domain')}</span><span role="columnheader">${t('Convergência','Convergence')}</span><span role="columnheader">${t('Diagnóstico','Diagnosis')}</span></div>${b.matrix.map(([d,r,l,x])=>`<div class="mx-r" role="row"><span role="cell" class="mx-d">${esc(d)}</span><span role="cell"><span class="mx-b mx-${l}">${esc(r)} · ${l==='alta'?t('Alta','High'):l==='media'?t('Média','Medium'):t('Baixa','Low')}</span></span><span role="cell" class="mx-x">${md(x)}</span></div>`).join('')}</div>`;
   if(b.list)return `<ul class="llist">${b.list.map(([t,x])=>`<li><h3>${esc(t)}</h3><p>${md(x)}</p></li>`).join('')}</ul>`;
   return '';
 }
 function Carousel(list,title){
-  return `<div class="car${list.every(g=>g.video)?' car-video':''}" data-car aria-roledescription="carrossel" aria-label="Galeria de telas">
-   <div class="car-vp"><div class="car-track">${list.map((g,i)=>`<figure class="car-s" aria-label="${i+1} de ${list.length}">
-     ${g.video?`<div class="car-img" role="button" tabindex="0" data-zoom="${i}" data-video="${esc(g.video)}" data-poster="${esc(g.poster||'')}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="Ampliar vídeo: ${esc(g.caption||g.alt||title)}"><video src="${esc(g.video)}" poster="${esc(g.poster||'')}" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div>`
-      :`<button type="button" class="car-img" data-zoom="${i}" data-src="${esc(g.src)}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="Ampliar: ${esc(g.caption||g.alt||title)}"><img src="${esc(g.src)}" alt="${esc(g.alt||title)}" loading="lazy"></button>`}
+  return `<div class="car${list.every(g=>g.video)?' car-video':''}" data-car aria-roledescription="${t('carrossel','carousel')}" aria-label="${t('Galeria de telas','Screen gallery')}">
+   <div class="car-vp"><div class="car-track">${list.map((g,i)=>`<figure class="car-s" aria-label="${i+1} ${t('de','of')} ${list.length}">
+     ${g.video?`<div class="car-img" role="button" tabindex="0" data-zoom="${i}" data-video="${esc(g.video)}" data-poster="${esc(g.poster||'')}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="${t('Ampliar vídeo','Enlarge video')}: ${esc(g.caption||g.alt||title)}"><video src="${esc(g.video)}" poster="${esc(g.poster||'')}" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div>`
+      :`<button type="button" class="car-img" data-zoom="${i}" data-src="${esc(g.src)}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="${t('Ampliar','Enlarge')}: ${esc(g.caption||g.alt||title)}"><img src="${esc(g.src)}" alt="${esc(g.alt||title)}" loading="lazy"></button>`}
      ${g.caption?`<figcaption>${esc(g.caption)}</figcaption>`:''}</figure>`).join('')}</div></div>
-   <div class="car-ctl">${list.length>1?`<button type="button" class="car-arrow car-prev" aria-label="Tela anterior">←</button>
-    <div class="car-dots">${list.map((g,i)=>`<button type="button" class="car-dot" aria-label="Ir para a tela ${i+1}"></button>`).join('')}</div>
-    <button type="button" class="car-arrow car-next" aria-label="Próxima tela">→</button>`:''}<span class="car-hint">Clique ${list[0].video&&list.length===1?'no vídeo':'na tela'} para ampliar</span></div>
+   <div class="car-ctl">${list.length>1?`<button type="button" class="car-arrow car-prev" aria-label="${t('Tela anterior','Previous screen')}">←</button>
+    <div class="car-dots">${list.map((g,i)=>`<button type="button" class="car-dot" aria-label="${t('Ir para a tela','Go to screen')} ${i+1}"></button>`).join('')}</div>
+    <button type="button" class="car-arrow car-next" aria-label="${t('Próxima tela','Next screen')}">→</button>`:''}<span class="car-hint">${list[0].video&&list.length===1?t('Clique no vídeo para ampliar','Click the video to enlarge'):t('Clique na tela para ampliar','Click the screen to enlarge')}</span></div>
   </div>`;
 }
 function CasePage(p){
@@ -1145,29 +1430,29 @@ function CasePage(p){
     :Array.isArray(v)?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:String(v).split(/\n\n+/).map(x=>`<p>${esc(x)}</p>`).join('');
   const nGal=c.gallery?c.gallery.length:5;
   const gal=Array.from({length:nGal},(_,i)=>{const g=c.gallery&&c.gallery[i];
-    return `<figure class="gi reveal" style="margin:0">${g?`<img src="${esc(g.src||g)}" alt="${esc(g.alt||p.title)}" loading="lazy">`:art(p,i*7+1)+'<span class="ph">imagem provisória</span>'}</figure>`}).join('');
+    return `<figure class="gi reveal" style="margin:0">${g?`<img src="${esc(g.src||g)}" alt="${esc(g.alt||p.title)}" loading="lazy">`:art(p,i*7+1)+`<span class="ph">${t('imagem provisória','placeholder image')}</span>`}</figure>`}).join('');
   const sib=byCat(p.cat),next=sib[(sib.indexOf(p)+1)%sib.length];
   const custom=Array.isArray(c.sections);
-  const toc=custom?[...c.sections.map(x=>[x.id,x.title]),['galeria','Galeria'],...(c.creditos?[['creditos','Créditos']]:[])]
-    :[...secs.map(s=>[s[0],s[1]]),...(c.aprendizados?[['aprendizados','Aprendizados']]:[]),['galeria','Galeria'],['creditos','Créditos']];
+  const toc=custom?[...c.sections.map(x=>[x.id,x.title]),['galeria',t('Galeria','Gallery')],...(c.creditos?[['creditos',t('Créditos','Credits')]]:[])]
+    :[...secs.map(s=>[s[0],s[1]]),...(c.aprendizados?[['aprendizados',t('Aprendizados','Learnings')]]:[]),['galeria',t('Galeria','Gallery')],['creditos',t('Créditos','Credits')]];
   return `<section class="band ${heroBand} case-hero" aria-labelledby="h-case"><div class="wrap">
     <a class="crumb" href="#${C.route}">${ARROW}${esc(C.name)}</a>
     <h1 id="h-case">${esc(p.title)}</h1><p class="lead">${esc(p.summary)}</p>
-    <dl class="meta"><div><dt>Categoria</dt><dd>${esc(C.name)}</dd></div>${p.date?`<div><dt>${p.cat==='comunidade'?'Data':'Ano'}</dt><dd>${esc(p.date)}</dd></div>`:''}<div><dt>Meu papel</dt><dd>${esc(p.role||'—')}</dd></div></dl>
+    <dl class="meta"><div><dt>${t('Categoria','Category')}</dt><dd>${esc(C.name)}</dd></div>${p.date?`<div><dt>${p.cat==='comunidade'?t('Data','Date'):t('Ano','Year')}</dt><dd>${esc(p.date)}</dd></div>`:''}<div><dt>${t('Meu papel','My role')}</dt><dd>${esc(p.role||'—')}</dd></div></dl>
     ${Tags(p.tags)}</div></section>
-   <div class="cover-wrap"><div class="case-cover">${cover(p,p.cat==='comunidade'?'foto provisória':'imagem provisória')}</div></div>
+   <div class="cover-wrap"><div class="case-cover">${cover(p,p.cat==='comunidade'?t('foto provisória','placeholder photo'):t('imagem provisória','placeholder image'))}</div></div>
    ${c.stats?`<div class="stats-wrap"><div class="stats reveal">${c.stats.map(([n,l])=>`<div><strong>${esc(n)}</strong><span>${esc(l)}</span></div>`).join('')}</div></div>`:''}
    <section class="band"><div class="wrap case-body">
-    <nav class="toc" aria-label="Seções do case">${toc.map(([id,l])=>`<a href="#case-${p.slug}" data-scroll="cs-${id}">${esc(l)}</a>`).join('')}</nav>
+    <nav class="toc" aria-label="${t('Seções do case','Case sections')}">${toc.map(([id,l])=>`<a href="#case-${p.slug}" data-scroll="cs-${id}">${esc(l)}</a>`).join('')}</nav>
     <div>
      ${custom?c.sections.map(x=>`<section class="csec reveal" id="cs-${x.id}"><h2>${esc(x.title)}</h2>${x.blocks.map(Block).join('')}</section>`).join('')
        :secs.map(([id,l,hint])=>`<section class="csec reveal" id="cs-${id}"><h2>${esc(l)}</h2>${fill(c[id],hint)}</section>`).join('')}
-     ${c.aprendizados?`<section class="csec reveal" id="cs-aprendizados"><h2>Meus aprendizados</h2>${fill(c.aprendizados,'')}${c.citacao?`<blockquote class="cquote">${esc(c.citacao)}</blockquote>`:''}</section>`:''}
-     ${p.link?`<div class="csec reveal"><a class="btn btn-lima" href="${esc(p.link)}" target="_blank" rel="noopener">Ver case original${ARROW}</a></div>`:''}
-     <section class="csec" id="cs-galeria"><h2>Galeria</h2>${c.gallery?(c.gallerySmall?`<div class="car-sm">${Carousel(c.gallery,p.title)}</div>`:Carousel(c.gallery,p.title)):`<div class="gal">${gal}</div>`}</section>
-     ${custom&&!c.creditos?'':`<section class="csec reveal" id="cs-creditos"><h2>Créditos e colaboradores</h2>${fill(c.creditos,'Liste quem fez parte, quando aplicável (aceita lista). Se não houver, remova esta seção.')}</section>`}
+     ${c.aprendizados?`<section class="csec reveal" id="cs-aprendizados"><h2>${t('Meus aprendizados','My learnings')}</h2>${fill(c.aprendizados,'')}${c.citacao?`<blockquote class="cquote">${esc(c.citacao)}</blockquote>`:''}</section>`:''}
+     ${p.link?`<div class="csec reveal"><a class="btn btn-lima" href="${esc(p.link)}" target="_blank" rel="noopener">${t('Ver case original','View original case')}${ARROW}</a></div>`:''}
+     <section class="csec" id="cs-galeria"><h2>${t('Galeria','Gallery')}</h2>${c.gallery?(c.gallerySmall?`<div class="car-sm">${Carousel(c.gallery,p.title)}</div>`:Carousel(c.gallery,p.title)):`<div class="gal">${gal}</div>`}</section>
+     ${custom&&!c.creditos?'':`<section class="csec reveal" id="cs-creditos"><h2>${t('Créditos e colaboradores','Credits and collaborators')}</h2>${fill(c.creditos,'Liste quem fez parte, quando aplicável (aceita lista). Se não houver, remova esta seção.')}</section>`}
     </div></div></section>
-   ${next&&next!==p?`<a class="band b-graf next" href="${caseHref(next)}"><div class="wrap"><small>Próximo projeto · ${esc(C.name)}</small><h2>${esc(next.title)}${ARROW}</h2></div></a>`:''}`;
+   ${next&&next!==p?`<a class="band b-graf next" href="${caseHref(next)}"><div class="wrap"><small>${t('Próximo projeto','Next project')} · ${esc(C.name)}</small><h2>${esc(next.title)}${ARROW}</h2></div></a>`:''}`;
 }
 
 function AboutPage(){
@@ -1175,41 +1460,45 @@ function AboutPage(){
   return `<section class="band b-lima" aria-labelledby="h-about"><div class="wrap about-g">
     <div class="reveal">
      <h1 id="h-about" style="font-size:clamp(42px,5.6vw,80px);line-height:.95;letter-spacing:-.03em;margin:0 0 20px">Ju Ribeiro</h1>
-     <div class="lead" style="margin-top:14px;font-size:15.5px;line-height:1.6;max-width:56ch;display:grid;gap:12px"><p>Sou Ju Ribeiro, Designer de Produto & Comunicação com +${CONFIG.years} anos de experiência conectando design, comunicação e pessoas. Minha atuação passa por diferentes áreas, do design de produtos digitais e interfaces à criação de identidades visuais, campanhas, materiais gráficos e estampas para produtos.</p><p>Sou pós-graduada em User Experience Design pela PUCRS e atuo como organizadora do Google Developers Group BH e Community Manager da Comunidade UXis. Minha trajetória multidisciplinar fortaleceu meu olhar analítico, minha criatividade e minha capacidade de adaptação a diferentes contextos.</p><p>Acredito na combinação entre estratégia, criatividade e diferentes perspectivas para transformar ideias em soluções relevantes.</p></div><div class="btns" style="margin-top:28px">${CvButton()}</div></div>
-    <div class="portrait reveal">${portrait(true)}<span class="sticker yrs">+${CONFIG.years} anos de design</span><span class="ptag">Gosto do ponto onde produto, comunicação e gente se encontram.</span></div></div></section>
+     <div class="lead" style="margin-top:14px;font-size:15.5px;line-height:1.6;max-width:56ch;display:grid;gap:12px">${t(`<p>Sou Ju Ribeiro, Designer de Produto & Comunicação com +${CONFIG.years} anos de experiência conectando design, comunicação e pessoas. Minha atuação passa por diferentes áreas, do design de produtos digitais e interfaces à criação de identidades visuais, campanhas, materiais gráficos e estampas para produtos.</p><p>Sou pós-graduada em User Experience Design pela PUCRS e atuo como organizadora do Google Developers Group BH e Community Manager da Comunidade UXis. Minha trajetória multidisciplinar fortaleceu meu olhar analítico, minha criatividade e minha capacidade de adaptação a diferentes contextos.</p><p>Acredito na combinação entre estratégia, criatividade e diferentes perspectivas para transformar ideias em soluções relevantes.</p>`,`<p>I'm Ju Ribeiro, a Product & Communication Designer with +${CONFIG.years} years of experience connecting design, communication and people. My work spans different areas, from designing digital products and interfaces to creating visual identities, campaigns, graphic materials and product prints.</p><p>I hold a postgraduate degree in User Experience Design from PUCRS and serve as an organizer of Google Developers Group BH and Community Manager at the UXis Community. My multidisciplinary background has sharpened my analytical eye, my creativity and my ability to adapt to different contexts.</p><p>I believe in combining strategy, creativity and different perspectives to turn ideas into meaningful solutions.</p>`)}</div><div class="btns" style="margin-top:28px">${CvButton()}</div></div>
+    <div class="portrait reveal">${portrait(true)}<span class="sticker yrs">${t(`+${CONFIG.years} anos de design`,`+${CONFIG.years} years in design`)}</span><span class="ptag">${t('Gosto do ponto onde produto, comunicação e gente se encontram.','I love the point where product, communication and people meet.')}</span></div></div></section>
    <section class="band" aria-labelledby="h-dims"><div class="wrap">
-    ${SectionHead('<span id="h-dims">Competências</span>','')}
-    <div class="dims comps">${[
+    ${SectionHead(`<span id="h-dims">${t('Competências','Skills')}</span>`,'')}
+    <div class="dims comps">${(LANG==='en'?[
+     ['Technical Skills',['UX/UI Design and Product Design','User research, discovery and journey mapping','Prototyping, wireframes and usability testing','Design Systems and digital interfaces','Graphic design and art direction','Visual identity and brand communication','Content strategy and social media','Website development and no-code solutions','Community management and engagement','Event planning and production','AI tools applied to the creative process','Communication, collaboration and project management']],
+     ['Career Highlights',['+'+CONFIG.years+' years of experience in design','Postgraduate degree in User Experience Design from PUCRS','Organizer at Google Developers Group BH','Community Manager at the UXis Community','Built a UX metrics culture','Volunteer UX mentor','Experience with digital, graphic and product print projects','Organizing tech events and communities','Multidisciplinary career path, with a background in healthcare as well']]
+    ]:[
      ['Habilidades Técnicas',['UX/UI Design e Product Design','Pesquisa com usuários, discovery e mapeamento de jornadas','Prototipação, wireframes e testes de usabilidade','Design Systems e interfaces digitais','Design gráfico e direção de arte','Identidade visual e comunicação de marca','Estratégia de conteúdo e social media','Desenvolvimento de sites e soluções no-code','Gestão de comunidades e engajamento','Planejamento e produção de eventos','Ferramentas de IA aplicadas ao processo criativo','Comunicação, colaboração e gestão de projetos']],
      ['Destaques de Carreira',['+'+CONFIG.years+' anos de experiência em design','Pós-graduação em User Experience Design pela PUCRS','Organizadora do Google Developers Group BH','Community Manager da Comunidade UXis','Estruturação de cultura de métricas em UX','Mentora de UX em voluntariado','Experiência em projetos digitais, gráficos e estampas para produtos','Atuação na organização de eventos e comunidades de tecnologia','Trajetória profissional multidisciplinar, com formação também na área da saúde']]
-    ].map(([t,items])=>`<div class="dim reveal"><h3>${esc(t)}</h3><ul>${items.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`).join('')}</div>
-    <div class="dim tcard reveal"><h3>Ferramentas</h3><div class="tools">${['Figma','FigJam','Jira','Confluence','Notion','Miro','Maze','Dovetail','Trello','Claude','Google Analytics','Pacote Adobe','Slack','Framer','Wix Studio'].map(t=>Tag(t)).join('')}</div></div>
+    ]).map(([t,items])=>`<div class="dim reveal"><h3>${esc(t)}</h3><ul>${items.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`).join('')}</div>
+    <div class="dim tcard reveal"><h3>${t('Ferramentas','Tools')}</h3><div class="tools">${['Figma','FigJam','Jira','Confluence','Notion','Miro','Maze','Dovetail','Trello','Claude','Google Analytics',t('Pacote Adobe','Adobe Creative Cloud'),'Slack','Framer','Wix Studio'].map(t=>Tag(t)).join('')}</div></div>
    </div></section>
-   <section class="band b-graf" aria-label="Trajetória"><div class="wrap">
-    <div class="reveal traj"><h2>Trajetória</h2><div class="tl">
-     ${TRAJETORIA.map(x=>x?`<div class="tl-i"><span class="tl-p">${esc(x.periodo)}</span><h3>${esc(x.cargo)}${x.empresa?' · '+esc(x.empresa):''}</h3><p class="tl-d">${esc(x.descricao)}</p>${(x.tags||[]).length?`<div class="tags tl-t">${x.tags.map(t=>Tag(t)).join('')}</div>`:''}</div>`:`<div class="tl-i"><span class="tl-p">Período</span><h3>Cargo · Empresa</h3><div class="todo"><b>para preencher</b>Empresa ou projeto, o que você fazia e o que levou dali.</div></div>`).join('')}
+   <section class="band b-graf" aria-label="${t('Trajetória','Career')}"><div class="wrap">
+    <div class="reveal traj"><h2>${t('Trajetória','Career')}</h2><div class="tl">
+     ${TRAJETORIA.map(x=>x&&x.grupo?`<div class="tl-i tl-g"><span class="tl-p">${esc(x.periodo)}</span><h3>${esc(x.empresa)}</h3><div class="tl-sub">${x.grupo.map((r,n)=>`<div class="tl-s"><span class="tl-p">${esc(r.periodo)}</span><h4>${esc(r.cargo)}</h4><p class="tl-d">${esc(r.descricao)}</p>${(r.tags||[]).length?`<div class="tags tl-t">${r.tags.map(t=>Tag(t)).join('')}</div>`:''}</div>`).join('')}</div></div>`:x?`<div class="tl-i"><span class="tl-p">${esc(x.periodo)}</span><h3>${esc(x.cargo)}${x.empresa?' · '+esc(x.empresa):''}</h3><p class="tl-d">${esc(x.descricao)}</p>${(x.tags||[]).length?`<div class="tags tl-t">${x.tags.map(t=>Tag(t)).join('')}</div>`:''}</div>`:`<div class="tl-i"><span class="tl-p">Período</span><h3>Cargo · Empresa</h3><div class="todo"><b>para preencher</b>Empresa ou projeto, o que você fazia e o que levou dali.</div></div>`).join('')}
     </div></div></div></section>
    ${Contact()}`;
 }
 
 function NotFound(){
-  return `<section class="band b-coral chero"><div class="wrap"><h1>Ops, essa página não existe.</h1><p class="lead">Talvez o projeto tenha mudado de endereço.</p><div class="btns" style="margin-top:28px">${Button('Voltar ao início','#inicio','btn-lima')}</div></div></section>`;
+  return `<section class="band b-coral chero"><div class="wrap"><h1>${t('Ops, essa página não existe.',"Oops, this page doesn't exist.")}</h1><p class="lead">${t('Talvez o projeto tenha mudado de endereço.','The project may have moved.')}</p><div class="btns" style="margin-top:28px">${Button(t('Voltar ao início','Back to home'),'#inicio','btn-lima')}</div></div></section>`;
 }
 
 /* ---------- roteador (rotas amigáveis via #nome) ---------- */
-const META={inicio:'Portfólio de Ju Ribeiro, Designer de Produto & Comunicação há +6 anos.',sobre:'Trajetória, áreas de atuação e ferramentas de Ju Ribeiro.'};
+const META=new Proxy({},{get:(o,k)=>({inicio:t('Portfólio de Ju Ribeiro, Designer de Produto & Comunicação há +6 anos.',"Portfolio of Ju Ribeiro, Product & Communication Designer with +6 years of experience."),sobre:t('Trajetória, áreas de atuação e ferramentas de Ju Ribeiro.',"Ju Ribeiro's career, areas of expertise and tools.")})[k]});
 let first=true,io=null;
 function setMeta(title,desc){document.title=title;const m=document.querySelector('meta[name=description]');if(m&&desc)m.setAttribute('content',desc)}
 function route(){
   const h=decodeURIComponent(location.hash.slice(1));
   let html,active='',scrollTo=null;
   const catKey=Object.keys(CATS).find(k=>CATS[k].route===h&&!isSoon(k));
-  if(!h||h==='inicio'||h==='contato'){html=Home();active=h==='contato'?'contato':'inicio';if(h==='contato')scrollTo='sec-contato';setMeta('Ju Ribeiro — Designer de Produto & Comunicação',META.inicio)}
+  if(!h||h==='inicio'||h==='contato'){html=Home();active=h==='contato'?'contato':'inicio';if(h==='contato')scrollTo='sec-contato';setMeta(t('Ju Ribeiro — Designer de Produto & Comunicação','Ju Ribeiro — Product & Communication Designer'),META.inicio)}
   else if(catKey){html=CategoryPage(catKey);active=h;setMeta(CATS[catKey].name+' — Ju Ribeiro',CATS[catKey].lead)}
-  else if(h==='sobre'){html=AboutPage();active='sobre';setMeta('Sobre mim — Ju Ribeiro',META.sobre)}
+  else if(h==='sobre'){html=AboutPage();active='sobre';setMeta(t('Sobre mim — Ju Ribeiro','About me — Ju Ribeiro'),META.sobre)}
   else if(h.startsWith('case-')){const p=PROJECTS.find(x=>'case-'+x.slug===h&&!isSoon(x.cat));
     if(p){html=CasePage(p);active=CATS[p.cat].route;setMeta(p.title+' — Ju Ribeiro',p.summary)}else html=NotFound()}
   else{const el=document.getElementById(h);if(el&&main.contains(el)){el.scrollIntoView();return}html=NotFound()}
+  syncUI();
   main.innerHTML=html;
   document.getElementById('hdr').innerHTML=Header(active);
   document.body.style.overflow='';
@@ -1273,13 +1562,15 @@ LB.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')lbShow(lbI-1);if(e.key=
 
 /* ---------- interações ---------- */
 document.addEventListener('click',e=>{
+  const lg=e.target.closest('[data-lang]');
+  if(lg){setLang(lg.dataset.lang);return}
   const mb=e.target.closest('.menu-btn');
   if(mb){const open=mb.getAttribute('aria-expanded')!=='true';mb.setAttribute('aria-expanded',open);document.getElementById('nav').classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';return}
   if(e.target.closest('.nav a')){document.body.style.overflow=''}
   const sc=e.target.closest('[data-scroll]');
   if(sc){const t=document.getElementById(sc.dataset.scroll);if(t){e.preventDefault();t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}return}
   const cp=e.target.closest('[data-copy]');
-  if(cp){const v=cp.dataset.copy;const done=ok=>{cp.textContent=ok?'Copiado!':'Selecione e copie';setTimeout(()=>cp.textContent='Copiar e-mail',2000)};
+  if(cp){const v=cp.dataset.copy;const done=ok=>{cp.textContent=ok?t('Copiado!','Copied!'):t('Selecione e copie','Select and copy');setTimeout(()=>cp.textContent=t('Copiar e-mail','Copy email'),2000)};
     try{navigator.clipboard.writeText(v).then(()=>done(true),()=>done(false))}catch(err){done(false)}return}
   const ar=e.target.closest('[data-area]');
   if(ar){selectArea(ar.dataset.area);return}
@@ -1288,9 +1579,9 @@ document.addEventListener('click',e=>{
   const ft=e.target.closest('.ft');
   if(ft){ft.parentElement.querySelectorAll('.ft').forEach(b=>b.setAttribute('aria-pressed',b===ft));applyFilter();return}
   const pd=e.target.closest('[data-pending]');
-  if(pd){e.preventDefault();pd.firstChild.textContent='Link em breve ';return}
+  if(pd){e.preventDefault();pd.firstChild.textContent=t('Link em breve ','Link coming soon ');return}
   const cv=e.target.closest('[data-cv-missing]');
-  if(cv){e.preventDefault();cv.firstChild.textContent='Currículo em breve ';}
+  if(cv){e.preventDefault();cv.firstChild.textContent=t('Currículo em breve ','Résumé coming soon ');}
 });
 main.addEventListener('mouseover',e=>{const ar=e.target.closest('[data-area]');if(ar&&matchMedia('(hover: hover)').matches)selectArea(ar.dataset.area)});
 main.addEventListener('focusin',e=>{const ar=e.target.closest('[data-area]');if(ar)selectArea(ar.dataset.area)});
