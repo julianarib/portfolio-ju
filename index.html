@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ju Ribeiro — Designer Multidisciplinar</title>
-<meta name="description" content="Portfólio de Ju Ribeiro, designer multidisciplinar há +6 anos: experiências digitais, comunicação criativa e construção de comunidades.">
-<meta property="og:title" content="Ju Ribeiro — Designer Multidisciplinar">
+<title>Ju Ribeiro — Designer de Produto &amp; Comunicação</title>
+<meta name="description" content="Portfólio de Ju Ribeiro, Designer de Produto &amp; Comunicação há +6 anos: experiências digitais, comunicação criativa e construção de comunidades.">
+<meta property="og:title" content="Ju Ribeiro — Designer de Produto &amp; Comunicação">
 <meta property="og:description" content="Entre pixels, pessoas e possibilidades. Experiências digitais, comunicação criativa e comunidades.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#7138D5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ju Ribeiro","jobTitle":"Designer Multidisciplinar"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ju Ribeiro","jobTitle":"Designer de Produto & Comunicação"}</script>
 <style>
 /* VOICE: brincalhão e editorial, mas profissional — um fanzine bem impresso.
    IDEA: um caderno de colagem: recortes, adesivos e etiquetas sobre faixas de cor chapada.
@@ -1042,7 +1042,7 @@ function Header(active){
 function Footer(){
   return `<div class="wrap"><div class="ftr-g"><a class="logo" href="#inicio">JU RIBEIRO<sup>®</sup></a>
   <nav aria-label="Rodapé">${NAV.slice(1).map(([r,l,soon])=>soon?`<span class="ftr-soon" aria-disabled="true">${l}${SOON_TAG}</span>`:`<a href="#${r}">${l}</a>`).join('')}</nav></div>
-  <div class="ftr-b"><span>© ${new Date().getFullYear()} Ju Ribeiro · Designer Multidisciplinar</span><span>Entre pixels, pessoas e possibilidades.</span></div></div>`;
+  <div class="ftr-b"><span>© ${new Date().getFullYear()} Ju Ribeiro · Designer de Produto & Comunicação</span><span>Entre pixels, pessoas e possibilidades.</span></div></div>`;
 }
 
 /* ---------- páginas ---------- */
@@ -1057,7 +1057,7 @@ function Home(){
    <svg class="blob" viewBox="0 0 400 400" style="left:-230px;bottom:-200px;width:420px" aria-hidden="true"><path d="M200 20c90 0 180 60 180 170s-80 190-190 190S20 300 20 200 110 20 200 20z" fill="#FF704E" opacity=".9"/></svg>
    <div class="wrap hero-g">
     <div class="hero-t">
-     <span class="sticker">Designer Multidisciplinar</span>
+     <span class="sticker">Designer de Produto & Comunicação</span>
      <h1 id="h-hero">Entre pixels, pessoas e possibilidades.</h1>
     </div>
     <div class="hero-c"><div class="collage">
@@ -1176,7 +1176,7 @@ function AboutPage(){
   return `<section class="band b-lima" aria-labelledby="h-about"><div class="wrap about-g">
     <div class="reveal">
      <h1 id="h-about" style="font-size:clamp(42px,5.6vw,80px);line-height:.95;letter-spacing:-.03em;margin:0 0 20px">Ju Ribeiro</h1>
-     <div class="lead" style="margin-top:14px;font-size:15.5px;line-height:1.6;max-width:56ch;display:grid;gap:12px"><p>Sou Ju Ribeiro, designer multidisciplinar com +${CONFIG.years} anos de experiência conectando design, comunicação e pessoas. Minha atuação passa por diferentes áreas, do design de produtos digitais e interfaces à criação de identidades visuais, campanhas, materiais gráficos e estampas para produtos.</p><p>Sou pós-graduada em User Experience Design pela PUCRS e atuo como organizadora do Google Developers Group BH e Community Manager da Comunidade UXis. Minha trajetória multidisciplinar fortaleceu meu olhar analítico, minha criatividade e minha capacidade de adaptação a diferentes contextos.</p><p>Acredito na combinação entre estratégia, criatividade e diferentes perspectivas para transformar ideias em soluções relevantes.</p></div><div class="btns" style="margin-top:28px">${CvButton()}</div></div>
+     <div class="lead" style="margin-top:14px;font-size:15.5px;line-height:1.6;max-width:56ch;display:grid;gap:12px"><p>Sou Ju Ribeiro, Designer de Produto & Comunicação com +${CONFIG.years} anos de experiência conectando design, comunicação e pessoas. Minha atuação passa por diferentes áreas, do design de produtos digitais e interfaces à criação de identidades visuais, campanhas, materiais gráficos e estampas para produtos.</p><p>Sou pós-graduada em User Experience Design pela PUCRS e atuo como organizadora do Google Developers Group BH e Community Manager da Comunidade UXis. Minha trajetória multidisciplinar fortaleceu meu olhar analítico, minha criatividade e minha capacidade de adaptação a diferentes contextos.</p><p>Acredito na combinação entre estratégia, criatividade e diferentes perspectivas para transformar ideias em soluções relevantes.</p></div><div class="btns" style="margin-top:28px">${CvButton()}</div></div>
     <div class="portrait reveal">${portrait(true)}<span class="sticker yrs">+${CONFIG.years} anos de design</span><span class="ptag">Gosto do ponto onde produto, comunicação e gente se encontram.</span></div></div></section>
    <section class="band" aria-labelledby="h-dims"><div class="wrap">
     ${SectionHead('<span id="h-dims">Competências</span>','')}
@@ -1198,14 +1198,14 @@ function NotFound(){
 }
 
 /* ---------- roteador (rotas amigáveis via #nome) ---------- */
-const META={inicio:'Portfólio de Ju Ribeiro, designer multidisciplinar há +6 anos.',sobre:'Trajetória, áreas de atuação e ferramentas de Ju Ribeiro.'};
+const META={inicio:'Portfólio de Ju Ribeiro, Designer de Produto & Comunicação há +6 anos.',sobre:'Trajetória, áreas de atuação e ferramentas de Ju Ribeiro.'};
 let first=true,io=null;
 function setMeta(title,desc){document.title=title;const m=document.querySelector('meta[name=description]');if(m&&desc)m.setAttribute('content',desc)}
 function route(){
   const h=decodeURIComponent(location.hash.slice(1));
   let html,active='',scrollTo=null;
   const catKey=Object.keys(CATS).find(k=>CATS[k].route===h&&!isSoon(k));
-  if(!h||h==='inicio'||h==='contato'){html=Home();active=h==='contato'?'contato':'inicio';if(h==='contato')scrollTo='sec-contato';setMeta('Ju Ribeiro — Designer Multidisciplinar',META.inicio)}
+  if(!h||h==='inicio'||h==='contato'){html=Home();active=h==='contato'?'contato':'inicio';if(h==='contato')scrollTo='sec-contato';setMeta('Ju Ribeiro — Designer de Produto & Comunicação',META.inicio)}
   else if(catKey){html=CategoryPage(catKey);active=h;setMeta(CATS[catKey].name+' — Ju Ribeiro',CATS[catKey].lead)}
   else if(h==='sobre'){html=AboutPage();active='sobre';setMeta('Sobre mim — Ju Ribeiro',META.sobre)}
   else if(h.startsWith('case-')){const p=PROJECTS.find(x=>'case-'+x.slug===h&&!isSoon(x.cat));
