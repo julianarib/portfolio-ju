@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ju Ribeiro — Designer Multidisciplinar</title>
+<meta name="description" content="Portfólio de Ju Ribeiro, designer multidisciplinar há +6 anos: experiências digitais, comunicação criativa e construção de comunidades.">
+<meta property="og:title" content="Ju Ribeiro — Designer Multidisciplinar">
+<meta property="og:description" content="Entre pixels, pessoas e possibilidades. Experiências digitais, comunicação criativa e comunidades.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7138D5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ju Ribeiro","jobTitle":"Designer Multidisciplinar"}</script>
+<style>
+/* VOICE: brincalhão e editorial, mas profissional — um fanzine bem impresso.
+   IDEA: um caderno de colagem: recortes, adesivos e etiquetas sobre faixas de cor chapada.
+   PICTURE: colagem do hero com três recortes inclinados = as três dimensões do trabalho (e atalhos para elas).
+   COLOUR+TYPE: roxo domina, lima/coral/azul alternam por seção; Archivo Black + DM Sans + Plex Mono só em etiquetas.
+   LAYOUT: bandas de cor de ponta a ponta, grades assimétricas, cards horizontais para comunidades. */
+:root{color-scheme:light dark;
+--roxo:#7138D5;--lima:#C4F05A;--coral:#FF704E;--azul:#4779F5;--creme:#F5EEDC;--graf:#25212B;
+--bg:light-dark(#F5EEDC,#1c1922);--ink:light-dark(#25212B,#F5EEDC);--card:light-dark(#FFFBF2,#2a2631);
+--muted:light-dark(#554e5e,#c3bbcc);--edge:light-dark(#25212B,#F5EEDC);--focus:var(--roxo);
+--h:'Archivo Black',Impact,'Arial Black',sans-serif;--t:'DM Sans',system-ui,-apple-system,sans-serif;--m:'IBM Plex Mono',ui-monospace,monospace}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root[data-theme=dark]{--focus:var(--lima)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--t);overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--h);font-weight:400;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.4vw,42px)}
+h3{font-size:clamp(20px,2vw,24px);line-height:1.15}
+p{margin:0}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.b-roxo,.b-graf{--focus:var(--lima)}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:var(--lima);color:var(--graf);padding:10px 16px;border-radius:999px;font-weight:700}
+.skip:focus{top:12px}
+.wrap{max-width:1240px;margin:0 auto;position:relative}
+.band{padding:clamp(56px,7vw,112px) max(5vw,16px);position:relative;overflow:clip}
+.b-roxo{background:var(--roxo);color:#fff;--edge:#25212B;--muted:#ece4ff}
+.b-lima{background:var(--lima);color:var(--graf);--edge:#25212B;--muted:#3b3644}
+.b-coral{background:var(--coral);color:var(--graf);--edge:#25212B;--muted:#3a2a27}
+.b-graf{background:var(--graf);color:var(--creme);--edge:#F5EEDC;--muted:#cdc5d6}
+.b-azul{background:var(--azul);color:#fff;--edge:#25212B;--muted:#fff}
+.lead{font-size:clamp(18px,1.6vw,21px);max-width:56ch;color:var(--muted)}
+.note{font:500 13px/1.4 var(--m);color:var(--muted);margin-top:14px}
+.shead .hint{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:2px solid var(--edge)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px;padding:0 max(5vw,16px);max-width:1340px;margin:auto}
+.logo{font-family:var(--h);font-size:21px;text-decoration:none;white-space:nowrap}
+.hdr .logo{font:700 16px/1 var(--t);letter-spacing:.06em}
+.logo sup{font-size:.5em;color:var(--roxo)}
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{text-decoration:none;padding:7px 12px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap}
+.nav a:hover{background:color-mix(in srgb,var(--roxo) 15%,transparent)}
+.nav a[aria-current=page]{background:var(--roxo);color:#fff}
+.nav a.nav-cta{border:2px solid var(--edge);margin-left:6px}
+.ns-t{position:relative}
+.nav-soon{display:inline-flex;align-items:center;padding:7px 12px;font-weight:500;font-size:15px;white-space:nowrap;color:color-mix(in srgb,var(--ink) 38%,transparent);cursor:default}
+.nav-soon .soon{position:absolute;bottom:-7px;right:-10px;border:0;background:var(--lima);color:var(--graf);font:700 7.5px/1 var(--m);padding:2px 5px;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 1px 0 var(--graf)}
+.soon{display:inline-block;font:500 11px/1 var(--m);padding:4px 7px;border-radius:99px;border:1.5px solid currentColor;white-space:nowrap;vertical-align:middle;letter-spacing:.02em}
+.ftr-soon{position:relative;display:inline-flex;align-items:center;opacity:.75;cursor:default}
+.ftr-soon,.area-soon .an,.lbl-soon{position:relative}
+.ftr-soon .soon,.area-soon .soon,.lbl-soon .soon{position:absolute;border:0;background:var(--lima);color:var(--graf);font:700 9.5px/1 var(--m);padding:3px 6px;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 1px 0 var(--graf)}
+.ftr-soon .soon{top:-12px;right:-14px}
+.area-soon{position:relative}.area-soon .soon{top:-10px;right:18px;font-size:11px;padding:4px 8px}
+.lbl-soon{overflow:visible}.lbl-soon .soon{top:-10px;right:-10px}
+.area-soon{cursor:default;color:color-mix(in srgb,var(--ink) 45%,transparent);border-color:color-mix(in srgb,var(--edge) 35%,transparent);justify-items:start}.area-soon p{color:inherit}.area-soon{transition:background .25s,color .25s}.area.area-soon:hover{background:color-mix(in srgb,var(--ink) 12%,transparent);color:color-mix(in srgb,var(--ink) 40%,transparent)}
+.tile-soon{cursor:default}
+.nav a.nav-in{width:38px;height:38px;padding:0;display:inline-grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--bg);font:700 15px/1 var(--t);margin-left:6px;flex:none}
+.nav a.nav-in:hover{background:var(--roxo);color:#fff}
+.nav-in .in-tx{display:none}
+.menu-btn{display:none;align-items:center;gap:8px;min-height:38px;padding:0 16px;border-radius:999px;border:2px solid var(--edge);background:var(--lima);color:var(--graf);font:700 15px var(--t);cursor:pointer}
+.menu-btn i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 5px 0 currentColor,0 -5px 0 currentColor;transition:.2s}
+.menu-btn[aria-expanded=true] i{box-shadow:none;transform:rotate(45deg)}
+@media(max-width:1060px){
+ .menu-btn{display:inline-flex}
+ .nav{display:none;position:fixed;inset:54px 0 0 0;background:var(--roxo);flex-direction:column;align-items:stretch;padding:28px max(5vw,16px);gap:4px;overflow:auto}
+ .nav.open{display:flex}
+ .nav a{color:#fff;font-family:var(--h);font-size:clamp(28px,7vw,40px);font-weight:400;padding:10px 4px;border-radius:0;border-bottom:2px solid rgba(255,255,255,.18)}
+ .nav a[aria-current=page]{background:none;color:var(--lima)}
+ .nav a.nav-cta{border:0;border-bottom:2px solid rgba(255,255,255,.18);margin:0}
+ .nav-soon{color:rgba(255,255,255,.55);font-family:var(--h);font-size:clamp(28px,7vw,40px);font-weight:400;padding:10px 4px;border-bottom:2px solid rgba(255,255,255,.18);gap:12px}
+ .nav-soon .soon{top:auto;bottom:-2px;right:-66px;font:700 11px/1 var(--m);padding:4px 8px}
+ .nav a.nav-in{width:auto;height:auto;display:block;background:none;border-radius:0;color:#fff;margin:0;font-family:var(--h);font-size:clamp(28px,7vw,40px);font-weight:400;padding:10px 4px}
+ .nav-in .in-ic{display:none}.nav-in .in-tx{display:inline}
+}
+
+/* buttons, tags, stickers */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;border:2px solid var(--edge);background:var(--creme);color:var(--graf);font:700 16px/1.1 var(--t);text-decoration:none;box-shadow:4px 4px 0 var(--edge);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--edge)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--edge)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-lima{background:var(--lima)}.btn-roxo{background:var(--roxo);color:#fff}.btn-coral{background:var(--coral)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:500 13px/1 var(--m);padding:7px 10px;border-radius:999px;border:1.5px solid currentColor;white-space:nowrap}
+.sticker{display:inline-block;background:var(--lima);color:var(--graf);font:700 15px/1 var(--t);padding:10px 16px;border-radius:999px;border:2px solid var(--graf);box-shadow:3px 3px 0 var(--graf);transform:rotate(-3deg)}
+.ph{position:absolute;left:12px;bottom:12px;z-index:2;font:500 13px/1 var(--m);background:var(--graf);color:var(--lima);padding:6px 9px;border-radius:6px;pointer-events:none}
+
+/* hero */
+.hero{padding-bottom:clamp(48px,6vw,88px)}
+.hero-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-areas:"t c" "b c";grid-template-rows:auto 1fr;gap:20px 48px;align-items:start}
+.hero-t{grid-area:t}.hero-c{grid-area:c}.hero-b{grid-area:b;display:grid;gap:26px}
+.hero h1{font-size:clamp(42px,5.6vw,80px);line-height:.95;letter-spacing:-.03em;margin-top:22px;max-width:12ch}
+.hero h1 span{display:block}
+.tagline{font-family:var(--h);font-size:clamp(21px,2.1vw,27px);line-height:1.08;margin-top:26px;max-width:16ch}
+.hero-b p{max-width:46ch;font-size:18.5px;color:var(--muted)}
+.scribble{width:84px;height:46px;color:var(--lima)}
+.collage{position:relative;aspect-ratio:1/1.04;width:100%;max-width:560px;margin-inline:auto}
+.tile{position:absolute;width:60%;aspect-ratio:4/3;border:3px solid var(--graf);border-radius:18px;overflow:hidden;box-shadow:8px 8px 0 var(--graf);transition:transform .35s cubic-bezier(.2,.8,.2,1.2);display:block;background:var(--graf)}
+.tile svg{position:absolute;inset:0;width:100%;height:100%}
+.tile .lbl{position:absolute;top:12px;left:12px;z-index:2;background:var(--creme);color:var(--graf);font:700 14px/1 var(--t);padding:8px 12px;border-radius:999px;border:2px solid var(--graf)}
+.t1{left:0;top:3%;transform:rotate(-6deg)}
+.t2{right:0;top:33%;transform:rotate(5deg);z-index:2}
+.t3{left:7%;bottom:0;transform:rotate(-2deg);z-index:1}
+.tile:hover{transform:rotate(0) scale(1.04);z-index:5}
+.tile-soon svg{transition:filter .3s}
+.tile-soon:hover svg{filter:grayscale(1) brightness(1.05)}
+.tile-soon:hover .lbl{color:#7a7480}
+.badge{position:absolute;right:2%;top:-2%;z-index:4;width:clamp(120px,14vw,172px);aspect-ratio:1;border-radius:50%;background:var(--lima);border:3px solid var(--graf);box-shadow:5px 5px 0 var(--graf);transform:rotate(8deg);animation:wob 6s ease-in-out infinite}
+.badge>img,.badge>svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.bph{position:absolute;left:50%;top:14%;transform:translateX(-50%);font:500 13px/1 var(--m);background:var(--graf);color:var(--lima);padding:4px 7px;border-radius:5px;white-space:nowrap}
+.bcap{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%) rotate(-10deg);background:var(--creme);color:var(--graf);border:2px solid var(--graf);border-radius:999px;padding:6px 10px;font:700 13px/1 var(--t);white-space:nowrap}
+@keyframes wob{50%{transform:rotate(-3deg) scale(1.03)}}
+.blob{position:absolute;pointer-events:none}
+@media(max-width:900px){.blob{display:none}}
+@media(max-width:900px){.hero-g{grid-template-columns:1fr;grid-template-areas:"t" "c" "b";grid-template-rows:auto}.collage{max-width:460px}}
+
+/* marquee */
+.mq{background:var(--lima);color:var(--graf);border-block:2px solid var(--graf);overflow:hidden;padding:8px 0}
+.mq-t{display:flex;width:max-content;animation:mq 45s linear infinite}
+.mq-t span{font:500 clamp(15px,1.3vw,17px)/1.4 var(--t);white-space:nowrap;display:inline-flex;align-items:center;gap:20px;padding-right:20px}
+.mq-t svg{width:14px;height:14px;flex:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* section heads */
+.shead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 40px;align-items:end;margin-bottom:clamp(28px,4vw,52px)}
+.shead p{margin-top:14px}
+.shead .sticker{justify-self:start;align-self:end}
+.sfoot{margin-top:clamp(32px,4vw,52px);display:flex;justify-content:center}
+@media(max-width:700px){.shead{grid-template-columns:1fr}}
+
+/* project cards */
+.pcard{background:var(--card);color:var(--ink);border:2px solid var(--edge);border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:8px 8px 0 var(--edge)}
+.pcard>a{display:flex;flex-direction:column;height:100%;text-decoration:none}
+.pcover{position:relative;aspect-ratio:4/3;overflow:hidden;border-bottom:2px solid var(--edge);background:var(--graf);flex:none}
+.pcover svg,.pcover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pcard:hover .pcover svg,.pcard:hover .pcover img{transform:scale(1.05)}
+.pbody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pbody p{color:var(--muted);font-size:16px}
+.more{font-weight:700;display:inline-flex;gap:8px;align-items:center;margin-top:auto;padding-top:6px}
+.more svg{width:18px;height:18px;transition:transform .2s}
+.pcard:hover .more svg{transform:translateX(5px)}
+.b-coral .pcard,.b-lima .pcard{--card:#FFFBF2;--ink:#25212B;--muted:#554e5e}
+.grid-home{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.grid-home .pcard:first-child{grid-column:span 2;grid-row:span 2}
+.grid-home .pcard:first-child .pcover{aspect-ratio:auto;flex:1;min-height:300px}
+.grid-home .pcard:first-child .pbody{flex:none}
+.grid-home .pcard:first-child h3{font-size:clamp(26px,3vw,36px)}
+.grid-d{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.grid-e{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(16px,2vw,28px);grid-auto-flow:dense}
+.grid-e .pcard:nth-child(6n+1){grid-column:span 4}.grid-e .pcard:nth-child(6n+1) .pcover{aspect-ratio:16/10}
+.grid-e .pcard:nth-child(6n+2){grid-column:span 2}.grid-e .pcard:nth-child(6n+2) .pcover{aspect-ratio:3/4}
+.grid-e .pcard:nth-child(6n+3),.grid-e .pcard:nth-child(6n+4){grid-column:span 3}
+.grid-e .pcard:nth-child(6n+5){grid-column:span 2}.grid-e .pcard:nth-child(6n+5) .pcover{aspect-ratio:1}
+.grid-e .pcard:nth-child(6n){grid-column:span 4}.grid-e .pcard:nth-child(6n) .pcover{aspect-ratio:16/9}
+.grid-e .pcard:nth-child(odd){transform:rotate(-.6deg)}.grid-e .pcard:nth-child(even){transform:rotate(.5deg)}
+.grid-e .pcard:hover{transform:translateY(-6px) rotate(0)}
+@media(max-width:900px){
+ .grid-home,.grid-d{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid-home .pcard:first-child{grid-row:auto}
+ .grid-e{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid-e .pcard:nth-child(n){grid-column:span 2}
+ .grid-e .pcard:nth-child(6n+2),.grid-e .pcard:nth-child(6n+5){grid-column:span 1}
+}
+@media(max-width:600px){
+ .grid-home,.grid-d,.grid-e{grid-template-columns:minmax(0,1fr)}
+ .grid-home .pcard:first-child,.grid-e .pcard:nth-child(n){grid-column:auto}
+ .grid-e .pcard .pcover{aspect-ratio:4/3!important}
+}
+
+/* works switcher (home) */
+.works{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr);gap:clamp(18px,2.4vw,32px);align-items:start}
+.areas{display:grid;gap:12px;grid-auto-rows:1fr}
+.area{text-align:left;border:2px solid var(--edge);border-radius:22px;padding:20px 22px;background:transparent;color:inherit;cursor:pointer;display:grid;gap:8px;font:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.area:hover{background:color-mix(in srgb,var(--c) 22%,transparent)}
+.area .an{font-family:var(--h);font-size:clamp(20px,2vw,26px);line-height:1.05;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.area .an svg{width:22px;height:22px;flex:none;transition:transform .25s}
+.area{align-content:start}
+.area p{font-size:15px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.area .cnt{font:500 13px var(--m)}
+.area[aria-selected=true]{background:var(--c);color:var(--fg);--muted:var(--fg);box-shadow:6px 6px 0 var(--edge);transform:translate(-3px,-3px)}
+.area[aria-selected=true] .an svg{transform:translateX(4px)}
+.panel{border:2px solid #25212B;border-radius:28px;padding:clamp(18px,2.4vw,30px);background:var(--c);color:var(--fg);box-shadow:8px 8px 0 #25212B;animation:pin .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes pin{from{opacity:0;transform:translateY(14px)}}
+.panel-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}
+.panel-h h3{font-size:clamp(22px,2.2vw,28px)}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.panel .pcard{--card:#FFFBF2;--ink:#25212B;--muted:#554e5e;--edge:#25212B}
+.panel .btn{--edge:#25212B}
+@media(max-width:900px){.works{grid-template-columns:minmax(0,1fr)}.areas{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.area{padding:14px}.area p,.area .an svg{display:none}.area .an{font-size:clamp(15px,3.6vw,20px)}}
+@media(max-width:600px){.pgrid{grid-template-columns:minmax(0,1fr)}.areas{grid-template-columns:minmax(0,1fr)}}
+
+/* community cards */
+.clist{display:grid;gap:clamp(22px,3vw,40px)}
+.clist.c2{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.c2 .ccard{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);border-radius:22px}
+.c2 .cphoto{min-height:300px}
+.c2 .cinfo{padding:clamp(18px,2vw,26px);gap:12px}
+.c2 .cinfo h3{font-size:clamp(20px,1.8vw,24px)}
+.c2 .cinfo p{font-size:14.5px;line-height:1.55}
+.c2 .btn{min-height:42px;padding:9px 16px;font-size:14px}
+.c2 .btns{gap:6px 14px;flex-wrap:nowrap}
+.c2 .btn{white-space:nowrap}
+.btn.btn-link{background:none;border:0;box-shadow:none;padding:9px 2px;color:inherit;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.btn.btn-link:hover{transform:none;box-shadow:none;color:var(--roxo)}
+@media(max-width:1060px){.clist.c2{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.c2 .ccard{grid-template-columns:minmax(0,1fr)}.c2 .cphoto{min-height:0;aspect-ratio:4/3}.c2 .btns{flex-wrap:wrap}}
+.t-gdg{background:#fff;color:#25212B;border-color:#25212B;display:inline-flex;align-items:center;gap:3px}
+.t-gdg i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.t-gdg i:nth-child(1){background:#4285F4}.t-gdg i:nth-child(2){background:#EA4335}.t-gdg i:nth-child(3){background:#FBBC04}.t-gdg i:nth-child(4){background:#34A853;margin-right:5px}
+.cinfo .csub{font-weight:700;color:var(--graf);font-size:16px;line-height:1.35;margin-top:-4px}
+.cinfo .cguest{font:500 13px/1.3 var(--m);color:var(--roxo);margin-top:-4px}
+.ctopics .tag{font-size:13px;padding:6px 9px;text-transform:uppercase}
+.rlist{border-top:1px solid rgba(245,238,220,.18)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;padding:28px 0;border-bottom:1px solid rgba(245,238,220,.18);align-items:start}
+.rimg{position:relative;display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#000;transition:transform .25s}
+.rimg svg,.rimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rimg .ph{left:8px;bottom:8px}
+.rbody{display:grid;gap:8px;justify-items:start}
+.rhead{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;width:100%;flex-wrap:wrap}
+.rmeta{display:flex;align-items:center;gap:12px;flex:none}
+.rdate{font:500 13px/1 var(--m);color:var(--muted);white-space:nowrap}
+.rbody .rdesc,.rbody .csub{max-width:70ch}
+.rbody h3{font-size:clamp(20px,1.9vw,26px)}
+.rbody .csub{font-weight:700;font-size:16px;line-height:1.35;color:var(--creme)}
+.rbody .cguest{font:500 13px/1.3 var(--m);color:var(--lima)}
+.rbody .rdesc{color:var(--muted);font-size:15px;line-height:1.6}
+.rbody .btns{margin-top:6px;gap:8px 16px}
+.rbody .btn{min-height:42px;padding:9px 16px;font-size:14px}
+.rbody .btn-link{color:var(--creme)}.rbody .btn-link:hover{color:var(--lima)}
+@media(max-width:600px){.row{grid-template-columns:96px minmax(0,1fr);gap:16px;padding:22px 0}.rimg .ph{display:none}.rhead .rmeta{flex:1 1 100%;justify-content:flex-start;gap:8px}}
+.t-wtm{background:var(--coral);color:var(--graf);border-color:var(--coral)}
+.rmeta{flex-wrap:wrap;justify-content:flex-end}
+.rhead .tag{background:transparent;color:var(--creme);border-color:rgba(245,238,220,.85)}
+.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 36px;margin-bottom:10px}
+.fgrp{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}
+.fgrp span{font:500 13px var(--m);color:var(--muted);margin-right:2px}
+.ft{background:none;border:0;border-bottom:2px solid transparent;color:var(--creme);font:500 15px var(--t);padding:10px 0;min-height:44px;cursor:pointer;opacity:.65}
+.ft:hover{opacity:1}
+.ft[aria-pressed=true]{opacity:1;color:var(--lima);border-bottom-color:var(--lima)}
+.fcount{font:500 13px var(--m);color:var(--muted);margin-left:auto}
+.b-graf .rempty{margin-top:24px;color:var(--muted)}
+.t-uxis{background:var(--roxo);color:#fff;border-color:var(--roxo)}
+.ccard{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);background:var(--creme);color:var(--graf);border:2px solid var(--graf);border-radius:28px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.ccard:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--lima)}
+.cphoto{position:relative;min-height:360px;background:var(--graf)}
+.cphoto svg,.cphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cinfo{padding:clamp(24px,3.6vw,52px);display:flex;flex-direction:column;gap:16px;justify-content:center;align-items:flex-start}
+.cinfo h3{font-size:clamp(24px,2.6vw,34px);line-height:1}
+.cinfo p{color:#4a4452;max-width:44ch}
+.t-date{background:var(--lima);color:var(--graf);border-color:var(--graf)}
+.cinfo .btn{--edge:#25212B}
+@media(max-width:760px){.ccard{grid-template-columns:minmax(0,1fr)}.cphoto{min-height:0;aspect-ratio:4/3}}
+
+/* about + contact */
+.about-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,80px);align-items:center}
+.portrait{position:relative;width:100%;max-width:420px;margin-inline:auto;aspect-ratio:4/5}
+.portrait svg{width:100%;height:100%}
+.portrait .ph{left:auto;right:6%;bottom:8%}
+.portrait .ptag~.ph,.portrait:has(.ptag) .ph{right:auto;left:8%;bottom:auto;top:6%}
+.ptag{position:absolute;right:-6%;bottom:5%;z-index:3;max-width:230px;background:var(--creme);color:var(--graf);border:2px solid var(--graf);border-radius:18px;padding:10px 14px;font:700 14px/1.35 var(--t);box-shadow:4px 4px 0 var(--graf);transform:rotate(-4deg)}
+.yrs{position:absolute;left:-10%;top:30%;z-index:3;background:#fff;transform:rotate(-6deg)}
+@media(max-width:800px){.yrs{left:0}}
+.ptag::before{content:"✦ ";color:var(--roxo)}
+@media(max-width:800px){.ptag{right:0;bottom:2%}}
+.big{font-family:var(--h);font-size:clamp(21px,2.3vw,30px);line-height:1.1}
+.about-g .btns{margin-top:30px}
+@media(max-width:800px){.about-g{grid-template-columns:minmax(0,1fr)}.portrait{max-width:320px}}
+.contact h2{font-size:clamp(32px,4.2vw,56px);line-height:.95;letter-spacing:-.03em;max-width:11ch}
+.contact .lead{margin-top:16px;font-size:16px}
+.clinks{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px;gap:16px}
+.clink{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:2px solid var(--graf);border-radius:20px;background:var(--creme);color:var(--graf);text-decoration:none;box-shadow:6px 6px 0 var(--graf);transition:transform .2s,box-shadow .2s;position:relative}
+a.clink:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--graf)}
+.clink small{font:500 13px var(--m);color:#5b5463}
+.clink strong{font-size:clamp(17px,1.8vw,21px);overflow-wrap:anywhere}
+.copy{align-self:flex-start;margin-top:6px;min-height:40px;padding:0 14px;border-radius:999px;border:2px solid var(--graf);background:var(--lima);color:var(--graf);font:700 14px var(--t);cursor:pointer}
+.deco-star{position:absolute;right:max(5vw,16px);top:clamp(40px,6vw,90px);width:clamp(90px,14vw,190px);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:800px){.clinks{grid-template-columns:minmax(0,1fr)}.deco-star{opacity:.5}}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);column-gap:clamp(32px,5vw,80px)}
+.contact h2,.contact .lead{grid-column:1}
+.contact h2{align-self:end}.contact .lead{align-self:start}
+.contact .clinks{grid-column:2;grid-row:1/span 2;align-self:center;margin-top:0;grid-template-columns:minmax(0,1fr);max-width:none}
+@media(max-width:800px){.contact .wrap{grid-template-columns:minmax(0,1fr)}.contact .clinks{grid-column:1;grid-row:auto;margin-top:32px}}
+
+/* footer */
+.ftr{background:var(--graf);color:var(--creme);padding:clamp(40px,5vw,64px) max(5vw,16px) 28px;border-top:2px solid var(--graf)}
+.ftr-g{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-end}
+.ftr .logo{font:700 clamp(18px,1.8vw,22px)/1 var(--t);letter-spacing:.06em;color:var(--creme)}
+.ftr .logo sup{color:var(--lima)}
+.ftr nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.ftr nav a{text-decoration:none;font-weight:500;padding:6px 0}
+.ftr nav a:hover{color:var(--lima)}
+.ftr-b{margin-top:32px;padding-top:18px;border-top:1px solid rgba(245,238,220,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font:500 13px var(--m);color:#cdc5d6}
+
+/* category pages */
+.chero h1{font-size:clamp(40px,6vw,84px);line-height:.88;letter-spacing:-.03em;max-width:12ch}
+.chero .lead{margin-top:22px}
+.chero .tags{margin-top:26px}
+.chero .sticker{margin-bottom:22px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--edge);background:transparent;color:inherit;font:500 15px var(--t);cursor:pointer}
+.chip:hover{background:color-mix(in srgb,var(--roxo) 14%,transparent)}
+.chip[aria-pressed=true]{background:var(--graf);color:var(--creme);border-color:var(--graf)}
+.b-coral .chip[aria-pressed=true]{background:var(--graf)}
+.empty{padding:28px;border:2px dashed currentColor;border-radius:20px}
+[hidden]{display:none!important}
+
+/* case template */
+.case-hero{padding-bottom:clamp(150px,16vw,220px)}
+.crumb{display:inline-flex;gap:8px;align-items:center;font-weight:700;text-decoration:none;margin-bottom:26px;min-height:44px}
+.crumb svg{width:18px;height:18px;transform:rotate(180deg)}
+.case-hero h1{font-size:clamp(36px,5vw,68px);line-height:.9;letter-spacing:-.03em;max-width:14ch}
+.case-hero .lead{margin-top:20px}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,auto));justify-content:start;gap:12px 48px;margin:28px 0 0}
+.meta dt{font:500 13px var(--m);opacity:.85}
+.meta dd{margin:2px 0 0;font-weight:700}
+.case-hero .tags{margin-top:22px}
+.cover-wrap{padding:0 max(5vw,16px);margin-top:clamp(-200px,-14vw,-120px);position:relative;z-index:2}
+.case-cover{max-width:1240px;margin:auto;position:relative;aspect-ratio:16/8;border:3px solid var(--graf);border-radius:28px;overflow:hidden;box-shadow:10px 10px 0 var(--graf);background:var(--graf)}
+.case-cover svg,.case-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.case-body{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+.toc{position:sticky;top:96px;align-self:start;display:grid;gap:2px}
+.toc a{text-decoration:none;padding:7px 10px;border-radius:10px;font-size:15px;color:var(--muted)}
+.toc a:hover{background:color-mix(in srgb,var(--roxo) 14%,transparent);color:var(--ink)}
+.toc a{position:relative;transition:background .2s,color .2s}
+.toc a[aria-current=true]{background:color-mix(in srgb,var(--roxo) 14%,transparent);color:var(--roxo)}
+.toc a[aria-current=true]::before{content:'';position:absolute;left:-6px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--roxo)}
+:root[data-theme=dark] .toc a[aria-current=true]{color:var(--lima)}
+:root[data-theme=dark] .toc a[aria-current=true]::before{background:var(--lima)}
+.csec{padding:30px 0;border-top:2px solid var(--edge)}
+.csec:first-child{border-top:0;padding-top:0}
+.csec h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:16px}
+.csec p,.csec ul{max-width:68ch}
+.csec ul{margin:0;padding-left:20px}
+.cquote{margin:22px 0 0;padding:18px 22px;border-left:4px solid var(--roxo);font-family:var(--h);font-size:clamp(20px,2vw,26px);line-height:1.2;max-width:30ch}
+.csec mark{background:linear-gradient(transparent 55%,color-mix(in srgb,var(--lima) 75%,transparent) 55%);color:inherit;padding:0 1px;font-weight:600}
+.csec>p+p,.csec>p+div{margin-top:14px}
+.stats-wrap{padding:clamp(28px,4vw,48px) max(5vw,16px) 0}
+.stats{max-width:1240px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid var(--edge);border-radius:22px;overflow:hidden;background:var(--card)}
+.stats>div{padding:22px 24px;display:grid;gap:6px;border-left:2px solid var(--edge)}
+.stats>div:first-child{border-left:0}
+.stats strong{font-family:var(--h);font-weight:400;font-size:clamp(40px,5vw,64px);line-height:.9;color:var(--roxo)}
+:root[data-theme=dark] .stats strong{color:var(--lima)}
+.stats span{font-size:15px;color:var(--muted);line-height:1.3}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats>div:nth-child(3){border-left:0}.stats>div:nth-child(n+3){border-top:2px solid var(--edge)}}
+.callout{margin-top:20px;padding:20px 22px;border-radius:16px;background:var(--roxo);color:#fff;max-width:68ch}
+.callout b{font:500 13px var(--m);color:var(--lima);display:block;margin-bottom:6px}
+.callout mark{background:none;color:var(--lima);font-weight:700}
+.pcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pc{border:2px solid var(--edge);border-radius:18px;padding:20px;background:var(--card)}
+.pc h3{font-size:20px;margin-bottom:10px}.pc p{font-size:15px;line-height:1.55;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:18px;max-width:72ch}
+.steps li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:14px;align-items:start}
+.sn{width:10px;height:10px;border-radius:50%;background:var(--roxo);margin-top:13px}
+.steps h3{font-size:20px;margin:6px 0 8px}.steps p{font-size:16px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.kpi{border-radius:18px;padding:20px;background:light-dark(#fff,#2a2631);color:var(--ink);border:1.5px solid color-mix(in srgb,var(--edge) 22%,transparent);display:grid;gap:6px;align-content:start}
+.kpi strong{font-family:var(--h);font-weight:400;font-size:clamp(26px,2.6vw,34px);line-height:1;color:var(--roxo)}
+:root[data-theme=dark] .kpi strong{color:var(--lima)}
+.kpi h3{font-size:16px}.kpi p{font-size:14px;line-height:1.55;color:var(--muted)}
+.llist{list-style:none;padding:0;margin:0;display:grid;gap:16px;max-width:72ch}
+.llist li{padding-left:18px;border-left:3px solid var(--coral)}
+.llist h3{font-size:18px;margin-bottom:6px}.llist p{font-size:16px}
+@media(max-width:900px){.pcards,.kpis{grid-template-columns:minmax(0,1fr)}}
+.mx{border:1px solid color-mix(in srgb,var(--edge) 18%,transparent);border-radius:18px;background:light-dark(#fff,#2a2631);overflow:hidden;max-width:880px}
+.mx-r{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,2.2fr);gap:16px;padding:14px 20px;align-items:center;border-top:1px solid color-mix(in srgb,var(--edge) 12%,transparent)}
+.mx-h{border-top:0;font:500 12px var(--m);color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding-block:12px}
+.mx-d{font-weight:700;font-size:15px}.mx-x{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.mx-b{display:inline-block;font:500 13px var(--m);padding:4px 10px;border-radius:99px;border:1.5px solid currentColor;white-space:nowrap}
+.mx-alta{color:#2f7a1f}.mx-media{color:#b8550f}.mx-baixa{color:#c0331a}
+:root[data-theme=dark] .mx-alta{color:var(--lima)}:root[data-theme=dark] .mx-media{color:#ffb38f}:root[data-theme=dark] .mx-baixa{color:var(--coral)}
+.mx mark{background:none;color:inherit;font-weight:inherit}
+@media(max-width:700px){.mx-h{display:none}.mx-r{grid-template-columns:minmax(0,1fr);gap:6px}}
+/* case: versão clean */
+.case-hero{padding-top:clamp(36px,4.5vw,64px);padding-bottom:clamp(150px,14vw,200px)}
+.case-hero .crumb{margin-bottom:14px;font-size:15px}
+.case-hero .meta dd{font-size:15px}
+.cover-wrap{margin-top:clamp(-140px,-9vw,-90px)}
+.csec .kpi p,.csec .pc p{font-size:14.5px;line-height:1.55}
+.csec .kpi h3{font-size:15px}
+.case-hero h1{font-size:clamp(30px,3.6vw,48px);line-height:1.02;letter-spacing:-.02em;max-width:20ch}
+.case-hero .lead{font-size:17px;max-width:60ch;margin-top:14px}
+.case-hero .meta{margin-top:22px}
+.case-cover{border-width:2px;box-shadow:none;border-radius:20px}
+.stats{border:1px solid color-mix(in srgb,var(--edge) 18%,transparent);background:light-dark(#fff,#2a2631);border-radius:18px}
+.stats>div{border-left:1px solid color-mix(in srgb,var(--edge) 14%,transparent);padding:18px 22px}
+.stats>div:nth-child(n+3){border-top-width:1px}
+.stats strong{font-size:clamp(28px,3vw,40px)}
+.stats span{font-size:14px}
+.case-body{grid-template-columns:180px minmax(0,1fr)}
+.case-body>div{max-width:820px}
+.toc a{font-size:14px;padding:6px 10px}
+.csec{padding:36px 0;border-top:1px solid color-mix(in srgb,var(--edge) 14%,transparent)}
+.csec h2{font-size:clamp(20px,1.9vw,24px);margin-bottom:14px;letter-spacing:-.01em}
+.csec h3{font-family:var(--t);font-weight:700;letter-spacing:0;line-height:1.3}
+.csec p,.csec li{font-size:16px;line-height:1.65}
+.callout{background:color-mix(in srgb,var(--roxo) 9%,transparent);color:var(--ink);border-left:3px solid var(--roxo);border-radius:0 12px 12px 0;padding:16px 20px}
+.callout b{color:var(--roxo)}
+.callout mark{background:linear-gradient(transparent 55%,color-mix(in srgb,var(--lima) 75%,transparent) 55%);color:inherit;font-weight:600}
+.pc{border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);background:light-dark(#fff,#2a2631);border-radius:14px;padding:18px}
+.pc h3{font-size:16px;margin-bottom:6px}.pc p{font-size:14.5px}
+.steps{gap:22px}.steps h3{font-size:16px;margin:4px 0 4px}.sn{margin-top:9px;width:8px;height:8px}
+.kpi{border-color:color-mix(in srgb,var(--edge) 16%,transparent);border-width:1px;border-radius:14px}
+.llist li{border-left:2px solid color-mix(in srgb,var(--roxo) 55%,transparent);padding-left:16px}
+.llist h3{font-size:16px;margin-bottom:4px}
+.gi{border-width:1px;border-radius:12px}
+.next h2{font-size:clamp(24px,3vw,40px)}
+@media(max-width:900px){.case-body{grid-template-columns:minmax(0,1fr)}}
+
+.gal-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px;align-items:start}
+.shot{margin:0}.shot:first-child{grid-column:1/-1}
+.shot img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);background:#fff}
+.shot figcaption{font:500 13px/1.4 var(--m);color:var(--muted);margin-top:10px}
+@media(max-width:700px){.gal-shots{grid-template-columns:minmax(0,1fr)}}
+.car{max-width:780px}
+.car-sm .car{max-width:480px}
+.car-vp{overflow:hidden;border-radius:14px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);background:#fff}
+.car-track{display:flex;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.car-s{flex:0 0 100%;margin:0;min-width:0}
+.car-img{display:block;width:100%;padding:0;border:0;background:#fff;cursor:zoom-in;aspect-ratio:16/10}
+.car-img img,.car-img video{width:100%;height:100%;object-fit:contain;display:block}
+.car-s figcaption{font:500 13px/1.4 var(--m);color:#554e5e;padding:10px 16px;border-top:1px solid #eee7d6;background:#fffdf8}
+.car-ctl{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.car-arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--edge) 30%,transparent);background:transparent;color:inherit;font-size:18px;cursor:pointer}
+.car-arrow:hover{background:var(--lima);border-color:var(--graf);color:var(--graf)}
+.car-dots{display:flex;gap:6px;align-items:center}
+.car-dot{width:8px;height:8px;border-radius:999px;border:0;padding:0;cursor:pointer;background:color-mix(in srgb,var(--ink) 25%,transparent);transition:width .3s,background .3s}
+.car-dot[aria-current=true]{width:24px;background:var(--roxo)}
+.car-hint{font:500 13px var(--m);color:var(--muted);margin-left:auto}
+.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;overflow:visible}
+.lb::backdrop{background:rgba(20,18,26,.85)}
+.lb figure{margin:0}
+.lb img,.lb video{max-width:min(1100px,88vw);max-height:80vh;display:block;border-radius:12px;background:#fff}
+.lb [hidden]{display:none!important}
+.lb figcaption{color:#F5EEDC;font:500 13px var(--m);margin-top:12px;text-align:center}
+.lb-x,.lb-p,.lb-n{position:fixed;width:44px;height:44px;border-radius:50%;border:0;background:#F5EEDC;color:#25212B;font-size:24px;line-height:1;cursor:pointer;z-index:2}
+.lb-x{top:16px;right:16px}
+.lb-p,.lb-n{top:50%;transform:translateY(-50%)}.lb-p{left:16px}.lb-n{right:16px}
+@media(max-width:600px){.car-hint{display:none}}
+.csec .callout mark,.csec .pc mark,.csec .kpi mark{background:none;color:inherit;font-weight:inherit;padding:0}
+.csec .bh{font-size:17px;margin:28px 0 14px}
+.route{font:500 13.5px/1.5 var(--m);background:color-mix(in srgb,var(--roxo) 10%,transparent);color:var(--ink);padding:2px 6px;border-radius:6px;white-space:normal}
+.kpi strong{overflow-wrap:anywhere}
+#cs-atuacao .pcards{grid-template-columns:minmax(0,1fr);gap:10px;max-width:760px}
+#cs-atuacao .pc{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 16px;align-items:baseline;padding:14px 18px}
+#cs-atuacao .pc h3{margin:0}
+@media(max-width:600px){#cs-atuacao .pc{grid-template-columns:minmax(0,1fr)}}
+.car-video .car-vp{background:transparent;border:0;border-radius:0}
+.car-video .car-img{background:transparent;aspect-ratio:auto;width:auto;display:inline-block}
+.car-video .car-img video{width:auto;height:min(70vh,620px);max-width:100%;border-radius:18px;box-shadow:0 18px 40px -18px rgba(37,33,43,.45)}
+.car-video .car-s figcaption{background:transparent;border:0;padding:12px 0 0}
+.car-video .car-hint,.car-video .car-ctl{display:none}
+.car-video .car-ctl{margin-top:4px}
+.csec ul.dots{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:72ch}
+.csec ul.dots li{position:relative;padding-left:24px}
+.csec ul.dots li::before{content:"";position:absolute;left:2px;top:.68em;width:8px;height:8px;border-radius:50%;background:var(--roxo)}
+.pcards.pc2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.todo{border:2px dashed var(--muted);border-radius:14px;padding:16px 18px;color:var(--muted);max-width:68ch}
+.todo b{font:500 13px var(--m);display:block;color:var(--roxo);margin-bottom:6px}
+:root[data-theme=dark] .todo b{color:var(--lima)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .todo b{color:var(--lima)}}
+.gal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:8px}
+.gi{position:relative;border:2px solid var(--edge);border-radius:16px;overflow:hidden;background:var(--graf);grid-column:span 2;aspect-ratio:1}
+.gi:nth-child(5n+1){grid-column:span 4;aspect-ratio:16/10}
+.gi:nth-child(5n+2){aspect-ratio:4/5}
+.gi svg,.gi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.next{display:block;text-decoration:none;transition:background .3s}
+.next small{font:500 13px var(--m)}
+.next h2{font-size:clamp(30px,4.4vw,60px);line-height:.92;margin-top:10px;display:flex;align-items:center;gap:.3em;flex-wrap:wrap}
+.next h2 svg{width:.7em;height:.7em;transition:transform .3s}
+.next:hover h2 svg{transform:translateX(12px)}
+@media(max-width:900px){.case-body{grid-template-columns:minmax(0,1fr)}.toc{display:none}.meta{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:600px){.gal{grid-template-columns:minmax(0,1fr)}.gi,.gi:nth-child(n){grid-column:auto;aspect-ratio:4/3}.case-cover{aspect-ratio:4/3}}
+
+/* about page */
+.dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.dim{border:2px solid var(--graf);border-radius:24px;padding:26px;color:var(--graf);box-shadow:6px 6px 0 var(--graf)}
+.dim:nth-child(1){background:var(--azul);color:#fff}
+.dim:nth-child(2){background:var(--coral)}
+.dim:nth-child(3){background:var(--lima)}
+.dim h3{font-size:clamp(21px,2vw,26px);margin-bottom:16px}
+.dim ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.dim li{padding-left:22px;position:relative}
+.comps{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.comps .dim:nth-child(1){background:var(--roxo);color:#fff}
+.comps .dim:nth-child(2){background:var(--lima);color:var(--graf)}
+.comps .dim{padding:clamp(24px,3vw,36px)}
+.dim.tcard{margin-top:24px;background:var(--coral);color:var(--graf);display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px 24px;align-items:center;padding:clamp(22px,2.6vw,32px)}
+.tcard h3{margin:0;font-size:clamp(19px,1.7vw,22px)}
+.tcard .tag{font-size:14px;padding:8px 12px}
+@media(max-width:700px){.tcard{grid-template-columns:minmax(0,1fr)}}
+.comps .dim ul{gap:8px;font-size:15px;line-height:1.5}
+.comps .dim h3{font-size:clamp(19px,1.7vw,22px)}
+.comps .dim li::before{width:8px;height:8px;top:.6em}
+.comps .dim li{padding-left:18px}
+.dim li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:currentColor}
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tools-h{font:500 13px/1 var(--m);margin:22px 0 12px;opacity:.85}
+.tools .tag{font-size:15px;padding:10px 14px;background:var(--creme);color:var(--graf);border-color:var(--graf)}
+.tl{display:grid;gap:0;border-left:3px solid var(--roxo);margin-left:8px}
+.tl-i{position:relative;padding:0 0 28px 30px}
+.tl-i::before{content:"";position:absolute;left:-11px;top:4px;width:19px;height:19px;border-radius:50%;background:var(--lima);border:3px solid var(--graf)}
+.tl-i h3{margin-bottom:10px}
+.traj{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px clamp(32px,5vw,80px)}
+.traj h2{font-size:clamp(26px,2.8vw,34px)}
+.traj .tl{border-left:1.5px solid rgba(196,240,90,.4);margin-left:6px}
+.traj .tl-i{padding:0 0 30px 28px}
+.traj .tl-i:last-child{padding-bottom:0}
+.traj .tl-i::before{left:-6.5px;top:5px;width:11px;height:11px;border:0;background:var(--lima);box-shadow:0 0 0 5px rgba(196,240,90,.14)}
+.tl-p{display:block;font:500 13px/1 var(--m);color:var(--lima);margin-bottom:8px}
+.traj .tl-i h3{font:600 18px/1.3 var(--t);letter-spacing:0;margin-bottom:10px}
+.traj .todo{border:1px dashed rgba(245,238,220,.28);border-radius:12px;padding:12px 14px;font-size:15px}
+.traj .todo b{color:var(--lima)}
+.tl-d{font-size:15px;line-height:1.6;color:var(--muted);max-width:62ch;margin-bottom:12px}
+.tl-t .tag{font-size:13px;padding:6px 9px;text-transform:uppercase;border-color:rgba(245,238,220,.35);color:var(--creme)}
+@media(max-width:800px){.traj{grid-template-columns:minmax(0,1fr)}}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+@media(max-width:860px){.dims,.two{grid-template-columns:minmax(0,1fr)}}
+
+/* motion */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#inicio" id="skip">Pular para o conteúdo</a>
+<header class="hdr" id="hdr"></header>
+<main id="main" tabindex="-1"></main>
+<footer class="ftr" id="ftr"></footer>
+<noscript><p style="padding:24px">Este portfólio precisa de JavaScript para exibir os projetos.</p></noscript>
+<script>
+{
+/* =====================================================================
+   CONTEÚDO EDITÁVEL
+   Tudo o que aparece no site vem daqui. Para adicionar um case, copie
+   um objeto em PROJECTS, troque o slug (sem espaços/acentos) e os textos.
+   Ele aparece sozinho na página da categoria, na Home (se featured:true)
+   e ganha uma página própria em #case-<slug>.
+   - image: caminho/URL da capa real (enquanto vazio, mostra arte provisória)
+   - case: textos do case; campos ausentes mostram um lembrete "para preencher"
+   ===================================================================== */
+const CONFIG={
+  name:'Ju Ribeiro',
+  years:6,
+  email:'julianaribeiro.ux@gmail.com',
+  linkedin:'https://www.linkedin.com/in/julianarib/',
+  linkedinLabel:'/in/julianarib',
+  whatsapp:'5521979164660', whatsappLabel:'(21) 97916-4660',
+  instagram:'https://www.instagram.com/',// PLACEHOLDER
+  instagramLabel:'@seu.perfil',
+  photo:'img/ju-rosto-2.jpg',              // foto do círculo no topo da Início (vazio = ilustração provisória)
+  photoAbout:'img/ju-retrato.jpg',       // foto vertical da seção "Prazer, Ju" na Início
+  videoAbout:'img/ju-sobre.mp4',         // vídeo em loop da página Sobre (sem som)
+  videoPoster:'img/ju-sobre-poster.jpg',
+  cv:''                                  // PLACEHOLDER: link do currículo (PDF, Drive…). Vazio = botão mostra 'em breve'
+};
+
+const CATS={
+  digital:{route:'experiencias-digitais',name:'Experiências Digitais',short:'Digital',band:'b-graf',
+    lead:'Produtos, interfaces, sites e landing pages. Da jornada ao pixel final, incluindo o que dá pra colocar no ar com Framer e Wix Studio.',
+    areas:['UX Design','Product Design','UI Design','Design System','IA aplicada ao Design','Sites e landing pages','No-code']},
+  comunicacao:{route:'visual-design',name:'Visual Design',short:'Visual Design',band:'b-coral',
+    lead:'Marcas, campanhas, conteúdo e direção de arte. Ideias que precisam ser vistas, entendidas e lembradas.',
+    areas:['Estratégia de comunicação','Criação de conteúdo','Branding','Identidade visual','Design gráfico','Comunicação para redes']},
+  comunidade:{route:'comunidades',name:'Community Manager',short:'Community Manager',band:'b-lima',
+    lead:'Eventos, encontros e iniciativas que juntam gente em torno de tecnologia e design. Aqui o design também é organizar, acolher e fazer acontecer.',
+    areas:['Construção de comunidades','Organização de eventos','Host','Relacionamento com Patrocinadores','GDG BH','Comunidade UXis']}
+};
+
+const PROJECTS=[
+  {slug:'mentoria-ux-uxis',image:'img/uxis-mockup.jpg',imageAlt:'Mockup com as telas do Marketplace UXis, UXis Academy e Avaliador de Portfólio',cat:'digital',featured:true,title:'Liderança em UX/UI: Aceleração de Squads e Governança de Produto',
+   summary:'Liderança da mentoria prática do programa de aceleração de novos talentos de UX/UI da Comunidade UXis: 6 designers, 3 squads e 3 produtos entregues no prazo.',
+   tags:['UX Design','Mentoria','Gestão de squads'],date:'2023',role:'Mentora UX · Liderança de squads',
+   case:{
+    gallery:[{src:'img/uxis-marketplace.jpg',alt:'Marketplace UXis: lista de candidatos com filtros de senioridade, área e modelo de trabalho',caption:'Marketplace UXis · busca de talentos com filtros e perfis'},
+             {src:'img/uxis-academy.jpg',alt:'Landing page da UXis Academy com chamada para iniciar os estudos',caption:'UXis Academy · landing page do hub educacional'},
+             {src:'img/uxis-avaliador.jpg',alt:'Avaliador de Portfólio: gráfico de resultados e recomendações de cursos',caption:'Avaliador de Portfólio · relatório com resultados e recomendações'}],
+    stats:[['6','designers mentorados'],['3','squads sob minha liderança'],['3','produtos entregues'],['100%','entregues no prazo']],
+    sections:[
+     {id:'visao',title:'Visão Geral & Desafio de Liderança',blocks:[
+      {p:'Na Comunidade UXis, liderei a **mentoria prática do programa de aceleração de novos talentos de UX/UI**. O programa foi estruturado para desenvolver **6 designers** divididos originalmente em **3 squads autônomas**, operando em projetos estratégicos da comunidade.'},
+      {label:'O desafio',callout:'Inicialmente responsável pela liderança técnica de 1 squad, precisei **assumir emergentemente a gestão e orientação das outras 2 squads** no decorrer do programa. O objetivo central foi **unificar a governança visual, acelerar a entrega dos produtos e garantir autonomia técnica aos times** sem comprometer prazos ou consistência.'}]},
+     {id:'escopo',title:'Escopo dos Produtos Sob Minha Gestão',blocks:[
+      {cards:[['Marketplace UXis','Plataforma de conexões projetada para **centralizar o portfólio dos membros** e conectá-los diretamente a **recrutadores e oportunidades** do mercado de tecnologia.'],
+              ['UXis Academy','Hub educacional estruturado para **mapear e orientar a jornada de aprendizado em UX/UI**, centralizando cursos, artigos e trilhas formativas da comunidade.'],
+              ['Avaliador de Portfólio','Ferramenta interativa de diagnóstico que analisa o **nível de maturidade do portfólio** de designers iniciantes, gerando **relatórios estratégicos** com recomendações de melhorias.']]}]},
+     {id:'atuacao',title:'Atuação Estratégica & Gestão de Squads',blocks:[
+      {steps:[['Escala de Liderança & Replanejamento Agilizado','Ao assumir o **comando total das 3 squads**, realizei um diagnóstico imediato dos gargalos de fluxo. **Redefini os escopos críticos (MVP)**, reorganizei cronogramas de entrega e estabeleci rituais ágeis leves (syncs semanais e critiquing de design) para manter ritmo e clareza de prioridades.'],
+              ['Governança & Padronização (Design System & QA)','Para evitar discrepâncias entre as entregas de cada dupla, estabeleci **critérios claros de Quality Assurance (QA) e guias de consistência de interface**, garantindo que os três produtos conversassem visualmente com o ecossistema da UXis.'],
+              ['Mentoria Baseada em Autonomia Guiada','Atuei como **ponte estratégica entre os stakeholders da comunidade e as equipes**. Direcionei os times nas tomadas de decisão de arquitetura da informação, pesquisa com usuários e navegação, **incentivando a resolução autônoma de problemas complexos** em vez de ditar respostas prontas.']]}]},
+     {id:'resultados',title:'Resultados & Impacto do Programa',blocks:[
+      {kpis:[['100%','dos produtos entregues no prazo','Todos os 3 projetos (Marketplace, Academy e Avaliador de Portfólio) foram concluídos no prazo estabelecido, mantendo o padrão de UX e a fidelidade aos requisitos estratégicos.'],
+             ['3 squads','Continuidade sem ruído','A transição para a liderança unificada de 3 squads ocorreu **sem atrasos na esteira de produção** e sem perda de motivação do time voluntário.'],
+             ['6 designers','Desenvolvimento de talentos','Os 6 designers mentorados evoluíram em **maturidade técnica** (pensamento sistêmico, fundamentação de decisões e prototipação de alta fidelidade) e em **preparação para o mercado de trabalho**.']]}]},
+     {id:'aprendizados',title:'Aprendizados de Liderança',blocks:[
+      {list:[['Capacidade de Pivotação Operacional','Redimensionar processos rapidamente diante de mudanças de capacidade do time é essencial para **proteger a entrega do MVP**.'],
+             ['Liderança por Influência e Empatia','Em ambientes voluntários, a **motivação contínua e a clareza de propósito** são os principais motores de engajamento e alta performance.'],
+             ['Equilíbrio entre Direcionamento e Autonomia','Delegar com segurança exige criar **guardrails claros** (design system, rituais de review) para dar liberdade criativa sem perder a coerência do produto final.']]}]}
+    ]
+   }},
+  {slug:'linkedin-qr-code',image:'img/linkedin-cover.jpg',imageAlt:'Mockup de dois celulares com o perfil e o QR Code do LinkedIn redesenhados',cat:'digital',featured:true,title:'QR Code do LinkedIn: de escondido na busca a 2 toques do perfil',
+   summary:'Um teste com 53 usuários mostrou que 73,5% não sabiam que o recurso existia e 38% não conseguiam chegar até ele. Propus um novo fluxo que leva o QR Code para o perfil e reduz o acesso de 4 para 2 toques.',
+   tags:['Product Design','UX Research','Arquitetura de informação','Mobile'],date:'Ano a preencher',role:'Product Designer (End-to-End)',
+   case:{
+    gallery:[{video:'img/linkedin-fluxo.mp4',poster:'img/linkedin-fluxo-poster.jpg',alt:'Vídeo do protótipo: do feed ao drawer de perfil e à tela do QR Code',caption:'Protótipo · do feed ao QR Code em 2 toques'}],
+    stats:[['53','participantes no teste'],['73,5%','desconheciam o recurso'],['38%','de falha ou desistência'],['4 → 2','toques até o QR Code']],
+    sections:[
+     {id:'visao',title:'Visão Geral do Projeto',blocks:[
+      {p:'A funcionalidade de compartilhamento via QR Code no app mobile do LinkedIn foi desenhada para acelerar o networking presencial. Contudo, a arquitetura de informação atual **exige múltiplos passos e oculta a ferramenta na barra de busca**, gerando atrito de navegação e **baixas taxas de descoberta**.'},
+      {p:'Este estudo de caso de Product Design avalia a jornada atual por meio de **testes quantitativos e qualitativos**, propondo um novo fluxo de acesso a partir do perfil do usuário para **reduzir o tempo de tarefa e eliminar pontos de descarte**.'}]},
+     {id:'atuacao',title:'Estrutura de Atuação',blocks:[
+      {cards:[['Papel','Product Designer (End-to-End).'],
+              ['Escopo','UX Research, Análise de Dados de Navegação, Arquitetura de Informação, Prototipação e Design de Interação.'],
+              ['Contexto','Estudo de otimização de produto apresentado como Trabalho de Conclusão de Curso (TCC) na pós-graduação em UX Design da PUCRS.']]}]},
+     {id:'pesquisa',title:'Pesquisa de Usabilidade e Análise de Dados',blocks:[
+      {p:'Para validar a hipótese de **desalinhamento de modelo mental** dos usuários, foi realizado um **teste não moderado de usabilidade utilizando o Maze**, aplicado a uma amostra de **53 participantes**.'},
+      {label:'Cenário do teste',callout:'Encontrar e exibir o próprio QR Code de perfil no aplicativo móvel.'},
+      {h:'Métricas Quantitativas Alcançadas'},
+      {kpis:[['73,5%','Desconhecimento do recurso','39 dos 53 participantes relataram ignorar a existência da funcionalidade no app.'],
+             ['38%','Taxa de falha/desistência','Mais de um terço dos usuários não concluiu a tarefa ou encerrou a navegação na tela errada.'],
+             ['+60s','Tempo médio por tarefa','Tempo excessivo para uma funcionalidade cujo valor principal é a agilidade instantânea no mundo físico.']]}]},
+     {id:'friction',title:'Mapeamento de Friction Points (Qualitativo)',blocks:[
+      {steps:[['Quebra de Modelo Mental','Os usuários esperam encontrar dados de identificação própria (como o QR Code) **dentro do hub de Perfil**, e não integrados visualmente ao componente de Busca Global.'],
+              ['Excesso de Clicabilidade Secundária','O fluxo original exige a rota `Feed → Barra de Busca → Ícone Secundário de QR Code → Aba Meu Código`, adicionando **fricção desnecessária**.']]}]},
+     {id:'solucao',title:'Proposta de Solução: Reestruturação do Fluxo de Perfil',blocks:[
+      {p:'A solução proposta redesenhou o modelo de acesso para alinhar o app às **expectativas de navegação imediata** do usuário:'},
+      {steps:[['Drawer de Ações Rápidas no Perfil','Ao tocar na foto de perfil/avatar no feed, o app exibe um **menu contextual contendo o atalho direto para "Meu QR Code"**.'],
+              ['Redução de Passos (Clicks to Task)','O novo fluxo diminui a jornada **de 4 para 2 toques**, eliminando a dependência do componente de busca.'],
+              ['Preservação de Contexto','A navegação ocorre por meio de componentes de superfície (drawers/modais), **mantendo o usuário ancorado na sua sessão de navegação original**.']]}]},
+     {id:'resultados',title:'Hipóteses de Impacto e Métricas para Validação',blocks:[
+      {p:'Por se tratar de uma **proposta de redesign** da funcionalidade, a nova estrutura de navegação foi desenhada para atingir os seguintes **indicadores de sucesso (Benchmarking)** em um próximo ciclo de testes:'},
+      {kpis:[['< 5s','Meta de redução de TTF (Time to Find)','Projetada a queda do tempo de localização do recurso de +60s para menos de 5s, viabilizada pelo acesso direto via menu contextual.'],
+             ['4 → 2','Redução de fricção (Task Efficiency)','Encurtamento da jornada de 4 para 2 toques a partir do feed inicial.'],
+             ['> 90%','Projeção de taxa de conclusão','Meta de elevar o sucesso direto da tarefa para >90% (mitigando os 38% de falha/desistência identificados no fluxo legatório).']]}]}
+    ]
+   }},
+  {slug:'design-system-greenole',image:'img/ds-cover-original.jpg',imageAlt:'Telas do Design System em perspectiva: paleta de cores, tipografia, botões e sombras',cat:'digital',featured:true,title:'Criação e Governança do Design System',
+   summary:'Design System criado do zero no Figma: tokens, biblioteca de componentes e governança que padronizaram a nova identidade visual e aproximaram Design e Desenvolvimento.',
+   tags:['Design System','Figma','UI Design','Governança'],date:'2025',role:'Product Designer · Design System',
+   case:{
+    gallery:[{src:'img/ds-cores.svg',alt:'Paleta primária do Design System: tokens purple-400 a purple-900 com hex e rgb',caption:'Fundamentos · paleta primária ($purple-400 a $purple-900)'},
+             {src:'img/ds-tipografia.svg',alt:'Escala de títulos H1 a H4 com peso, tamanho e altura de linha',caption:'Fundamentos · escala tipográfica de títulos'},
+             {src:'img/ds-botoes.svg',alt:'Botões primário, secundário e terciário nos estados default e hover',caption:'Componentes · botões, variantes e estados'},
+             {src:'img/ds-sombras.svg',alt:'Tokens de sombra shadow-sm, shadow-md e shadow-lg com seus valores',caption:'Fundamentos · elevação e sombras'}],
+    stats:[['0 → 1','Design System criado do zero'],['Tokens','primitivos e semânticos'],['WCAG','contraste verificado'],['1:1','componentes no Figma e no código']],
+    sections:[
+     {id:'visao',title:'Visão Geral & Desafio',blocks:[
+      {p:'Durante a evolução do produto, identificamos a necessidade de **atualizar a interface e padronizar os elementos visuais**. A plataforma contava com **componentes duplicados, variações desnecessárias de telas e desalinhamento de padrões** entre Design e Desenvolvimento.'},
+      {label:'O desafio',callout:'Criar um Design System estruturado no Figma a partir do zero (tokens, biblioteca de componentes e diretrizes), garantindo a nova identidade visual da marca, acelerando o tempo de prototipação do time e reduzindo o retrabalho no handoff.'}]},
+     {id:'atuacao',title:'Minha Atuação & Responsabilidade',blocks:[
+      {cards:[['Papel','Product Designer responsável pela arquitetura e manutenção do Design System.'],
+              ['Escopo','Auditoria da interface atual, estruturação da hierarquia de tokens, criação da biblioteca no Figma (com Auto Layout, Variáveis e Component Properties) e documentação de handoff técnico.']]}]},
+     {id:'processo',title:'Processo de Construção',blocks:[
+      {h:'Auditoria da UI Atual'},
+      {ul:['**Mapeamento global de telas** para identificar inconsistências visuais (botões desalinhados, variações de tipografia, modais e paletas sem padronização).',
+           'Mapeamento dos principais **pontos de fricção relatados pelos desenvolvedores** ao implementar novas features.']},
+      {h:'Definição de Tokens e Fundamentos'},
+      {steps:[['Cores e Tipografia','Estruturação de **tokens primitivos e semânticos** para garantir consistência e facilitar a aplicação do branding.'],
+              ['Espaçamento e Grid','Padronização de **escalas de espaçamentos e elevações** para tornar os layouts mais previsíveis e responsivos.'],
+              ['Acessibilidade','Verificação de **contraste (WCAG)** nas combinações de cores principais para garantir boa leitura e acessibilidade visual.']]},
+      {h:'Biblioteca no Figma'},
+      {ul:['Criação de **componentes atômicos** (botões, inputs, badges, ícones) até estruturas mais complexas (cards, modais e tabelas).',
+           'Uso de recursos avançados do Figma (**Auto Layout, Variables, Variants e Components**) para garantir que a biblioteca fosse leve e fácil de usar.']},
+      {h:'Heurísticas e Vieses Cognitivos'},
+      {p:'Apliquei as **heurísticas de Nielsen** e conhecimentos sobre **vieses cognitivos** para tornar os componentes mais previsíveis, consistentes e fáceis de usar. Princípios como **consistência e padrões, visibilidade do status do sistema e prevenção de erros** guiaram a interação de botões, campos, modais e mensagens. Também considerei **modelos mentais e padrões reconhecíveis** para reduzir a carga cognitiva e orientar as decisões visuais e de comportamento.'},
+      {h:'Documentação e Governança'},
+      {ul:['Criação do **guia de uso no Figma** (especificações de comportamento, estados dos componentes e variações).',
+           'Alinhamento frequente com o time de desenvolvimento para garantir **equivalência entre os componentes do Figma e o código**.',
+           'Definição de **fluxo interno para solicitação, aprovação e criação de novos componentes** conforme a necessidade das demandas.']}]},
+     {id:'resultados',title:'Resultados e Impacto',blocks:[
+      {cards2:[['Agilidade em Prototipação','Redução expressiva no tempo de entrega de novos fluxos e telas de alta fidelidade pelo time.'],
+               ['Consistência Visual','Padronização completa do produto com a nova identidade visual da empresa.'],
+               ['Alinhamento com Desenvolvedores','Diminuição de dúvidas e ajustes durante as sprints de desenvolvimento devido aos padrões claros de componentes e tokens.'],
+               ['Evolução Contínua','Criação de um processo claro de manutenção para que o Design System continue crescendo de forma organizada.']]}]},
+     {id:'aprendizados',title:'Aprendizados',blocks:[
+      {list:[['Design System é um Produto','Exige **manutenção contínua, escuta ativa dos times e governança clara** para que continue sendo utilizado no dia a dia.'],
+             ['Comunicação entre Design e Dev','A documentação clara e a **padronização de nomenclatura** reduzem a distância entre o que é desenhado e o que é codificado.'],
+             ['Processos Simples Aceleram Entregas','Garantir componentes flexíveis e organizados no Figma **libera o designer para focar na solução dos problemas do usuário**, e não na montagem de telas.']]}]}
+    ]
+   }},
+  {slug:'arquitetura-informacao-saas',image:'img/ia-cover.jpg',imageAlt:'Quadros do Miro com o teste de navegação e o card sorting da nova arquitetura de informação',cat:'digital',featured:true,title:'Reestruturação da Arquitetura de Informação: Redução de Carga Cognitiva e Validação de Navegação em Plataforma SaaS',
+   summary:'Nova navegação global orientada à intenção do usuário, validada com 8 participantes em teste de navegação por tarefas e card sorting fechado.',
+   tags:['Arquitetura de Informação','UX Research','Card Sorting','SaaS'],date:'',role:'Product Designer · Arquitetura de Informação',
+   case:{
+    gallerySmall:true,
+    gallery:[{src:'img/ia-sessao.jpg',alt:'Sessão remota de card sorting no Miro, com os rostos da chamada de vídeo desfocados',caption:'Amostra · sessão de card sorting'}],
+    stats:[['8','participantes em sessões individuais'],['2','métodos de UX Research'],['6','domínios orientados à intenção'],['~80–90%','convergência em 3 domínios']],
+    sections:[
+     {id:'visao',title:'Visão Geral & Desafio de Negócio',blocks:[
+      {p:'Com a evolução incremental da plataforma, a arquitetura de informação original acumulou débitos estruturais: **módulos fragmentados**, funções operacionais, analíticas e administrativas **misturadas no mesmo nível** e **alta carga cognitiva no menu principal**.'},
+      {label:'O desafio',callout:'Reorganizar a navegação global do sistema em domínios funcionais orientados à intenção do usuário, reduzindo a complexidade de busca, aumentando a encontrabilidade e criando uma base escalável para o crescimento do produto.'}]},
+     {id:'arquitetura',title:'Nova Arquitetura (Orientada à Intenção)',blocks:[
+      {p:'O ecossistema foi dividido em domínios baseados nos **estados mentais e nas tarefas** do usuário:'},
+      {cards:[['Dashboard Builder','Criar: ferramentas de edição e construção.'],
+              ['My Dashboards','Consumir: biblioteca e visualização de dashboards salvos.'],
+              ['Analysis Center','Analisar: analytics, relatórios e tendências.'],
+              ['Data Management','Configurar dados: infraestrutura, integrações, data sources e dispositivos.'],
+              ['Administration','Administrar: controle de acesso, usuários, permissões, logs e configurações globais.'],
+              ['Help & Support','Obter suporte e assistência técnica.']]}]},
+     {id:'metodologia',title:'Metodologia de Validação com Usuários',blocks:[
+      {p:'Para não reorganizar com base em suposições, conduzi **sessões individuais com 8 participantes**, combinando duas metodologias complementares de UX Research:'},
+      {steps:[['Fase 1 · Task-Based Navigation Test','Validar a **clareza da nomenclatura e a intuição do primeiro clique**. Os participantes indicavam onde clicariam para realizar tarefas reais (criar um dashboard, configurar uma integração, adicionar um usuário, verificar um alerta) sem contexto prévio.'],
+              ['Fase 2 · Closed Card Sorting','Validar a **sustentabilidade estrutural dos agrupamentos**. Os participantes organizavam itens reais da plataforma (Analytics, Reports, Alerts, Users, Logs, Insights) dentro das categorias predefinidas.']]}]},
+     {id:'resultados',title:'Resultados da Pesquisa & UX Metrics',blocks:[
+      {p:'O estudo gerou **indicadores de convergência por domínio** e revelou padrões sobre o modelo mental dos usuários.'},
+      {h:'Matriz de Validação Estrutural'},
+      {matrix:[['Dashboard Builder','~80–90%','alta','Separação clara entre o estado mental de construção e o de consumo.'],
+               ['My Dashboards','~80–90%','alta','Biblioteca de consumo bem compreendida pelos usuários.'],
+               ['Administration','~80–90%','alta','Modelo mental unificado para governança, usuários, logs e permissões.'],
+               ['Data Management','~60–70%','media','Reconhecimento de que a infraestrutura e a origem dos dados são uma camada técnica própria.'],
+               ['Analysis Center','~60–70%','media','O conceito analítico é compreendido, mas a abrangência do hub pede melhorias semânticas.'],
+               ['Alerts & Insights','~40–50%','baixa','Ambiguidade semântica: o recurso foi associado a alertas operacionais e a insights de dashboard.']]}]},
+     {id:'insights',title:'Principais Insights Comportamentais',blocks:[
+      {list:[['Modelo mental orientado a tarefas','Os usuários não pensam em módulos técnicos, e sim em ações imediatas: **Criar, Ver, Analisar e Configurar**. Separar Dashboard Builder (criação) de My Dashboards (consumo) **eliminou o atrito cognitivo anterior**.'],
+             ['Governança centralizada','Controle, logs, segurança e gestão de acessos são vistos naturalmente como **um único ecossistema administrativo**.'],
+             ['Ambiguidade em Alerts e Insights','Alerts foi associado tanto a notificações operacionais da home quanto a métricas dentro dos dashboards. Já Insights é entendido como **resultado de uma análise**, e não como uma ferramenta isolada.']]}]},
+     {id:'decisoes',title:'Decisões de Design & Refinamento',blocks:[
+      {p:'Com base nos dados, a proposta passou por ajustes antes do alinhamento com **Produto e Engenharia**:'},
+      {ul:['**Alertas transversais:** em vez de isolar Alerts numa categoria, os alertas viraram um elemento transversal, com notificações de sistema na barra global e indicadores contextuais dentro de cada dashboard.',
+           '**Insights contextuais:** integrados ao Analysis Center e ao consumo de relatórios, reforçando seu papel de resultado analítico.',
+           '**Menos risco no handoff:** a reorganização validada por dados deu ao time a segurança para implementar a navegação **sem risco de retrabalho ou rejeição pós-lançamento**.']}]},
+     {id:'impacto',title:'Impacto do Projeto',blocks:[
+      {cards2:[['Estrutura validada em dados','Decisões de navegação apoiadas em testes com usuários.'],
+               ['Arquitetura escalável','Base sólida para incluir novas features sem poluir o menu principal.'],
+               ['Menos carga cognitiva','Organização alinhada aos modelos mentais mapeados nos testes de navegação.']]}]}
+    ]
+   }},
+
+  {slug:'identidade-visual-01',cat:'comunicacao',featured:true,title:'Identidade visual',
+   summary:'Texto provisório. Qual marca, qual personalidade e como ela ganhou forma.',
+   tags:['Branding','Identidade visual'],date:'Ano a preencher',role:'Designer'},
+  {slug:'campanha-01',cat:'comunicacao',featured:true,title:'Campanha de marca',
+   summary:'Texto provisório. A mensagem central da campanha e onde ela apareceu.',
+   tags:['Campanha','Direção de arte'],date:'Ano a preencher',role:'Direção de arte'},
+  {slug:'estrategia-comunicacao-01',cat:'comunicacao',featured:true,title:'Estratégia de comunicação',
+   summary:'Texto provisório. Que conversa a marca precisava ter, e com quem.',
+   tags:['Estratégia','Conteúdo'],date:'Ano a preencher',role:'Estratégia'},
+  {slug:'comunicacao-redes-01',cat:'comunicacao',featured:true,title:'Comunicação para redes',
+   summary:'Texto provisório. O tom, os formatos e o que fez esse conteúdo funcionar.',
+   tags:['Redes sociais','Criação de conteúdo'],date:'Ano a preencher',role:'Conteúdo e design'},
+  {slug:'devfest-bh-2026-comunicacao',cat:'comunicacao',org:'gdg',title:'DevFest BH 2026: identidade e comunicação',
+   summary:'Texto provisório. Identidade visual e peças de comunicação criadas para o DevFest BH 2026.',
+   tags:['Identidade visual','Design gráfico','GDG BH'],date:'Outubro 2026',role:'Identidade e comunicação'},
+  {slug:'design-grafico-01',cat:'comunicacao',title:'Design gráfico',
+   summary:'Texto provisório. Peças, suportes e a ideia que amarra tudo.',
+   tags:['Design gráfico'],date:'Ano a preencher',role:'Designer'},
+  {slug:'direcao-de-arte-01',cat:'comunicacao',title:'Direção de arte',
+   summary:'Texto provisório. O conceito visual e como ele foi aplicado.',
+   tags:['Direção de arte','Campanha'],date:'Ano a preencher',role:'Direção de arte'},
+
+  {slug:'devfest-bh',image:'img/ev-devfest-bh.jpg',imageAlt:'Organização do DevFest BH 2026 no palco com o público ao fundo',cat:'comunidade',featured:true,org:'gdg',title:'DevFest BH 2026',
+   subtitle:'O Maior Evento de Tecnologia da Comunidade Google em BH',
+   summary:'Como organizadora do GDG BH, participei da gestão e execução do DevFest BH, primeira edição a reunir mais de 1.000 pessoas no Minascentro. Além da organização do evento focado em IA e produto, assinei a direção de arte e comunicação visual completa — do site às peças físicas do espaço.',
+   tags:['Evento','GDG BH'],date:'Outubro 2026',role:'Organizadora · Identidade e comunicação',
+   buttons:[{label:'Site do evento',href:'https://gdgbh.com.br/devfest-2026'}]}, // "Ver case" (#case-devfest-bh-2026-comunicacao) removido por enquanto
+  {slug:'uxis-talk-youtube',image:'img/ev-uxis-talk-youtube-2.jpg',imageAlt:'Marianne Fernandes apresentando na UXis Talks #005',cat:'comunidade',featured:true,org:'uxis',title:'UXis Talks #005',
+   subtitle:'Carreira Internacional & Processos Seletivos na Gringa',
+   summary:'Um bate-papo com a convidada Marianne Fernandes focado em desmistificar o mercado internacional para designers, abordando desde a preparação de currículo/LinkedIn e níveis de inglês exigidos até as etapas de processos seletivos em startups e Big Techs.',
+   topics:['Carreira internacional','Inglês para UX','LinkedIn','Processos seletivos'],
+   tags:['Talk','Comunidade UXis'],date:'Outubro 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/live/-ojy6o4Dxlk'}]},
+  {slug:'uxis-talks-004',image:'img/ev-uxis-talks-004.jpg',imageAlt:'Ju Ribeiro, Thamiris Garcia e Davi Aires na UXis Talks #004',cat:'comunidade',org:'uxis',title:'UXis Talks #004',
+   subtitle:'Recrutamento & Seleção de Designers no Mercado Atual',
+   summary:'Discussão detalhada com a convidada Thamiris Garcia, recrutadora de Design no Itaú, sobre como os recrutadores avaliam designers, os impactos da inteligência artificial nas seleções, como estruturar um bom portfólio e storytelling, e o que realmente faz um candidato se destacar em grandes empresas.',
+   tags:['Talk','Comunidade UXis'],date:'Setembro 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/live/BLOaaXAPIJI'}]},
+  {slug:'uxis-talks-003',image:'img/ev-uxis-talks-003.jpg',imageAlt:'Ju Ribeiro, Vitor David e Davi Aires na UXis Talks #003',cat:'comunidade',org:'uxis',title:'UXis Talks #003',
+   subtitle:'Acessibilidade Digital Além do Checklist',
+   summary:'Uma imersão com o convidado Vitor David (Bradesco Seguros / ABNT) na cultura e prática de acessibilidade no design, debatendo como integrá-la ao negócio e às diretrizes da ABNT/WCAG sem tratá-la apenas como uma lista de requisitos morosos.',
+   tags:['Talk','Comunidade UXis'],date:'Agosto 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/live/OfVHJd5OgvY'}]},
+  {slug:'uxis-talks-002',image:'img/ev-uxis-talks-002.jpg',imageAlt:'Ju Ribeiro, Davi Aires e Luan Mateus na UXis Talks #002',cat:'comunidade',org:'uxis',title:'UXis Talks #002',
+   subtitle:'A Arte de Se Vender e Design de Serviço na Prática',
+   summary:'Uma conversa com o convidado Luan Mateus (Papo de UX / Designer Especialista) sobre o valor estratégico da visibilidade profissional, o jogo político nas empresas e a aplicação do design de serviço e resolução de problemas para além do ambiente digital.',
+   tags:['Talk','Comunidade UXis'],date:'Julho 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/live/je5oQWthn20'}]},
+  {slug:'uxis-talks-001',image:'img/ev-uxis-talks-001.jpg',imageAlt:'Card de divulgação da UXis Talks #001 com Filipe Nzongo',cat:'comunidade',org:'uxis',title:'UXis Talks #001',
+   subtitle:'Design Sustentável, Pesquisa Acadêmica e Carreira Global',
+   summary:'Um debate profundo com o convidado Filipe Nzongo (Designer, Pesquisador e PhD Candidate) sobre a aplicação de design persuasivo e sustentável em sistemas complexos, a transição para carreiras e pesquisas no exterior e o valor do rigor teórico frente aos avanços da IA.',
+   tags:['Talk','Comunidade UXis'],date:'Julho 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/live/1riG0qVnrVM'}]},
+  {slug:'google-io-extended-bh-2026',image:'img/ev-google-io-extended-bh-2026.jpg',imageAlt:'Público do Google I/O Extended BH 2026 com a bandeira do GDG BH',cat:'comunidade',org:'gdg',title:'Google I/O Extended BH 2026',
+   subtitle:'Transmissão & Desdobramento das Novidades do Google I/O',
+   summary:'Como organizadora do GDG BH, atuei na gestão e execução do Google I/O Extended BH, transmitindo os principais lançamentos em IA e Web em clima de Copa do Mundo. Fui responsável pela organização geral do evento e assinei a identidade visual, inspirada no Brasil para conectar as novidades globais ao orgulho e energia local.',
+   tags:['Evento','GDG BH'],date:'Junho 2026',role:'Organizadora · Identidade visual',
+   buttons:[{label:'Site do evento',href:'https://gdgbh.com.br/google-io-extended-2026'}]},
+  {slug:'iwd-bh-2026',image:'img/ev-iwd-bh-2026.jpg',imageAlt:'Participantes do IWD BH 2026 no auditório com a bandeira do Women Techmakers',cat:'comunidade',org:['wtm','gdg'],title:'IWD BH 2026',
+   subtitle:'Celebração & Empoderamento Feminino na Tecnologia',
+   summary:"Como organizadora e voluntária do WTM/GDG BH, atuei na gestão e execução da edição local do International Women's Day (IWD). Além da organização do evento — focado em equidade, liderança feminina e inovação tecnológica —, assinei a direção de arte e identidade visual das peças digitais e físicas da edição.",
+   tags:['Evento','Women Techmakers','GDG BH'],date:'Março 2026',role:'Organizadora · Direção de arte',
+   buttons:[{label:'Site do evento',href:'https://gdgbh.com.br/iwd-2026'}]},
+  {slug:'gdg-bh-meet-2',image:'img/ev-gdg-bh-meet-2.jpg',imageAlt:'Participantes do GDG BH Meet #2 reunidos na arquibancada',cat:'comunidade',org:'gdg',title:'GDG BH Meet #2',
+   subtitle:'Encontro da Comunidade Dev, Networking & Troca de Conhecimento',
+   summary:'Como organizadora do GDG BH, participei da gestão e execução do meetup presencial da comunidade, focado em promover palestras técnicas, conexão entre profissionais e trocas de experiências em produto e desenvolvimento. Fui responsável pelo suporte à organização do encontro e pelo desenvolvimento das peças de comunicação visual e divulgação do evento.',
+   tags:['Meetup','GDG BH'],date:'Janeiro 2026',role:'Organização · Comunicação visual',
+   buttons:[{label:'Site do evento',href:'https://gdgbh.com.br/gdg-bh-meet-2'}]}
+];
+
+/* Trajetória (página Sobre), da mais recente para a mais antiga. null = espaço "para preencher". */
+const TRAJETORIA=[
+  {periodo:'2025 — Presente',cargo:'Organizadora de Comunidade',empresa:'Google Developer Group (GDG BH)',
+   descricao:'Planejamento e execução de meetups, workshops e conferências de tecnologia, articulando parceiros, palestrantes e patrocinadores. Responsável pela identidade visual, peças de comunicação e fortalecimento do ecossistema dev em Belo Horizonte.',
+   tags:['Community Building','Eventos de tech','Direção de arte','Relacionamento']},
+  {periodo:'2025 — 2026',cargo:'Product Designer',empresa:'Greenole',
+   descricao:'Atuação estratégica na arquitetura de módulos complexos de SaaS, governança de Design System e estruturação do workflow de documentação no Figma e Confluence. Aplicação de IA para acelerar pesquisas e prototipagem do time.',
+   tags:['Product Design','Design System','IA','Documentação','Arquitetura de informação']},
+  {periodo:'2023 — Presente',cargo:'Community Manager',empresa:'Comunidade UXis',
+   descricao:'Atuação estratégica no suporte, retenção e crescimento da comunidade, impulsionando o lançamento de novas iniciativas. Responsável pelo networking com parceiros e por atuar como host nas talks e transmissões ao vivo no YouTube.',
+   tags:['Community Management','Host','Networking','Engagement']},
+  {periodo:'2023',cargo:'Mentora de UX',empresa:'Comunidade UXis',
+   descricao:'Liderança de grupos de voluntários e mentoria prática para designers iniciantes. Orientação no desenvolvimento e na entrega de projetos reais sob metodologias ágeis em 3 frentes distintas da comunidade.',
+   tags:['Mentoria','Liderança','Metodologias ágeis','Voluntariado']},
+  {periodo:'2023 — 2025',cargo:'UX/UI Designer',empresa:'Greenole',
+   descricao:'Introdução do Figma para padronizar a colaboração com engenharia e condução de pesquisas e testes de usabilidade orientados a dados. Design end-to-end de fluxos e interfaces, transformando requisitos complexos de SaaS em jornadas intuitivas.',
+   tags:['UX Research','UI Design','Usabilidade','SaaS','Figma']},
+  {periodo:'2022 — Presente',cargo:'Designer Freelancer',empresa:'Autônoma',
+   descricao:'Atuação versátil em projetos de Design Gráfico, UX/UI, Social Media e branding. Desenvolvimento de sites e experiências digitais interativas utilizando plataformas no-code e infraestrutura em nuvem para diversos clientes e nichos.',
+   tags:['UX/UI Design','No-code','Branding','Social Media','Freelance']},
+  {periodo:'2017 — 2022',cargo:'Área da saúde',empresa:'',
+   descricao:'Período de atuação profissional na área da saúde, antes do retorno ao design.',
+   tags:[]},
+  {periodo:'2015 — 2017',cargo:'Designer',empresa:'IDÊ Ateliê',
+   descricao:'Criação e desenvolvimento de estampas e artes gráficas personalizadas para produtos variados e artigos têxteis. Atendimento direto ao cliente para alinhamento de briefings exclusivos e gestão do conteúdo visual da marca nas redes sociais.',
+   tags:['Design de produto','Design gráfico','Design de estampas','Redes sociais']}
+];
+
+/* Seções do template de case. A narrativa muda conforme a natureza do projeto. */
+const CASE_SECTIONS={
+  base:[
+    ['contexto','Introdução e contexto','Apresente o projeto: cliente ou produto, momento, público.'],
+    ['desafio','O desafio','Qual problema precisava ser resolvido? O que tornava isso difícil?'],
+    ['objetivos','Objetivos','Liste de 2 a 4 objetivos (aceita lista).'],
+    ['atuacao','Minha atuação','Seu papel, suas responsabilidades e com quem você trabalhou (aceita lista).'],
+    ['processo','Processo e desenvolvimento','Etapas, decisões e aprendizados ao longo do caminho.'],
+    ['solucoes','Soluções criadas','O que foi entregue e por que essas escolhas.'],
+    ['resultados','Resultados e impactos','Só resultados reais: números que você pode comprovar ou aprendizados qualitativos.']
+  ],
+  comunidade:[
+    ['contexto','Sobre a iniciativa','O que é, quando aconteceu, quem organizou.'],
+    ['desafio','Por que existe','A necessidade ou a vontade que deu origem ao projeto.'],
+    ['objetivos','O que queríamos provocar','O que se esperava para quem participou (aceita lista).'],
+    ['atuacao','Meu papel','Organização, comunicação, design, curadoria… (aceita lista).'],
+    ['processo','Como foi construído','Planejamento, parceiros, voluntários, bastidores.'],
+    ['solucoes','A experiência','Programação, identidade do evento, materiais, momentos marcantes.'],
+    ['resultados','O que ficou','Público, conexões, desdobramentos. Só números reais.']
+  ]
+};
+
+/* ===================================================================== */
+const main=document.getElementById('main');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hashOf=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))|0;return Math.abs(h)};
+const PAL=['#7138D5','#C4F05A','#FF704E','#4779F5'];
+const CR='#F5EEDC',GR='#25212B';
+let uid=0;
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const star=(cx,cy,R,r,n)=>{const p=[];for(let i=0;i<n*2;i++){const a=Math.PI*i/n-Math.PI/2,k=i%2?r:R;p.push((cx+k*Math.cos(a)).toFixed(1)+','+(cy+k*Math.sin(a)).toFixed(1))}return p.join(' ')};
+const STAR_ICON=`<svg viewBox="0 0 40 40" aria-hidden="true"><polygon points="${star(20,20,19,7,8)}" fill="#7138D5"/></svg>`;
+
+/* ---------- arte provisória (substituída por project.image quando houver) ---------- */
+function artDigital(s){
+  const k=s%4,bg=PAL[k],a=PAL[(k+1)%4],b=PAL[(k+2)%4],c=PAL[(k+3)%4],ty=(s%3)*14;
+  return `<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="800" height="600" fill="${bg}"/>
+  <circle cx="${600+(s%5)*20}" cy="110" r="170" fill="${a}"/>
+  <g transform="rotate(-4 380 320)">
+   <rect x="100" y="${120+ty}" width="540" height="370" rx="18" fill="${CR}" stroke="${GR}" stroke-width="5"/>
+   <path d="M100 ${164+ty}V${138+ty}a18 18 0 0 1 18-18h504a18 18 0 0 1 18 18v26z" fill="${GR}"/>
+   <circle cx="128" cy="${142+ty}" r="7" fill="#FF704E"/><circle cx="152" cy="${142+ty}" r="7" fill="#C4F05A"/><circle cx="176" cy="${142+ty}" r="7" fill="${CR}"/>
+   <rect x="134" y="${196+ty}" width="230" height="26" rx="13" fill="${GR}"/>
+   <rect x="134" y="${238+ty}" width="250" height="12" rx="6" fill="${GR}" opacity=".3"/>
+   <rect x="134" y="${260+ty}" width="200" height="12" rx="6" fill="${GR}" opacity=".3"/>
+   <rect x="134" y="${296+ty}" width="140" height="44" rx="22" fill="${b}" stroke="${GR}" stroke-width="3"/>
+   <rect x="410" y="${196+ty}" width="196" height="160" rx="14" fill="${c}"/>
+   <rect x="134" y="${370+ty}" width="140" height="90" rx="12" fill="${a}" opacity=".85"/>
+   <rect x="290" y="${370+ty}" width="140" height="90" rx="12" fill="${b}" opacity=".85"/>
+   <rect x="446" y="${370+ty}" width="160" height="90" rx="12" fill="${GR}" opacity=".12"/>
+  </g>
+  <g transform="rotate(9 650 420)">
+   <rect x="570" y="250" width="170" height="320" rx="28" fill="${GR}"/>
+   <rect x="583" y="280" width="144" height="262" rx="16" fill="${CR}"/>
+   <circle cx="655" cy="340" r="34" fill="${b}"/>
+   <rect x="600" y="392" width="110" height="10" rx="5" fill="${GR}" opacity=".35"/>
+   <rect x="600" y="412" width="80" height="10" rx="5" fill="${GR}" opacity=".35"/>
+   <rect x="600" y="446" width="110" height="36" rx="18" fill="${a}" stroke="${GR}" stroke-width="2"/>
+  </g>
+  <polygon points="${star(130,520,58,24,8)}" fill="#C4F05A" stroke="${GR}" stroke-width="4"/>
+ </svg>`;
+}
+function artComm(s,title){
+  const k=s%4,bg=PAL[k],a=PAL[(k+1)%4],b=PAL[(k+2)%4],c=PAL[(k+3)%4];
+  const L=esc((title||'J').trim()[0].toUpperCase()),r=(s%30)-15;
+  return `<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="800" height="600" fill="${bg}"/>
+  <circle cx="${250+(s%7)*30}" cy="300" r="230" fill="${a}"/>
+  <rect x="430" y="70" width="300" height="380" rx="8" fill="${b}" stroke="${GR}" stroke-width="5" transform="rotate(${r} 580 260)"/>
+  <text x="${190+(s%5)*20}" y="470" font-family="Archivo Black,Arial Black,sans-serif" font-size="440" fill="${c}" stroke="${GR}" stroke-width="6">${L}</text>
+  <path d="M40 120c40-40 80 40 120 0s80 40 120 0 80 40 120 0" fill="none" stroke="${GR}" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="${star(700,520,50,20,6)}" fill="${CR}" stroke="${GR}" stroke-width="4"/>
+  <circle cx="90" cy="520" r="30" fill="none" stroke="${GR}" stroke-width="8"/>
+ </svg>`;
+}
+function artPhoto(s){
+  const u=++uid,k=s%4,c1=PAL[k],c2=PAL[(k+1)%4];
+  let crowd='';
+  for(let row=0;row<2;row++)for(let i=0;i<13;i++){
+    const x=20+i*64+(row?32:0)+((s>>(i%8))%14),y=430+row*70+((s>>(i%5))%18);
+    crowd+=`<circle cx="${x}" cy="${y}" r="${row?36:30}" fill="${GR}" opacity="${row?.95:.75}"/><ellipse cx="${x}" cy="${y+(row?100:86)}" rx="${row?62:52}" ry="70" fill="${GR}" opacity="${row?.95:.75}"/>`;
+  }
+  return `<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs><linearGradient id="g${u}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient>
+  <pattern id="h${u}" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="1.5" fill="${GR}" opacity=".22"/></pattern></defs>
+  <rect width="800" height="600" fill="url(#g${u})"/>
+  <polygon points="${300+(s%200)},0 150,600 650,600" fill="#fff" opacity=".14"/>
+  <rect x="${200+(s%100)}" y="60" width="360" height="200" rx="10" fill="${CR}" opacity=".92" stroke="${GR}" stroke-width="4"/>
+  <polygon points="${star(380+(s%100),160,48,18,8)}" fill="${c1}"/>
+  <rect y="330" width="800" height="270" fill="${GR}" opacity=".18"/>
+  ${crowd}
+  <rect width="800" height="600" fill="url(#h${u})"/>
+ </svg>`;
+}
+function art(p,seed){
+  const s=hashOf(p.slug)+(seed||0);
+  return p.cat==='digital'?artDigital(s):p.cat==='comunicacao'?artComm(s,p.title):artPhoto(s);
+}
+function cover(p,label){
+  if(p.image)return `<img src="${esc(p.image)}" alt="${esc(p.imageAlt||p.title)}" loading="lazy">`;
+  return art(p)+`<span class="ph">${label||'imagem provisória'}</span>`;
+}
+function portrait(video){
+  const pst='width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:40% 60% 55% 45%/50% 45% 55% 50%;border:3px solid #25212B;box-shadow:8px 8px 0 #25212B;display:block';
+  if(video&&CONFIG.videoAbout){const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return `<video src="${esc(CONFIG.videoAbout)}" poster="${esc(CONFIG.videoPoster||'')}" ${still?'':'autoplay'} muted loop playsinline preload="metadata" aria-label="Ju Ribeiro sorrindo com óculos do GDG BH no DevFest" style="${pst}"></video>`}
+  const ph=CONFIG.photoAbout||CONFIG.photo;
+  if(ph)return `<img src="${esc(ph)}" alt="Ju Ribeiro falando ao microfone no palco do DevFest" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:40% 60% 55% 45%/50% 45% 55% 50%;border:3px solid #25212B;box-shadow:8px 8px 0 #25212B">`;
+  const u=++uid;
+  return `<svg viewBox="0 0 400 500" role="img" aria-label="Espaço para a foto da Ju">
+  <defs><clipPath id="c${u}"><path d="M200 22C322 12 392 112 382 242c-10 140-82 236-192 236C80 478 18 380 24 250 30 120 90 32 200 22z"/></clipPath></defs>
+  <path d="M200 22C322 12 392 112 382 242c-10 140-82 236-192 236C80 478 18 380 24 250 30 120 90 32 200 22z" fill="#7138D5" stroke="#25212B" stroke-width="5"/>
+  <g clip-path="url(#c${u})"><circle cx="200" cy="205" r="72" fill="#F5EEDC" stroke="#25212B" stroke-width="5"/>
+  <path d="M80 500c8-110 62-178 120-178s112 68 120 178z" fill="#F5EEDC" stroke="#25212B" stroke-width="5"/></g>
+  <polygon points="${star(342,70,44,18,8)}" fill="#FF704E" stroke="#25212B" stroke-width="4"/>
+  <path d="M30 120c20-30 50 10 70-20" fill="none" stroke="#25212B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="62" cy="420" r="22" fill="#4779F5" stroke="#25212B" stroke-width="4"/>
+ </svg><span class="ph">foto provisória</span>`;
+}
+
+/* ---------- componentes ---------- */
+const Tag=(t,cls)=>`<span class="tag ${cls||''}">${esc(t)}</span>`;
+const Tags=list=>`<div class="tags">${(list||[]).map(t=>Tag(t)).join('')}</div>`;
+const Button=(label,href,cls)=>`<a class="btn ${cls||''}" href="${href}">${esc(label)}${ARROW}</a>`;
+const caseHref=p=>'#case-'+p.slug;
+
+const ProjectCard=p=>{
+  const ev=p.cat==='comunidade',b=ev&&(p.buttons||[])[0];
+  const href=ev?(b&&b.href):caseHref(p),ext=href&&/^https?:/.test(href);
+  const inner=`<div class="pcover">${cover(p)}</div>
+  <div class="pbody"><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${Tags(p.tags)}${href?`<span class="more">${esc(ev?b.label:'Ver case')} ${ext?'↗':ARROW}</span>`:''}</div>`;
+  return `<article class="pcard reveal" data-tags="${esc((p.tags||[]).join('|'))}">${href?`<a href="${esc(href)}"${ext?' target="_blank" rel="noopener"':''}>${inner}</a>`:`<div>${inner}</div>`}</article>`;
+};
+
+const HCard=p=>`<article class="ccard reveal">
+  <div class="cphoto">${cover(p,p.cat==='comunidade'?'foto provisória':'imagem provisória')}</div>
+  <div class="cinfo"><div class="tags">${p.cat==='digital'?'':Tag(p.date,'t-date')}${orgTags(p)}</div><h3>${esc(p.title)}</h3>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p>${esc(p.summary)}</p>${p.cat==='comunidade'?(p.topics?`<div class="tags ctopics">${p.topics.map(t=>Tag(t)).join('')}</div>`:''):Tags(p.tags)}<div class="btns">${(p.buttons||[{label:p.cat==='comunidade'?'Explorar projeto':'Ver case',href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
+const yearOf=p=>((p.date||'').match(/\d{4}/)||[''])[0];
+const Row=p=>`<article class="row reveal" data-year="${yearOf(p)}" data-org="${[].concat(p.org||[]).join(' ')}"><div class="rimg">${cover(p,'provisória')}</div>
+  <div class="rbody"><div class="rhead"><h3>${esc(p.title)}</h3><div class="rmeta"><span class="rdate">${esc(p.date)}</span>${orgTags(p)}</div></div>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p class="rdesc">${esc(p.summary)}</p>
+  <div class="btns">${(p.buttons||[{label:'Explorar projeto',href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
+const orgTags=p=>[].concat(p.org||[]).map(o=>ORG_TAG[o]||'').join('');
+const ORG_TAG={wtm:'<span class="tag t-wtm">Women Techmakers BH</span>',gdg:'<span class="tag t-gdg"><i></i><i></i><i></i><i></i>GDG BH</span>',uxis:'<span class="tag t-uxis">✦ Comunidade UXis</span>'};
+const LinkBtn=(b,cls)=>{const ext=/^https?:/.test(b.href||'');return b.href?`<a class="btn ${cls}" href="${esc(b.href)}"${ext?' target="_blank" rel="noopener"':''}>${esc(b.label)}${ARROW}</a>`:`<a class="btn ${cls}" href="#${location.hash.slice(1)||'inicio'}" data-pending>${esc(b.label)}${ARROW}</a>`};
+const CvButton=()=>CONFIG.cv?`<a class="btn" href="${esc(CONFIG.cv)}" target="_blank" rel="noopener">Ver currículo${ARROW}</a>`:`<a class="btn" href="#sobre" data-cv-missing>Ver currículo${ARROW}</a>`;
+
+const SectionHead=(title,lead,extra)=>`<div class="shead reveal"><div><h2>${title}</h2>${lead?`<p class="lead">${esc(lead)}</p>`:''}</div>${extra||''}</div>`;
+
+const byCat=c=>PROJECTS.filter(p=>p.cat===c);
+const featured=(c,n)=>{const f=byCat(c).filter(p=>p.featured);return (f.length?f:byCat(c)).slice(0,n)};
+
+const AREA_BLURB={digital:'Produtos, interfaces, sites e landing pages.',comunicacao:'Marcas, campanhas, conteúdo e direção de arte.',comunidade:'Eventos e comunidades de tecnologia e design.'};
+const AREA_STYLE={digital:['#7138D5','#fff'],comunicacao:['#FF704E','#25212B'],comunidade:['#C4F05A','#25212B']};
+function WorksSection(){
+  const all=['digital','comunidade','comunicacao'].filter(k=>CATS[k]);const keys=all.filter(k=>!isSoon(k));
+  const tabs=all.map(k=>isSoon(k)?`<div class="area area-soon" role="presentation" aria-disabled="true" style="--c:${AREA_STYLE[k][0]};--fg:${AREA_STYLE[k][1]}"><span class="an">${esc(CATS[k].name)}</span>${SOON_TAG}<p>${esc(AREA_BLURB[k])}</p></div>`
+   :`<button class="area" type="button" role="tab" id="tab-${k}" aria-controls="panel-${k}" aria-selected="${k===keys[0]}" tabindex="${k===keys[0]?0:-1}" data-area="${k}" style="--c:${AREA_STYLE[k][0]};--fg:${AREA_STYLE[k][1]}">
+     <span class="an">${esc(CATS[k].name)}${ARROW}</span><p>${esc(AREA_BLURB[k])}</p></button>`).join('');
+  const panels=keys.map((k,i)=>`<div class="panel" role="tabpanel" id="panel-${k}" aria-labelledby="tab-${k}"${i?' hidden':''} style="--c:${AREA_STYLE[k][0]};--fg:${AREA_STYLE[k][1]}">
+     <div class="panel-h"><h3>${k==='comunidade'?'Últimos eventos':'Em destaque'}</h3>${Button(k==='comunidade'?'Ver todos os eventos':'Ver todos os projetos','#'+CATS[k].route,'btn-lima')}</div>
+     <div class="pgrid">${featured(k,2).map(ProjectCard).join('')}</div></div>`).join('');
+  return `<section class="band" id="sec-trabalhos" aria-labelledby="h-trab"><div class="wrap">
+    <div class="shead reveal"><div><h2 id="h-trab">Projetos</h2><p class="lead">Produto, marca e gente: escolha por onde começar.</p><p class="hint">* Passe o mouse ou toque em uma área para ver os destaques.</p></div></div>
+    <div class="works"><div class="areas" role="tablist" aria-label="Áreas de trabalho">${tabs}</div><div>${panels}</div></div>
+  </div></section>`;
+}
+function selectArea(k,focus){
+  const t=main.querySelector('#tab-'+k);if(!t||t.getAttribute('aria-selected')==='true')return;
+  main.querySelectorAll('.area').forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+  main.querySelectorAll('.panel').forEach(p=>{const on=p.id==='panel-'+k;p.hidden=!on;if(on)p.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'))});
+  if(focus)t.focus();
+}
+
+const Contact=()=>`<section class="band b-roxo contact" id="sec-contato" aria-labelledby="h-contato"><div class="wrap">
+  <h2 id="h-contato" class="reveal">Bora criar algo junto?</h2>
+  <p class="lead reveal">Tem um produto, uma marca, um evento ou aquela ideia meio maluca que ainda não tem nome? Me conta. Eu adoro começar pela conversa.</p>
+  <div class="clinks reveal">
+   <div class="clink"><small>E-mail</small><strong>${esc(CONFIG.email)}</strong><button class="copy" type="button" data-copy="${esc(CONFIG.email)}">Copiar e-mail</button></div>
+   <a class="clink" href="${esc(CONFIG.linkedin)}" target="_blank" rel="noopener"><small>LinkedIn</small><strong>${esc(CONFIG.linkedinLabel)} ↗</strong></a>
+   ${CONFIG.whatsapp?`<a class="clink" href="https://wa.me/${esc(CONFIG.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(CONFIG.whatsappLabel)} (abre em nova aba)"><small>WhatsApp</small><strong>${esc(CONFIG.whatsappLabel)} ↗</strong></a>`:''}
+  </div>
+ </div></section>`;
+
+const SOON=['comunicacao'];const isSoon=k=>SOON.includes(k);
+const SOON_TAG='<span class="soon">Em breve</span>';
+const NAV=[['inicio','Início'],['sobre','Sobre mim'],['experiencias-digitais','Experiências Digitais'],['comunidades','Community Manager'],['visual-design','Visual Design',1],['contato','Contato']];
+function Header(active){
+  return `<div class="hdr-in"><a class="logo" href="#inicio" aria-label="Ju Ribeiro, página inicial">JU RIBEIRO<sup>®</sup></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><i></i><span>Menu</span></button>
+  <nav class="nav" id="nav" aria-label="Principal">${NAV.map(([r,l,soon])=>soon?`<span class="nav-soon" aria-disabled="true"><span class="ns-t">${l}${SOON_TAG}</span></span>`:`<a href="#${r}" class="${r==='contato'?'nav-cta':''}"${r===active?' aria-current="page"':''}>${l}</a>`).join('')}<a class="nav-in" href="${esc(CONFIG.linkedin)}" target="_blank" rel="noopener" aria-label="LinkedIn de Ju Ribeiro (abre em nova aba)"><span class="in-ic" aria-hidden="true">in</span><span class="in-tx">LinkedIn ↗</span></a></nav></div>`;
+}
+function Footer(){
+  return `<div class="wrap"><div class="ftr-g"><a class="logo" href="#inicio">JU RIBEIRO<sup>®</sup></a>
+  <nav aria-label="Rodapé">${NAV.slice(1).map(([r,l,soon])=>soon?`<span class="ftr-soon" aria-disabled="true">${l}${SOON_TAG}</span>`:`<a href="#${r}">${l}</a>`).join('')}</nav></div>
+  <div class="ftr-b"><span>© ${new Date().getFullYear()} Ju Ribeiro · Designer Multidisciplinar</span><span>Entre pixels, pessoas e possibilidades.</span></div></div>`;
+}
+
+/* ---------- páginas ---------- */
+function Home(){
+  const D=PROJECTS.find(p=>p.cat==='digital')||{slug:'d',cat:'digital'};
+  const M=PROJECTS.find(p=>p.cat==='comunicacao')||{slug:'c',cat:'comunicacao',title:'C'};
+  const P=PROJECTS.find(p=>p.cat==='comunidade')||{slug:'p',cat:'comunidade'};
+  const words=['UX Design','Product Design','UI Design','Design System','IA aplicada ao Design','B2B e SaaS','Produtos escaláveis','Sites e landing pages','No-code','Identidade visual','Conteúdo','Comunidades','Eventos'];
+  const strip=`<span>${words.map(w=>esc(w)+STAR_ICON).join('')}</span>`;
+  return `
+  <section class="band b-roxo hero" aria-labelledby="h-hero">
+   <svg class="blob" viewBox="0 0 400 400" style="left:-230px;bottom:-200px;width:420px" aria-hidden="true"><path d="M200 20c90 0 180 60 180 170s-80 190-190 190S20 300 20 200 110 20 200 20z" fill="#FF704E" opacity=".9"/></svg>
+   <div class="wrap hero-g">
+    <div class="hero-t">
+     <span class="sticker">Designer Multidisciplinar</span>
+     <h1 id="h-hero">Entre pixels, pessoas e possibilidades.</h1>
+    </div>
+    <div class="hero-c"><div class="collage">
+     <a class="tile t1" href="#experiencias-digitais">${art(D,3)}<span class="lbl">Experiências Digitais</span></a>
+     <div class="tile t2 tile-soon" aria-disabled="true">${art(M,5)}<span class="lbl lbl-soon">Visual Design${SOON_TAG}</span></div>
+     <a class="tile t3" href="#comunidades">${art(P,2)}<span class="lbl">Comunidades</span></a>
+     <div class="badge">${CONFIG.photo?`<img src="${esc(CONFIG.photo)}" alt="Foto de Ju Ribeiro" style="object-position:50% 30%">`:`<svg viewBox="0 0 100 100" role="img" aria-label="Espaço para a foto da Ju"><rect width="100" height="100" fill="#C4F05A"/><circle cx="50" cy="40" r="17" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/><path d="M18 104c2-26 16-42 32-42s30 16 32 42z" fill="#F5EEDC" stroke="#25212B" stroke-width="3"/></svg><span class="bph">sua foto</span>`}</div>
+    </div></div>
+    <div class="hero-b">
+     <p>Sou Ju Ribeiro e, há +${CONFIG.years} anos, trabalho na interseção entre design, comunicação e pessoas, unindo estratégia e criatividade para criar experiências com propósito.</p>
+     <div class="btns"><button class="btn btn-lima" type="button" data-scroll="sec-trabalhos">Explorar projetos${ARROW}</button>
+      <a class="btn" href="#sobre">Quem é a Ju</a>
+      <svg class="scribble" viewBox="0 0 84 46" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M80 40C60 44 30 40 18 22 12 13 22 4 30 10c8 6-2 20-24 22M6 32l4-9M6 32l9 2"/></svg></div>
+    </div>
+   </div>
+  </section>
+  <div class="mq" role="region" aria-label="Áreas de atuação: ${esc(words.join(', '))}"><div class="mq-t" aria-hidden="true">${strip}${strip}</div></div>
+  ${WorksSection()}
+  <section class="band b-lima" aria-labelledby="h-sobre"><div class="wrap about-g">
+   <div class="portrait reveal">${portrait()}</div>
+   <div class="reveal"><h2 id="h-sobre" style="margin-bottom:22px">Prazer, Ju.</h2>
+    <p class="big">Designer há +${CONFIG.years} anos, sem caixinha. Minha prática junta UX, interfaces, identidade visual, estratégia, conteúdo e a organização de comunidades e eventos.</p>
+    <p class="lead" style="margin-top:18px">Não escolhi uma especialidade: escolhi as conexões entre elas.</p>
+    <div class="btns">${Button('Conhecer minha trajetória','#sobre','btn-roxo')}${CvButton()}</div></div>
+  </div></section>
+  ${Contact()}`;
+}
+
+const ORG_NAME={gdg:'GDG BH',uxis:'Comunidade UXis',wtm:'Women Techmakers'};
+function FilterBar(list){
+  const orgs=[...new Set(list.flatMap(p=>[].concat(p.org||[])))].filter(o=>o!=='wtm'); // filtros só para GDG BH e UXis
+  return `<div class="fbar" role="group" aria-label="Filtrar eventos">
+   <div class="fgrp"><span>Comunidade</span><button type="button" class="ft" data-fo="" aria-pressed="true">Todas</button>${orgs.map(o=>`<button type="button" class="ft" data-fo="${o}" aria-pressed="false">${esc(ORG_NAME[o]||o)}</button>`).join('')}</div>
+   <span class="fcount" aria-live="polite"></span></div>`;
+}
+function applyFilter(){
+  const bar=main.querySelector('.fbar');if(!bar)return;
+  const y=(bar.querySelector('[data-fy][aria-pressed=true]')||{dataset:{}}).dataset.fy||'';
+  const o=(bar.querySelector('[data-fo][aria-pressed=true]')||{dataset:{}}).dataset.fo||'';
+  let n=0;
+  main.querySelectorAll('.rlist .row').forEach(r=>{const ok=(!y||r.dataset.year===y)&&(!o||r.dataset.org.split(' ').includes(o));r.hidden=!ok;if(ok){n++;r.classList.add('in')}});
+  const em=main.querySelector('.rempty');if(em)em.hidden=n>0;
+  const c=bar.querySelector('.fcount');if(c)c.textContent=n+(n===1?' evento':' eventos');
+}
+function CategoryPage(key){
+  const C=CATS[key],list=byCat(key);
+  const heroBand={digital:'b-roxo',comunicacao:'b-coral',comunidade:'b-lima'}[key];
+  return `<section class="band ${heroBand} chero" aria-labelledby="h-cat">
+   <svg class="deco-star" viewBox="0 0 200 200" aria-hidden="true"><polygon points="${star(100,100,96,40,key==='digital'?6:key==='comunicacao'?10:14)}" fill="${key==='comunidade'?'#7138D5':'#C4F05A'}" stroke="#25212B" stroke-width="5"/></svg>
+   <div class="wrap">
+   <h1 id="h-cat">${esc(C.name)}</h1><p class="lead">${esc(C.lead)}</p>${Tags(C.areas)}</div></section>
+   <section class="band b-graf" aria-label="Projetos"><div class="wrap">${key==='comunidade'?FilterBar(list)+`<div class="rlist">${list.map(Row).join('')}</div><p class="empty rempty" hidden>Nenhum evento com esses filtros.</p>`:`<div class="clist">${list.map(HCard).join('')}</div>`}
+   <p class="note">${key==='comunidade'?'Fotos, datas e descrições provisórias':'Títulos, textos e imagens provisórios'}: substitua em PROJECTS.</p></div></section>
+   ${Contact()}`;
+}
+
+const md=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<mark>$1</mark>').replace(/`(.+?)`/g,'<code class="route">$1</code>');
+function Block(b){
+  if(b.p)return `<p>${md(b.p)}</p>`;
+  if(b.h)return `<h3 class="bh">${esc(b.h)}</h3>`;
+  if(b.callout)return `<div class="callout"><b>${esc(b.label||'')}</b><p>${md(b.callout)}</p></div>`;
+  if(b.cards)return `<div class="pcards">${b.cards.map(([t,x])=>`<div class="pc"><h3>${esc(t)}</h3><p>${md(x)}</p></div>`).join('')}</div>`;
+  if(b.steps)return `<ol class="steps">${b.steps.map(([t,x],i)=>`<li><span class="sn" aria-hidden="true"></span><div><h3>${esc(t)}</h3><p>${md(x)}</p></div></li>`).join('')}</ol>`;
+  if(b.kpis)return `<div class="kpis">${b.kpis.map(([k,t,x])=>`<div class="kpi"><strong>${esc(k)}</strong><h3>${esc(t)}</h3><p>${md(x)}</p></div>`).join('')}</div>`;
+  if(b.ul)return `<ul class="dots">${b.ul.map(x=>`<li>${md(x)}</li>`).join('')}</ul>`;
+  if(b.cards2)return `<div class="pcards pc2">${b.cards2.map(([t,x])=>`<div class="pc"><h3>${esc(t)}</h3><p>${md(x)}</p></div>`).join('')}</div>`;
+  if(b.matrix)return `<div class="mx" role="table" aria-label="Taxa de convergência por domínio"><div class="mx-r mx-h" role="row"><span role="columnheader">Domínio</span><span role="columnheader">Convergência</span><span role="columnheader">Diagnóstico</span></div>${b.matrix.map(([d,r,l,x])=>`<div class="mx-r" role="row"><span role="cell" class="mx-d">${esc(d)}</span><span role="cell"><span class="mx-b mx-${l}">${esc(r)} · ${l==='alta'?'Alta':l==='media'?'Média':'Baixa'}</span></span><span role="cell" class="mx-x">${md(x)}</span></div>`).join('')}</div>`;
+  if(b.list)return `<ul class="llist">${b.list.map(([t,x])=>`<li><h3>${esc(t)}</h3><p>${md(x)}</p></li>`).join('')}</ul>`;
+  return '';
+}
+function Carousel(list,title){
+  return `<div class="car${list.every(g=>g.video)?' car-video':''}" data-car aria-roledescription="carrossel" aria-label="Galeria de telas">
+   <div class="car-vp"><div class="car-track">${list.map((g,i)=>`<figure class="car-s" aria-label="${i+1} de ${list.length}">
+     ${g.video?`<div class="car-img" role="button" tabindex="0" data-zoom="${i}" data-video="${esc(g.video)}" data-poster="${esc(g.poster||'')}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="Ampliar vídeo: ${esc(g.caption||g.alt||title)}"><video src="${esc(g.video)}" poster="${esc(g.poster||'')}" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div>`
+      :`<button type="button" class="car-img" data-zoom="${i}" data-src="${esc(g.src)}" data-alt="${esc(g.alt||title)}" data-cap="${esc(g.caption||'')}" aria-label="Ampliar: ${esc(g.caption||g.alt||title)}"><img src="${esc(g.src)}" alt="${esc(g.alt||title)}" loading="lazy"></button>`}
+     ${g.caption?`<figcaption>${esc(g.caption)}</figcaption>`:''}</figure>`).join('')}</div></div>
+   <div class="car-ctl">${list.length>1?`<button type="button" class="car-arrow car-prev" aria-label="Tela anterior">←</button>
+    <div class="car-dots">${list.map((g,i)=>`<button type="button" class="car-dot" aria-label="Ir para a tela ${i+1}"></button>`).join('')}</div>
+    <button type="button" class="car-arrow car-next" aria-label="Próxima tela">→</button>`:''}<span class="car-hint">Clique ${list[0].video&&list.length===1?'no vídeo':'na tela'} para ampliar</span></div>
+  </div>`;
+}
+function CasePage(p){
+  const C=CATS[p.cat],secs=CASE_SECTIONS[p.cat==='comunidade'?'comunidade':'base'],c=p.case||{};
+  const heroBand={digital:'b-roxo',comunicacao:'b-coral',comunidade:'b-lima'}[p.cat];
+  const fill=(v,hint)=>v==null||v===''?`<div class="todo"><b>para preencher</b>${esc(hint)}</div>`
+    :Array.isArray(v)?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:String(v).split(/\n\n+/).map(x=>`<p>${esc(x)}</p>`).join('');
+  const nGal=c.gallery?c.gallery.length:5;
+  const gal=Array.from({length:nGal},(_,i)=>{const g=c.gallery&&c.gallery[i];
+    return `<figure class="gi reveal" style="margin:0">${g?`<img src="${esc(g.src||g)}" alt="${esc(g.alt||p.title)}" loading="lazy">`:art(p,i*7+1)+'<span class="ph">imagem provisória</span>'}</figure>`}).join('');
+  const sib=byCat(p.cat),next=sib[(sib.indexOf(p)+1)%sib.length];
+  const custom=Array.isArray(c.sections);
+  const toc=custom?[...c.sections.map(x=>[x.id,x.title]),['galeria','Galeria'],...(c.creditos?[['creditos','Créditos']]:[])]
+    :[...secs.map(s=>[s[0],s[1]]),...(c.aprendizados?[['aprendizados','Aprendizados']]:[]),['galeria','Galeria'],['creditos','Créditos']];
+  return `<section class="band ${heroBand} case-hero" aria-labelledby="h-case"><div class="wrap">
+    <a class="crumb" href="#${C.route}">${ARROW}${esc(C.name)}</a>
+    <h1 id="h-case">${esc(p.title)}</h1><p class="lead">${esc(p.summary)}</p>
+    <dl class="meta"><div><dt>Categoria</dt><dd>${esc(C.name)}</dd></div>${p.date?`<div><dt>${p.cat==='comunidade'?'Data':'Ano'}</dt><dd>${esc(p.date)}</dd></div>`:''}<div><dt>Meu papel</dt><dd>${esc(p.role||'—')}</dd></div></dl>
+    ${Tags(p.tags)}</div></section>
+   <div class="cover-wrap"><div class="case-cover">${cover(p,p.cat==='comunidade'?'foto provisória':'imagem provisória')}</div></div>
+   ${c.stats?`<div class="stats-wrap"><div class="stats reveal">${c.stats.map(([n,l])=>`<div><strong>${esc(n)}</strong><span>${esc(l)}</span></div>`).join('')}</div></div>`:''}
+   <section class="band"><div class="wrap case-body">
+    <nav class="toc" aria-label="Seções do case">${toc.map(([id,l])=>`<a href="#case-${p.slug}" data-scroll="cs-${id}">${esc(l)}</a>`).join('')}</nav>
+    <div>
+     ${custom?c.sections.map(x=>`<section class="csec reveal" id="cs-${x.id}"><h2>${esc(x.title)}</h2>${x.blocks.map(Block).join('')}</section>`).join('')
+       :secs.map(([id,l,hint])=>`<section class="csec reveal" id="cs-${id}"><h2>${esc(l)}</h2>${fill(c[id],hint)}</section>`).join('')}
+     ${c.aprendizados?`<section class="csec reveal" id="cs-aprendizados"><h2>Meus aprendizados</h2>${fill(c.aprendizados,'')}${c.citacao?`<blockquote class="cquote">${esc(c.citacao)}</blockquote>`:''}</section>`:''}
+     ${p.link?`<div class="csec reveal"><a class="btn btn-lima" href="${esc(p.link)}" target="_blank" rel="noopener">Ver case original${ARROW}</a></div>`:''}
+     <section class="csec" id="cs-galeria"><h2>Galeria</h2>${c.gallery?(c.gallerySmall?`<div class="car-sm">${Carousel(c.gallery,p.title)}</div>`:Carousel(c.gallery,p.title)):`<div class="gal">${gal}</div>`}</section>
+     ${custom&&!c.creditos?'':`<section class="csec reveal" id="cs-creditos"><h2>Créditos e colaboradores</h2>${fill(c.creditos,'Liste quem fez parte, quando aplicável (aceita lista). Se não houver, remova esta seção.')}</section>`}
+    </div></div></section>
+   ${next&&next!==p?`<a class="band b-graf next" href="${caseHref(next)}"><div class="wrap"><small>Próximo projeto · ${esc(C.name)}</small><h2>${esc(next.title)}${ARROW}</h2></div></a>`:''}`;
+}
+
+function AboutPage(){
+  const rel=PROJECTS.filter(p=>p.featured&&!isSoon(p.cat)).slice(0,6);
+  return `<section class="band b-lima" aria-labelledby="h-about"><div class="wrap about-g">
+    <div class="reveal">
+     <h1 id="h-about" style="font-size:clamp(42px,5.6vw,80px);line-height:.95;letter-spacing:-.03em;margin:0 0 20px">Ju Ribeiro</h1>
+     <div class="lead" style="margin-top:14px;font-size:15.5px;line-height:1.6;max-width:56ch;display:grid;gap:12px"><p>Sou Ju Ribeiro, designer multidisciplinar com +${CONFIG.years} anos de experiência conectando design, comunicação e pessoas. Minha atuação passa por diferentes áreas, do design de produtos digitais e interfaces à criação de identidades visuais, campanhas, materiais gráficos e estampas para produtos.</p><p>Sou pós-graduada em User Experience Design pela PUCRS e atuo como organizadora do Google Developers Group BH e Community Manager da Comunidade UXis. Minha trajetória multidisciplinar fortaleceu meu olhar analítico, minha criatividade e minha capacidade de adaptação a diferentes contextos.</p><p>Acredito na combinação entre estratégia, criatividade e diferentes perspectivas para transformar ideias em soluções relevantes.</p></div><div class="btns" style="margin-top:28px">${CvButton()}</div></div>
+    <div class="portrait reveal">${portrait(true)}<span class="sticker yrs">+${CONFIG.years} anos de design</span><span class="ptag">Gosto do ponto onde produto, comunicação e gente se encontram.</span></div></div></section>
+   <section class="band" aria-labelledby="h-dims"><div class="wrap">
+    ${SectionHead('<span id="h-dims">Competências</span>','')}
+    <div class="dims comps">${[
+     ['Habilidades Técnicas',['UX/UI Design e Product Design','Pesquisa com usuários, discovery e mapeamento de jornadas','Prototipação, wireframes e testes de usabilidade','Design Systems e interfaces digitais','Design gráfico e direção de arte','Identidade visual e comunicação de marca','Estratégia de conteúdo e social media','Desenvolvimento de sites e soluções no-code','Gestão de comunidades e engajamento','Planejamento e produção de eventos','Ferramentas de IA aplicadas ao processo criativo','Comunicação, colaboração e gestão de projetos']],
+     ['Destaques de Carreira',['+'+CONFIG.years+' anos de experiência em design','Pós-graduação em User Experience Design pela PUCRS','Organizadora do Google Developers Group BH','Community Manager da Comunidade UXis','Estruturação de cultura de métricas em UX','Mentora de UX em voluntariado','Experiência em projetos digitais, gráficos e estampas para produtos','Atuação na organização de eventos e comunidades de tecnologia','Trajetória profissional multidisciplinar, com formação também na área da saúde']]
+    ].map(([t,items])=>`<div class="dim reveal"><h3>${esc(t)}</h3><ul>${items.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`).join('')}</div>
+    <div class="dim tcard reveal"><h3>Ferramentas</h3><div class="tools">${['Figma','FigJam','Jira','Confluence','Notion','Miro','Maze','Dovetail','Trello','Claude','Google Analytics','Pacote Adobe','Slack','Framer','Wix Studio'].map(t=>Tag(t)).join('')}</div></div>
+   </div></section>
+   <section class="band b-graf" aria-label="Trajetória"><div class="wrap">
+    <div class="reveal traj"><h2>Trajetória</h2><div class="tl">
+     ${TRAJETORIA.map(x=>x?`<div class="tl-i"><span class="tl-p">${esc(x.periodo)}</span><h3>${esc(x.cargo)}${x.empresa?' · '+esc(x.empresa):''}</h3><p class="tl-d">${esc(x.descricao)}</p>${(x.tags||[]).length?`<div class="tags tl-t">${x.tags.map(t=>Tag(t)).join('')}</div>`:''}</div>`:`<div class="tl-i"><span class="tl-p">Período</span><h3>Cargo · Empresa</h3><div class="todo"><b>para preencher</b>Empresa ou projeto, o que você fazia e o que levou dali.</div></div>`).join('')}
+    </div></div></div></section>
+   ${Contact()}`;
+}
+
+function NotFound(){
+  return `<section class="band b-coral chero"><div class="wrap"><h1>Ops, essa página não existe.</h1><p class="lead">Talvez o projeto tenha mudado de endereço.</p><div class="btns" style="margin-top:28px">${Button('Voltar ao início','#inicio','btn-lima')}</div></div></section>`;
+}
+
+/* ---------- roteador (rotas amigáveis via #nome) ---------- */
+const META={inicio:'Portfólio de Ju Ribeiro, designer multidisciplinar há +6 anos.',sobre:'Trajetória, áreas de atuação e ferramentas de Ju Ribeiro.'};
+let first=true,io=null;
+function setMeta(title,desc){document.title=title;const m=document.querySelector('meta[name=description]');if(m&&desc)m.setAttribute('content',desc)}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  let html,active='',scrollTo=null;
+  const catKey=Object.keys(CATS).find(k=>CATS[k].route===h&&!isSoon(k));
+  if(!h||h==='inicio'||h==='contato'){html=Home();active=h==='contato'?'contato':'inicio';if(h==='contato')scrollTo='sec-contato';setMeta('Ju Ribeiro — Designer Multidisciplinar',META.inicio)}
+  else if(catKey){html=CategoryPage(catKey);active=h;setMeta(CATS[catKey].name+' — Ju Ribeiro',CATS[catKey].lead)}
+  else if(h==='sobre'){html=AboutPage();active='sobre';setMeta('Sobre mim — Ju Ribeiro',META.sobre)}
+  else if(h.startsWith('case-')){const p=PROJECTS.find(x=>'case-'+x.slug===h&&!isSoon(x.cat));
+    if(p){html=CasePage(p);active=CATS[p.cat].route;setMeta(p.title+' — Ju Ribeiro',p.summary)}else html=NotFound()}
+  else{const el=document.getElementById(h);if(el&&main.contains(el)){el.scrollIntoView();return}html=NotFound()}
+  main.innerHTML=html;
+  document.getElementById('hdr').innerHTML=Header(active);
+  document.body.style.overflow='';
+  if(scrollTo){requestAnimationFrame(()=>document.getElementById(scrollTo)?.scrollIntoView())}else if(!first)window.scrollTo(0,0);
+  if(!first)main.focus({preventScroll:true});
+  first=false;
+  observe();
+  applyFilter();
+  initCarousels();
+  spyToc();
+  if(LB.open)LB.close();
+}
+function observe(){
+  const els=main.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(e=>io.observe(e));
+}
+
+/* ---------- carrossel + lightbox ---------- */
+let carTimer=null;
+function spyToc(){
+  const toc=document.querySelector('.toc');if(!toc)return;
+  const links=[...toc.querySelectorAll('a[data-scroll]')];let cur=links[0];
+  const atEnd=innerHeight+scrollY>=document.documentElement.scrollHeight-4;
+  for(const a of links){const el=document.getElementById(a.dataset.scroll);if(el&&el.getBoundingClientRect().top<=innerHeight*0.35)cur=a}
+  if(atEnd)cur=links[links.length-1];
+  links.forEach(a=>a===cur?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));
+}
+addEventListener('scroll',()=>requestAnimationFrame(spyToc),{passive:true});
+addEventListener('resize',spyToc);
+function initCarousels(){
+  clearInterval(carTimer);carTimer=null;
+  const car=main.querySelector('[data-car]');if(!car)return;
+  const track=car.querySelector('.car-track'),n=track.children.length;let i=0,paused=false;
+  const go=k=>{i=(k+n)%n;track.style.transform=`translateX(${-i*100}%)`;car.querySelectorAll('.car-dot').forEach((d,j)=>d.setAttribute('aria-current',j===i));
+    [...track.children].forEach((s,j)=>{s.setAttribute('aria-hidden',j!==i);s.querySelector('[data-zoom]').tabIndex=j===i?0:-1})};
+  car.addEventListener('mouseenter',()=>paused=true);car.addEventListener('mouseleave',()=>paused=false);
+  car.addEventListener('focusin',()=>paused=true);car.addEventListener('focusout',()=>paused=false);
+  const pv=car.querySelector('.car-prev'),nx=car.querySelector('.car-next');
+  if(pv)pv.addEventListener('click',()=>go(i-1));if(nx)nx.addEventListener('click',()=>go(i+1));
+  car.querySelectorAll('.car-dot').forEach((d,j)=>d.addEventListener('click',()=>go(j)));
+  go(0);
+  if(n>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)carTimer=setInterval(()=>{if(!paused&&!document.hidden&&!LB.open)go(i+1)},3500);
+}
+const LB=document.createElement('dialog');LB.className='lb';LB.setAttribute('aria-label','Imagem ampliada');
+LB.innerHTML='<button type="button" class="lb-x" aria-label="Fechar">×</button><button type="button" class="lb-p" aria-label="Anterior">‹</button><figure><img alt=""><video controls muted loop playsinline hidden></video><figcaption></figcaption></figure><button type="button" class="lb-n" aria-label="Próxima">›</button>';
+document.body.appendChild(LB);
+let lbList=[],lbI=0;
+function lbShow(k){if(!lbList.length)return;lbI=(k+lbList.length)%lbList.length;const g=lbList[lbI],im=LB.querySelector('img'),vd=LB.querySelector('video');
+  if(g.video){im.hidden=true;im.removeAttribute('src');vd.hidden=false;vd.poster=g.poster||'';vd.src=g.video;vd.setAttribute('aria-label',g.alt);try{vd.play().catch(()=>{})}catch(err){}}
+  else{vd.pause();vd.hidden=true;vd.removeAttribute('src');im.hidden=false;im.src=g.src;im.alt=g.alt}
+  LB.querySelector('figcaption').textContent=g.cap;
+  LB.querySelector('.lb-p').hidden=LB.querySelector('.lb-n').hidden=lbList.length<2}
+function lbOpenAt(list,k){lbList=list;lbShow(k);try{LB.showModal()}catch(err){LB.setAttribute('open','')}}
+LB.addEventListener('click',e=>{if(e.target===LB||e.target.closest('.lb-x')){LB.close();return}if(e.target.closest('.lb-p'))lbShow(lbI-1);if(e.target.closest('.lb-n'))lbShow(lbI+1)});
+LB.addEventListener('close',()=>{const v=LB.querySelector('video');v.pause()});
+main.addEventListener('keydown',e=>{const z=e.target.closest&&e.target.closest('div[data-zoom]');if(z&&(e.key==='Enter'||e.key===' ')){e.preventDefault();z.click()}});
+LB.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')lbShow(lbI-1);if(e.key==='ArrowRight')lbShow(lbI+1)});
+
+/* ---------- interações ---------- */
+document.addEventListener('click',e=>{
+  const mb=e.target.closest('.menu-btn');
+  if(mb){const open=mb.getAttribute('aria-expanded')!=='true';mb.setAttribute('aria-expanded',open);document.getElementById('nav').classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';return}
+  if(e.target.closest('.nav a')){document.body.style.overflow=''}
+  const sc=e.target.closest('[data-scroll]');
+  if(sc){const t=document.getElementById(sc.dataset.scroll);if(t){e.preventDefault();t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}return}
+  const cp=e.target.closest('[data-copy]');
+  if(cp){const v=cp.dataset.copy;const done=ok=>{cp.textContent=ok?'Copiado!':'Selecione e copie';setTimeout(()=>cp.textContent='Copiar e-mail',2000)};
+    try{navigator.clipboard.writeText(v).then(()=>done(true),()=>done(false))}catch(err){done(false)}return}
+  const ar=e.target.closest('[data-area]');
+  if(ar){selectArea(ar.dataset.area);return}
+  const z=e.target.closest('[data-zoom]');
+  if(z){const list=[...main.querySelectorAll('[data-zoom]')].map(el=>({src:el.dataset.src||'',video:el.dataset.video||'',poster:el.dataset.poster||'',alt:el.dataset.alt||'',cap:el.dataset.cap||''}));lbOpenAt(list,+z.dataset.zoom);return}
+  const ft=e.target.closest('.ft');
+  if(ft){ft.parentElement.querySelectorAll('.ft').forEach(b=>b.setAttribute('aria-pressed',b===ft));applyFilter();return}
+  const pd=e.target.closest('[data-pending]');
+  if(pd){e.preventDefault();pd.firstChild.textContent='Link em breve ';return}
+  const cv=e.target.closest('[data-cv-missing]');
+  if(cv){e.preventDefault();cv.firstChild.textContent='Currículo em breve ';}
+});
+main.addEventListener('mouseover',e=>{const ar=e.target.closest('[data-area]');if(ar&&matchMedia('(hover: hover)').matches)selectArea(ar.dataset.area)});
+main.addEventListener('focusin',e=>{const ar=e.target.closest('[data-area]');if(ar)selectArea(ar.dataset.area)});
+main.addEventListener('keydown',e=>{const ar=e.target.closest('[data-area]');if(!ar||!['ArrowDown','ArrowUp','ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();
+  const ks=Object.keys(CATS).filter(k=>!isSoon(k)),i=ks.indexOf(ar.dataset.area),d=e.key==='ArrowDown'||e.key==='ArrowRight'?1:-1;selectArea(ks[(i+d+ks.length)%ks.length],true)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const mb=document.querySelector('.menu-btn[aria-expanded=true]');if(mb)mb.click()}});
+document.getElementById('skip').addEventListener('click',e=>{e.preventDefault();main.focus()});
+
+document.documentElement.classList.add('js');
+document.getElementById('ftr').innerHTML=Footer();
+addEventListener('hashchange',route);
+route();
+}
+</script>
+</body>
+</html>
