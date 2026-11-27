@@ -238,6 +238,12 @@ p{margin:0}
 .ctopics .tag{font-size:13px;padding:6px 9px;text-transform:uppercase}
 .rlist{border-top:1px solid rgba(245,238,220,.18)}
 .row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;padding:28px 0;border-bottom:1px solid rgba(245,238,220,.18);align-items:start}
+.rq{margin:14px 0 4px;padding:14px 18px;border-left:3px solid var(--lima);background:rgba(196,240,90,.08);border-radius:0 12px 12px 0;max-width:640px}
+.rq blockquote{margin:0 0 10px;font:italic 400 15px/1.55 var(--t)}
+.rq figcaption{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;opacity:.9}
+.rq figcaption img{border-radius:50%;flex:none}
+.rq-via{font:500 12px var(--m);opacity:.7}
+.rq figcaption a{font:500 12px var(--m);color:inherit;opacity:.75;text-decoration:underline;text-underline-offset:3px}
 .rimg{position:relative;display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#000;transition:transform .25s}
 .rimg svg,.rimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .rimg .ph{left:8px;bottom:8px}
@@ -861,12 +867,58 @@ const PROJECTS=[
                   ['Lucas Vida','Desenvolvedor Full Stack','img/df-av-lucas.png','Parabéns pelo trabalho e dedicação. Ficou sensacional, adorei cada detalhe e cuidado. E que venha o próximo!']]}}]},
     ]}},
 
+  {slug:'tqp-tudo-que-posso',cat:'comunicacao',featured:true,image:'img/tqp-board.jpg',imageAlt:'Prancha da identidade TQP: paleta de cores, logotipo, tipografia, mascote e aplicações',
+   title:'TQP — Tudo Que Posso',
+   summary:'Identidade visual para uma comunidade feminina que vai além dos espaços tradicionalmente associados às mulheres: irreverente, urbana e pensada para funcionar no digital, em produtos e em encontros.',
+   tags:['Branding','Identidade visual','IA generativa','Ilustração'],date:'',role:'Branding & Visual Design · Identidade Visual',
+   case:{
+    noGallery:true,
+    stats:[['4','cores na paleta'],['1','mascote como assinatura'],['16','expressões ilustradas'],['3','frentes de aplicação']],
+    sections:[
+     {id:'sobre',title:'01. Sobre o projeto',blocks:[
+      {p:'O TQP (**Tudo Que Posso**) nasceu da vontade de construir uma comunidade feminina que fosse além dos espaços tradicionalmente associados às mulheres.'},
+      {p:'Originalmente chamado de **Treina Que Passa**, o projeto começou conectado ao universo da atividade física, mas evoluiu para uma proposta mais ampla: um espaço de **troca, aprendizado, experimentação e construção coletiva**, para mulheres interessadas em movimento, cultura, criatividade, autonomia, carreira e tudo aquilo que atravessa a vida real.'},
+      {label:'O desafio',callout:'Como traduzir visualmente uma comunidade feminina que não queria seguir os códigos visuais tradicionalmente associados ao universo feminino?'},
+      {p:'A identidade precisava **fugir da estética delicada, minimalista e romantizada** sem perder a capacidade de criar identificação e pertencimento, e funcionar tanto no **digital** quanto em **produtos físicos, encontros e iniciativas** da comunidade.'}]},
+     {id:'conceito',title:'02. Conceito criativo',blocks:[
+      {label:'Conceito',callout:'Uma comunidade, muitas possibilidades.'},
+      {p:'A direção criativa partiu da ideia de **coletivo, movimento e expressão individual**, com referências do **streetwear, da cultura urbana, dos movimentos independentes e da estética de pôsteres e zines**.'},
+      {p:'A proposta era criar uma marca que não parecesse uma empresa tentando vender um estilo de vida, mas **um movimento do qual as pessoas gostariam de fazer parte**.'}]},
+     {id:'identidade',title:'03. Identidade visual',blocks:[
+      {h:'Logotipo'},
+      {p:'A sigla **T.Q.P** em serifa de alto contraste, com **"Club"** em script no verde neon, reforça a ideia de clube e crew. A sigla tem força para funcionar sozinha, sem precisar explicar o nome inteiro o tempo todo.'},
+      {imgs:[{src:'img/tqp-logo.jpg',alt:'Logotipo T.Q.P Club com o mascote em adesivo',caption:'Logotipo T.Q.P Club'},{src:'img/tqp-sticker.jpg',alt:'Mascote em adesivo sobre padrão',caption:'Mascote em adesivo'}],cols:2,ratio:'4/5'},
+      {h:'Paleta cromática'},
+      {palette:[['Preto','#171717'],['Roxo','#7929C7'],['Verde neon','#B8F52B'],['Bege','#E8DCC5']]},
+      {ul:['**Preto:** atitude, força e presença.','**Roxo:** criatividade e individualidade.','**Verde neon:** energia, provocação e destaque.','**Bege:** equilíbrio e contraste visual.']},
+      {h:'Tipografia & elementos gráficos'},
+      {p:'Fontes **expressivas, pesadas e de forte presença**, explorando pesos, escalas e composições, fazem da tipografia a protagonista da comunicação. A linguagem se completa com **patches, adesivos, estampas, colagens e composições experimentais**, construindo uma identidade menos institucional e mais próxima da cultura de coletivos independentes.'}]},
+     {id:'mascote',title:'04. Mascote & Inteligência Artificial',blocks:[
+      {p:'Para criar um elemento **proprietário** de identificação e personalidade, desenvolvi um mascote com **inteligência artificial generativa**.'},
+      {label:'O desafio',callout:'Garantir a consistência visual do personagem em diferentes gerações, permitindo explorar expressões, emoções e situações sem perder suas características originais.'},
+      {p:'Construí uma estrutura de **prompt engineering** com uma **descrição fixa do personagem** (formas, proporções, cores, características marcantes e estilo de ilustração) e, a partir de uma **imagem-base (character reference)**, conduzi um processo iterativo de geração e refinamento, alterando instruções específicas para criar novas expressões e variações.'},
+      {ul:['**Prompt Engineering:** instruções estruturadas e detalhadas.','**Character Consistency:** preservação das características entre gerações.','**Reference-Based Generation:** imagem de referência para orientar novas criações.','**Prompt Iteration:** refinamento progressivo dos resultados.','**Art Direction:** curadoria e seleção para manter a coerência com a marca.']},
+      {imgs:[{src:'img/tqp-expressoes-grid.jpg',alt:'Todas as expressões do mascote, quatro por linha, sobre fundo branco',caption:'Sistema de expressões: 16 variações a partir da mesma referência'}],full:true}]},
+     {id:'aplicacoes',title:'05. Sistema visual e aplicações',blocks:[
+      {p:'Mais do que um logotipo isolado, a identidade é **um sistema flexível**, capaz de acompanhar diferentes frentes da comunidade sem perder sua personalidade:'},
+      {cards:[['Digital','Comunicação para redes sociais e materiais digitais e editoriais.'],['Eventos','Materiais de divulgação de encontros e iniciativas.'],['Produtos','Camisetas, patches, adesivos e ecobags.']]}]},
+     {id:'resultado',title:'06. Resultado',blocks:[
+      {p:'Uma identidade que posiciona o TQP como uma comunidade **contemporânea, irreverente e colaborativa**, com um mascote consistente que torna a linguagem **mais próxima, divertida e reconhecível**.'},
+      {p:'Uma marca que não tenta definir como uma mulher deve ser, mas representa **tudo aquilo que ela pode experimentar, construir e compartilhar**.'}]}
+    ]}},
+  {slug:'uxis-talks-006',image:'img/ev-uxis-talks-006.jpg',imageAlt:'Juliana Ribeiro, Monica Barros e Davi Aires na UXis Talks #006',cat:'comunidade',featured:true,org:'uxis',title:'UXis Talks #006',
+   subtitle:'Design Estratégico, Liderança & IA',
+   summary:'Uma conversa com a convidada Monica Barros (Mona), Líder de Design no Banco Inter e autora do livro Do Intuitivo ao Intencional, sobre design estratégico, liderança, inteligência artificial e hiperpersonalização, conectando experiência, tecnologia e resultados de negócio.',
+   topics:['Design estratégico','Liderança','Inteligência artificial','Hiperpersonalização'],
+   quote:{text:'Disparado um dos melhores papos que já tive durante todo esse tempo de design! Obrigada demais pelo convite Juliana Ribeiro e Davi Aires. Ficaria facilmente mais 2 horas papeando sobre design e IA com vocês haha 💜',author:'Monica Barros',role:'Design Manager',via:'via LinkedIn'},
+   tags:['Talk','Comunidade UXis'],date:'Novembro 2026',role:'Host',
+   buttons:[{label:'Ver a talk no YouTube',href:'https://www.youtube.com/watch?v=_WdrErojX3Q'}]},
   {slug:'devfest-bh',image:'img/ev-devfest-bh.jpg',imageAlt:'Organização do DevFest BH 2026 no palco com o público ao fundo',cat:'comunidade',featured:true,org:'gdg',title:'DevFest BH 2026',
    subtitle:'O Maior Evento de Tecnologia da Comunidade Google em BH',
    summary:'Como organizadora do GDG BH, participei da gestão e execução do DevFest BH, primeira edição a reunir mais de 1.000 pessoas no Minascentro. Além da organização do evento focado em IA e produto, assinei a direção de arte e comunicação visual completa — do site às peças físicas do espaço.',
    tags:['Evento','GDG BH'],date:'Outubro 2026',role:'Organizadora · Identidade e comunicação',
    buttons:[{label:'Site do evento',href:'https://gdgbh.com.br/devfest-2026'},{label:'Ver case de Visual Design',href:'#case-devfest-bh-2026-comunicacao'}]}, // removido por enquanto
-  {slug:'uxis-talk-youtube',image:'img/ev-uxis-talk-youtube-2.jpg',imageAlt:'Marianne Fernandes apresentando na UXis Talks #005',cat:'comunidade',featured:true,org:'uxis',title:'UXis Talks #005',
+  {slug:'uxis-talk-youtube',image:'img/ev-uxis-talk-youtube-2.jpg',imageAlt:'Marianne Fernandes apresentando na UXis Talks #005',cat:'comunidade',org:'uxis',title:'UXis Talks #005',
    subtitle:'Carreira Internacional & Processos Seletivos na Gringa',
    summary:'Um bate-papo com a convidada Marianne Fernandes focado em desmistificar o mercado internacional para designers, abordando desde a preparação de currículo/LinkedIn e níveis de inglês exigidos até as etapas de processos seletivos em startups e Big Techs.',
    topics:['Carreira internacional','Inglês para UX','LinkedIn','Processos seletivos'],
@@ -1132,6 +1184,45 @@ const EN={
                ["Scalable architecture","A solid foundation for adding new features without cluttering the main menu."],
                ["Lower cognitive load","An organization aligned with the mental models mapped in the navigation tests."]]}]}
     ]}},
+  "tqp-tudo-que-posso":{image:"img/tqp-board-en.jpg",imageAlt:"TQP identity board: color palette, logo, typography, mascot and applications",
+   title:"TQP — Tudo Que Posso",
+   summary:"Visual identity for a women's community that goes beyond the spaces traditionally associated with women: irreverent, urban and built to work in digital, on products and at gatherings.",
+   tags:["Branding","Visual identity","Generative AI","Illustration"],role:"Branding & Visual Design · Visual Identity",
+   case:{
+    noGallery:true,
+    stats:[["4","palette colors"],["1","mascot as signature"],["16","illustrated expressions"],["3","application fronts"]],
+    sections:[
+     {id:"sobre",title:"01. About the project",blocks:[
+      {p:"TQP (**Tudo Que Posso**, \"Everything I Can\") was born from the desire to build a women's community that went beyond the spaces traditionally associated with women."},
+      {p:"Originally called **Treina Que Passa** (\"Train and It'll Pass\"), the project started out connected to physical activity, but evolved into something broader: a space for **exchange, learning, experimentation and collective building**, for women interested in movement, culture, creativity, autonomy, career and everything that runs through real life."},
+      {label:"The challenge",callout:"How do you visually translate a women's community that didn't want to follow the visual codes traditionally associated with the feminine?"},
+      {p:"The identity had to **steer clear of a delicate, minimalist and romanticized aesthetic** without losing the ability to create identification and belonging, and work both in **digital** and on **physical products, gatherings and community initiatives**."}]},
+     {id:"conceito",title:"02. Creative concept",blocks:[
+      {label:"Concept",callout:"One community, many possibilities."},
+      {p:"The creative direction started from the idea of **collective, movement and individual expression**, drawing on **streetwear, urban culture, independent movements and the aesthetics of posters and zines**."},
+      {p:"The goal was a brand that didn't look like a company trying to sell a lifestyle, but **a movement people would want to be part of**."}]},
+     {id:"identidade",title:"03. Visual identity",blocks:[
+      {h:"Logo"},
+      {p:"The **T.Q.P** acronym in a high-contrast serif, with **\"Club\"** in a neon green script, reinforces the idea of a club and a crew. The acronym is strong enough to stand on its own, without spelling out the full name every time."},
+      {imgs:[{src:"img/tqp-logo.jpg",alt:"T.Q.P Club logo with the mascot sticker",caption:"T.Q.P Club logo"},{src:"img/tqp-sticker.jpg",alt:"Mascot sticker over a pattern",caption:"Mascot sticker"}],cols:2,ratio:"4/5"},
+      {h:"Color palette"},
+      {palette:[["Black","#171717"],["Purple","#7929C7"],["Neon green","#B8F52B"],["Beige","#E8DCC5"]]},
+      {ul:["**Black:** attitude, strength and presence.","**Purple:** creativity and individuality.","**Neon green:** energy, provocation and emphasis.","**Beige:** balance and visual contrast."]},
+      {h:"Typography & graphic elements"},
+      {p:"**Expressive, heavy typefaces with strong presence**, explored across weights, scales and compositions, make typography the lead of the communication. The language is completed by **patches, stickers, prints, collages and experimental compositions**, building an identity that feels less institutional and closer to the culture of independent collectives."}]},
+     {id:"mascote",title:"04. Mascot & Artificial Intelligence",blocks:[
+      {p:"To create a **proprietary** element of identification and personality, I developed a mascot using **generative artificial intelligence**."},
+      {label:"The challenge",callout:"Ensure the character's visual consistency across different generations, making it possible to explore expressions, emotions and situations without losing its original traits."},
+      {p:"I built a **prompt engineering** structure around a **fixed character description** (shapes, proportions, colors, distinctive features and illustration style) and, starting from a **base image (character reference)**, ran an iterative process of generation and refinement, changing specific instructions to create new expressions and variations."},
+      {ul:["**Prompt Engineering:** structured, detailed instructions.","**Character Consistency:** preserving traits across generations.","**Reference-Based Generation:** a reference image to guide new creations.","**Prompt Iteration:** progressively refining the results.","**Art Direction:** curating and selecting to stay consistent with the brand."]},
+      {imgs:[{src:"img/tqp-expressoes-grid.jpg",alt:"All of the mascot's expressions, four per row, on a white background",caption:"Expression system: 16 variations from the same reference"}],full:true}]},
+     {id:"aplicacoes",title:"05. Visual system and applications",blocks:[
+      {p:"More than a standalone logo, the identity is **a flexible system** that can support the community's different fronts without losing its personality:"},
+      {cards:[["Digital","Social media communication and digital and editorial materials."],["Events","Promotion materials for gatherings and initiatives."],["Products","T-shirts, patches, stickers and tote bags."]]}]},
+     {id:"resultado",title:"06. Outcome",blocks:[
+      {p:"An identity that positions TQP as a **contemporary, irreverent and collaborative** community, with a consistent mascot that makes the language **closer, more fun and more recognizable**."},
+      {p:"A brand that doesn't try to define what a woman should be, but represents **everything she can experience, build and share**."}]}
+    ]}},
   "devfest-bh-2026-comunicacao":{imageAlt:"Case cover: DevFest Belo Horizonte logo, speaker posts, graphic elements and color illustrations of BH",
    title:"DevFest BH 2026: visual identity and communication",
    summary:"Visual identity for the biggest Google community tech event in BH, built within Google's brand colors and applied from the Instagram campaign to print pieces and the event space.",
@@ -1195,6 +1286,13 @@ const EN={
    summary:"As a GDG BH organizer, I took part in managing and running DevFest BH, the first edition to bring together more than 1,000 people at Minascentro. Beyond organizing the AI- and product-focused event, I led the full art direction and visual communication, from the website to the physical pieces at the venue.",
    tags:["Event","GDG BH"],date:"October 2026",role:"Organizer · Identity and communication",
    buttons:[{label:"Event website",href:"https://gdgbh.com.br/devfest-2026"},{label:"View Visual Design case",href:"#case-devfest-bh-2026-comunicacao"}]},
+  "uxis-talks-006":{imageAlt:"Juliana Ribeiro, Monica Barros and Davi Aires at UXis Talks #006",
+   subtitle:"Strategic Design, Leadership & AI",
+   summary:"A conversation with guest Monica Barros (Mona), Design Lead at Banco Inter and author of the book Do Intuitivo ao Intencional, about strategic design, leadership, artificial intelligence and hyper-personalization, connecting experience, technology and business results.",
+   topics:["Strategic design","Leadership","Artificial intelligence","Hyper-personalization"],
+   quote:{text:"Hands down one of the best conversations I've had in all my years in design! Huge thanks for the invite, Juliana Ribeiro and Davi Aires. I could easily have chatted about design and AI with you for 2 more hours haha 💜",author:"Monica Barros",role:"Design Manager",via:"via LinkedIn (translated)"},
+   tags:["Talk","UXis Community"],date:"November 2026",
+   buttons:[{label:"Watch the talk on YouTube",href:"https://www.youtube.com/watch?v=_WdrErojX3Q"}]},
   "uxis-talk-youtube":{imageAlt:"Marianne Fernandes presenting at UXis Talks #005",
    subtitle:"International Careers & Hiring Processes Abroad",
    summary:"A conversation with guest Marianne Fernandes focused on demystifying the international market for designers, from preparing your résumé/LinkedIn and the English level required to the stages of hiring processes at startups and Big Techs.",
@@ -1398,10 +1496,10 @@ const ProjectCard=p=>{
 
 const HCard=p=>`<article class="ccard reveal">
   <div class="cphoto">${cover(p,p.cat==='comunidade'?t('foto provisória','placeholder photo'):t('imagem provisória','placeholder image'))}</div>
-  <div class="cinfo"><div class="tags">${p.cat==='digital'?'':Tag(p.date,'t-date')}${orgTags(p)}</div><h3>${esc(p.title)}</h3>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p>${esc(p.summary)}</p>${p.cat==='comunidade'?(p.topics?`<div class="tags ctopics">${p.topics.map(t=>Tag(t)).join('')}</div>`:''):Tags(p.tags)}<div class="btns">${(p.buttons||[{label:p.cat==='comunidade'?t('Explorar projeto','Explore project'):t('Ver case','View case'),href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
+  <div class="cinfo"><div class="tags">${p.cat==='digital'||p.cat==='comunicacao'?'':Tag(p.date,'t-date')}${orgTags(p)}</div><h3>${esc(p.title)}</h3>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p>${esc(p.summary)}</p>${p.cat==='comunidade'?(p.topics?`<div class="tags ctopics">${p.topics.map(t=>Tag(t)).join('')}</div>`:''):Tags(p.tags)}<div class="btns">${(p.buttons||[{label:p.cat==='comunidade'?t('Explorar projeto','Explore project'):t('Ver case','View case'),href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
 const yearOf=p=>((p.date||'').match(/\d{4}/)||[''])[0];
 const Row=p=>`<article class="row reveal" data-year="${yearOf(p)}" data-org="${[].concat(p.org||[]).join(' ')}"><div class="rimg">${cover(p,'provisória')}</div>
-  <div class="rbody"><div class="rhead"><h3>${esc(p.title)}</h3><div class="rmeta"><span class="rdate">${esc(p.date)}</span>${orgTags(p)}</div></div>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p class="rdesc">${esc(p.summary)}</p>
+  <div class="rbody"><div class="rhead"><h3>${esc(p.title)}</h3><div class="rmeta"><span class="rdate">${esc(p.date)}</span>${orgTags(p)}</div></div>${p.subtitle?`<p class="csub">${esc(p.subtitle)}</p>`:''}${p.guest?`<p class="cguest">${esc(p.guest)}</p>`:''}<p class="rdesc">${esc(p.summary)}</p>${p.quote?`<figure class="rq"><blockquote>“${esc(p.quote.text)}”</blockquote><figcaption>${p.quote.avatar?`<img src="${esc(p.quote.avatar)}" alt="" width="32" height="32">`:''}<span><b>${esc(p.quote.author)}</b> · ${esc(p.quote.role)}</span>${p.quote.href?`<a href="${esc(p.quote.href)}" target="_blank" rel="noopener">${esc(p.quote.via)} ↗</a>`:`<small class="rq-via">${esc(p.quote.via||'')}</small>`}</figcaption></figure>`:''}
   <div class="btns">${(p.buttons||[{label:t('Explorar projeto','Explore project'),href:caseHref(p)}]).map((b,i)=>LinkBtn(b,b.cls||(i?'':'btn-lima'))).join('')}</div></div></article>`;
 const orgTags=p=>[].concat(p.org||[]).map(o=>(ORG_TAG[o]||'').replace('UXIS_LBL',t('Comunidade UXis','UXis Community'))).join('');
 const ORG_TAG={wtm:'<span class="tag t-wtm">Women Techmakers BH</span>',gdg:'<span class="tag t-gdg"><i></i><i></i><i></i><i></i>GDG BH</span>',uxis:'<span class="tag t-uxis">✦ UXIS_LBL</span>'};
@@ -1573,7 +1671,7 @@ function CasePage(p){
     return `<figure class="gi reveal" style="margin:0">${g?`<img src="${esc(g.src||g)}" alt="${esc(g.alt||p.title)}" loading="lazy">`:art(p,i*7+1)+`<span class="ph">${t('imagem provisória','placeholder image')}</span>`}</figure>`}).join('');
   const sib=byCat(p.cat),next=sib[(sib.indexOf(p)+1)%sib.length];
   const custom=Array.isArray(c.sections);
-  const toc=custom?[...c.sections.map(x=>[x.id,x.title]),['galeria',t('Galeria','Gallery')],...(c.creditos?[['creditos',t('Créditos','Credits')]]:[])]
+  const toc=custom?[...c.sections.map(x=>[x.id,x.title]),...(c.noGallery?[]:[['galeria',t('Galeria','Gallery')]]),...(c.creditos?[['creditos',t('Créditos','Credits')]]:[])]
     :[...secs.map(s=>[s[0],s[1]]),...(c.aprendizados?[['aprendizados',t('Aprendizados','Learnings')]]:[]),['galeria',t('Galeria','Gallery')],['creditos',t('Créditos','Credits')]];
   return `<section class="band ${heroBand} case-hero" aria-labelledby="h-case"><div class="wrap">
     <a class="crumb" href="#${C.route}">${ARROW}${esc(C.name)}</a>
@@ -1589,7 +1687,7 @@ function CasePage(p){
        :secs.map(([id,l,hint])=>`<section class="csec reveal" id="cs-${id}"><h2>${esc(l)}</h2>${fill(c[id],hint)}</section>`).join('')}
      ${c.aprendizados?`<section class="csec reveal" id="cs-aprendizados"><h2>${t('Meus aprendizados','My learnings')}</h2>${fill(c.aprendizados,'')}${c.citacao?`<blockquote class="cquote">${esc(c.citacao)}</blockquote>`:''}</section>`:''}
      ${p.link?`<div class="csec reveal"><a class="btn btn-lima" href="${esc(p.link)}" target="_blank" rel="noopener">${t('Ver case original','View original case')}${ARROW}</a></div>`:''}
-     <section class="csec" id="cs-galeria"><h2>${t('Galeria','Gallery')}</h2>${c.gallery?(c.galleryMosaic?Block({imgs:c.gallery}):c.gallerySmall?`<div class="car-sm">${Carousel(c.gallery,p.title)}</div>`:Carousel(c.gallery,p.title)):`<div class="gal">${gal}</div>`}</section>
+     ${custom&&c.noGallery?'':`<section class="csec" id="cs-galeria"><h2>${t('Galeria','Gallery')}</h2>${c.gallery?(c.galleryMosaic?Block({imgs:c.gallery}):c.gallerySmall?`<div class="car-sm">${Carousel(c.gallery,p.title)}</div>`:Carousel(c.gallery,p.title)):`<div class="gal">${gal}</div>`}</section>`}
      ${custom&&!c.creditos?'':`<section class="csec reveal" id="cs-creditos"><h2>${t('Créditos e colaboradores','Credits and collaborators')}</h2>${fill(c.creditos,'Liste quem fez parte, quando aplicável (aceita lista). Se não houver, remova esta seção.')}</section>`}
     </div></div></section>
    ${next&&next!==p?`<a class="band b-graf next" href="${caseHref(next)}"><div class="wrap"><small>${t('Próximo projeto','Next project')} · ${esc(C.name)}</small><h2>${esc(next.title)}${ARROW}</h2></div></a>`:''}`;
